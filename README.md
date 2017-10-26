@@ -12,8 +12,8 @@ If not: https://dev.mysql.com/doc/workbench/en/wb-installing.html
 1. SSH into the team server and `cd` into the `/nodeApp` directory.
 
 2. Type the following two commands to inject the two tables into our MySQL Database:
-	```mysql -u fa17g12 -p fa17g12 < listings.sql```
-	```mysql -u fag17g12 -p fa17g12 < t_user.sql``` 
+..* ```mysql -u fa17g12 -p fa17g12 < listings.sql```
+..* ```mysql -u fag17g12 -p fa17g12 < t_user.sql``` 
 
 3. Thats it, the database `fa7g12` will now have the above tables injected into it.
 
