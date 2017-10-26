@@ -22,9 +22,9 @@ app.use(
 
     connection(mysql,{
         host     : 'localhost',
-        user     : 'root',
-        password : '4521', //set password if there is one
-        database : 'test', //set DB name here
+        user     : 'fa17g12',
+        password : 'csc648fa17g12', //set password if there is one
+        database : 'fa17g12', //set DB name here
         debug    : false //set true if you wanna see debug logger
     },'request')
 
@@ -455,7 +455,7 @@ listingsRoute2.delete(function(req,res,next){
 app.use('/api', router);
 
 //start Server
-var server = app.listen(3000,function(){
+var server = app.listen(17012,function(){
 
    console.log("Listening to port %s",server.address().port);
 
