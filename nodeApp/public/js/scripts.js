@@ -1,5 +1,4 @@
 function saveUser1(){
-
     $.ajax({
 
         url:"/api/user",

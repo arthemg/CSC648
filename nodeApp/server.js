@@ -25,7 +25,7 @@ app.use(
         user     : 'fa17g12',
         password : 'csc648fa17g12', //set password if there is one
         database : 'fa17g12', //set DB name here
-        debug    : false //set true if you wanna see debug logger
+        debug    : true //set true if you want to see debug logger
     },'request')
 
 );
@@ -293,7 +293,7 @@ curut2.get(function(req,res,next){
 //update data
 curut2.put(function(req,res,next){
     var user_id = req.params.user_id;
-
+    
     //validation
     req.assert('name','Name is required').notEmpty();
     req.assert('email','A valid email is required').isEmail();
@@ -452,10 +452,10 @@ listingsRoute2.delete(function(req,res,next){
 });
 
 //now we need to apply our router here
-app.use('/api', router);
+app.use('/api/', router);
 
 //start Server
-var server = app.listen(17012,function(){
+var server = app.listen(17012,'localhost', function(){
 
    console.log("Listening to port %s",server.address().port);
 
