@@ -2,11 +2,13 @@
 <html>
     <head>
         <title><%=title%></title>
-        <script type="text/javascript" src="/../js/jquery-1.10.2.min.js"></script>
-        <script type="text/javascript" src="/../js/scripts.js"></script>
-        <link rel="stylesheet" href="/../css/style.css">
+        <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="./js/listingScripts.js"></script>
+        <link rel="stylesheet" href="./css/style.css">
     </head>
 <body>
+<p><a href="/">Back to user search</a></p>
+
 <div class="data-table">
     <table border="1" cellpadding="7" cellspacing="7">
         <tr>
@@ -28,7 +30,7 @@
             <td><%=data[i].state%></td>
             <td><%=data[i].zip_code%></td>
 			<td>
-                <a class="a-inside edit" href="/fa17g12/api/listings/<%=data[i].listing_id%>">Edit</a>
+                <a class="a-inside edit" href="/api/listings/<%=data[i].listing_id%>">Edit</a>
                
                 <a class="a-inside delete" href="javascript:void(0)" onClick="deleteListing(<%=data[i].listing_id%>)">Delete</a>
                

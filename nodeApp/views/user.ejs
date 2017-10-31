@@ -2,11 +2,12 @@
 <html>
     <head>
         <title><%=title%></title>
-        <script type="text/javascript" src="/../js/jquery-1.10.2.min.js"></script>
-        <script type="text/javascript" src="/../js/scripts.js"></script>
-        <link rel="stylesheet" href="/../css/style.css">
+        <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="./js/userScripts.js"></script>
+        <link rel="stylesheet" href="./css/style.css">
     </head>
 <body>
+<p><a href="/">Back to user search</a></p>
 <div class="data-table">
     <table border="1" cellpadding="7" cellspacing="7">
         <tr>
@@ -27,7 +28,7 @@
             <td><%=data[i].email%></td>
             <td><%=data[i].password%></td>
             <td>
-                <a class="a-inside edit" href="/fa17g12/api/user/<%=data[i].user_id%>">Edit</a>
+                <a class="a-inside edit" href="/api/user/<%=data[i].user_id%>">Edit</a>
                
                 <a class="a-inside delete" href="javascript:void(0)" onClick="deleteUser(<%=data[i].user_id%>)">Delete</a>
                
@@ -48,10 +49,10 @@
     <form method="post" action="" id="the-form">
         <table cellpadding="11">
         <tr>
-            <td class="label">Name</td><td>: <input type="text" name="name"></td>
+            <td class="label">Name</td><td>: <input type="text" id="name" name="name"></td>
          </tr>
         <tr>
-            <td class="label">Email</td><td>: <input type="text" name="email"></td>
+            <td class="label">Email</td><td>: <input type="text" id="email" name="email"></td>
          </tr>
           <tr>
             <td class="label">Password</td><td>: <input type="password" name="password"></td>
@@ -59,7 +60,7 @@
          <tr>
             <td class="label"></td>
             <td>
-                &nbsp; <input type="button" value="Save" onClick="saveUser1()">
+                &nbsp; <input type="button" value="Save" onClick="addNewUser()">
             </td>
          </tr>
         </table>

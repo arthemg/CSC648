@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script type="text/javascript" src="/../js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="/../js/scripts.js"></script>
-    <link rel="stylesheet" href="/../css/style.css">
+    <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="./js/userScripts.js"></script>
+    <script type="text/javascript" src="./js/listingScripts.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body id="divResults">
 
@@ -12,9 +13,9 @@
 <form method="post" action="" id="search_form">
 	<input type="text" placeholder="Search users" id="userSearch" name="search">
 	<input type="button" value="Search" onClick="searchUser()">
-	<p><a href="/fa17g12/api/user">All Users</a></p>
-	<p><a href="/fa17g12/search_listings">Listing Search</a></p>
-	<p><a href="/fa17g12/api/listings">All Listings</a></p>
+	<p><a href="api/user">All Users</a></p>
+	<p><a href="search_listings">Listing Search</a></p>
+	<p><a href="api/listings">All Listings</a></p>
 </form>
 
 <div class="data-table">
@@ -48,6 +49,6 @@ for(var i = 0;i < data.length;i++) { %>
         <% } %>
 
     </table>
-
+</div>
 </body>
 </html>
