@@ -51,12 +51,12 @@ function editUser(user_id) {
 
     console.log(user_id, 'arg');
     $.ajax({
-        url: "/api/user/" + user_id,
+        url: "/fa17g12/api/user/" + user_id,
         type: "put",
         data: $("#the-form").serialize(),
         success: function (res) {
 
-            window.location.href = '/api/user';
+            window.location.href = '/fa17g12/api/user';
             return false;
         },
         error: function (xhr, status, error) {
@@ -80,7 +80,7 @@ function searchUser(){
 
     $.ajax({
 
-        url:"/search/" + user,
+        url:"/fa17g12/search/" + user,
         type:"post",
         data:$("#search_form").serialize(),
         success:function(res){
