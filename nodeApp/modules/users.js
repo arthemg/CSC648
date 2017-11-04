@@ -117,7 +117,7 @@ var getUserToEdit = function (req, res, next){
                 if(rows.length < 1)
                     return res.send("User Not found");
                 //console.log(req.params, 'User Id params');
-                res.render('edit',{title:"Edit user",data:rows});
+                res.render('edit_user',{title:"Edit user",data:rows});
             });
 
         });
