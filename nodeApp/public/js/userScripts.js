@@ -2,7 +2,7 @@ function addNewUser(){
 
     $.ajax({
 
-        url:"/api/user",
+        url:"/fa17g12/api/user",
         type:"post",
         data:$("#the-form").serialize(),
         success:function(res){
@@ -31,7 +31,7 @@ function addNewUser(){
 function deleteUser(user_id){
 
     $.ajax({
-        url:"/api/user/"+user_id,
+        url:"/fa17g12/api/user/"+user_id,
         type: 'DELETE',
         success: function(res) {
 

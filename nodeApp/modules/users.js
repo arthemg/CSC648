@@ -14,7 +14,7 @@ var getAllUsers = function (req, res, next) {
 
             //console.log(rows, 'rows'); //debug console output
 
-            res.render('user', {title: "RESTful Crud Example", data: rows});
+            res.render('user', {title: "Users", data: rows});
 
         });
 
