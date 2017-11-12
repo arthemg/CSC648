@@ -1,54 +1,463 @@
 <!DOCTYPE html>
-<html>
 <head>
-    <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="./js/userScripts.js"></script>
-    <script type="text/javascript" src="./js/listingScripts.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/js/userScripts.js"></script>
+    <script type="text/javascript" src="/js/listingScripts.js"></script>
+    <!--<link type="text/css" rel="stylesheet" href="/css/style.css">-->
 </head>
-<body id="divResults">
+<!--<body id="divResults">-->
 
-<h1>Welcome to the CSC648</h1>
+<!--&lt;!&ndash;<h1>Welcome to the CSC648</h1>&ndash;&gt;-->
 
-<form method="post" action="" id="search_form">
-	<input type="text" placeholder="Search users" id="userSearch" name="search">
-	<input type="button" value="Search" onClick="searchUser()">
-	<p><a href="api/user">All Users</a></p>
-	<p><a href="search_listings">Listing Search</a></p>
-	<p><a href="api/listings">All Listings</a></p>
-</form>
+<!--<form method="post" action="" id="search_form">-->
+<!--<input type="text" placeholder="Search users" id="userSearch" name="search">-->
+<!--<input type="button" value="Search" onClick="searchUser()">-->
+<!--<p><a href="api/user">All Users</a></p>-->
+<!--<p><a href="search_listings">Listing Search</a></p>-->
+<!--<p><a href="api/listings">All Listings</a></p>-->
 
-<div class="data-table">
-    <table border="1" cellpadding="7" cellspacing="7">
-        <tr>
-            <th width="50px">Key</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Password</th>
-            <th>Action</th>
-        </tr>
-<% if(data.length){
 
-for(var i = 0;i < data.length;i++) { %>
-
-<tr>
-    <td><%=(i+1)%></td>
-    <td><%=data[i].name%></td>
-    <td><%=data[i].email%></td>
-    <td><%=data[i].password%></td>
-    <td>
-
-    </td>
-</tr>
-        <% }
-
-        }else{ %>
-        <tr>
-            <td colspan="5">No Data</td>
-        </tr>
-        <% } %>
-
-    </table>
-</div>
-</body>
+<!--</form>-->
 </html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--<title>real estate web</title>-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!--Optional theme-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+    #map {
+        width: 10%;
+        height: 40px;
+        background-color: grey;
+    }
+
+    .Log_Sin_button {
+        position: relative;
+        right: 150px;
+    }
+
+    .image {
+        width: 400px;
+        height: auto;
+    }
+
+    .column {
+        float: left;
+        width: 42%;
+        padding: 20px;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .navbar {
+        overflow: hidden;
+        position: fixed;
+        width: 1/6;
+    }
+</style>
+
+<!--<h1> real estate demo  </h1>-->
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#home" aria-expanded="false">Home</a>
+        <form method="post" action="" id="search_form">
+            <input type="text" placeholder="Search listings" id="listingSearch" name="search">
+            <input type="button" value="Search" onClick="searchListing()">
+        </form>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="profile.html" aria-expanded="true">ABOUT</a>
+    </li>
+    <li class=" navbar-light">
+        <div class="">
+
+            <button onclick="document.getElementById('Login').style.display = 'block'" style="width:auto;">LOGIN
+            </button>
+
+            <button onclick="document.getElementById('Signup').style.display = 'block'" style="width:auto;">SIGNUP
+            </button>
+
+        </div>
+
+    </li>
+
+</ul>
+<div id="form">
+    <div id="Login" class="modal">
+        <style>
+            /* Full-width input fields */
+            input[type=text], input[type=password] {
+                width: 100%;
+                padding: 10px 10px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+
+            /* Set a style for all buttons */
+            button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 18px;
+                border: none;
+                cursor: pointer;
+                width: 30%;
+            }
+
+            button_search {
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                border: none;
+                cursor: pointer;
+            }
+
+            button:hover {
+                opacity: 0.8;
+            }
+
+            /* Extra styles for the cancel button */
+            .cancelbtn {
+                width: 30%;
+                padding: 10px 18px;
+                background-color: #f44336;
+            }
+
+            /* Center the image and position the close button */
+            .imgcontainer {
+                text-align: center;
+                margin: 24px 0 12px 0;
+                position: relative;
+            }
+
+            img.avatar {
+                width: 40%;
+                border-radius: 50%;
+            }
+
+            .filter {
+                /*position:absolute;*/
+                left: 0;
+                transform: translateX(-45%);
+                /*padding: 16px;*/
+            }
+
+            .container {
+                width: 50%;
+                padding: 10px 10px;
+            }
+
+            span.psw {
+                float: right;
+                padding-top: 16px;
+            }
+
+            /* The Modal (background) */
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                /*                    top: 10%;
+                                    left: 10%;*/
+                width: 100%; /* Full width */
+                height: 110%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0, 0, 0); /* Fallback color */
+                background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+                padding-top: 60px;
+            }
+
+            /* Modal Content/Box */
+            .modal-content {
+                background-color: #fefefe;
+                margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+                border: 1px solid #888;
+                width: 60%; /* Could be more or less, depending on screen size */
+            }
+
+            /* The Close Button (x) */
+            .close {
+                position: absolute;
+                right: 25px;
+                top: 0;
+                color: #000;
+                font-size: 35px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: red;
+                cursor: pointer;
+            }
+
+            /* Add Zoom Animation */
+            .animate {
+                -webkit-animation: animatezoom 0.6s;
+                animation: animatezoom 0.6s
+            }
+
+            @-webkit-keyframes animatezoom {
+                from {
+                    -webkit-transform: scale(0)
+                }
+                to {
+                    -webkit-transform: scale(1)
+                }
+            }
+
+            @keyframes animatezoom {
+                from {
+                    transform: scale(0)
+                }
+                to {
+                    transform: scale(1)
+                }
+            }
+
+            /* Change styles for span and cancel button on extra small screens */
+            @media screen and (max-width: 300px) {
+                span.psw {
+                    display: block;
+                    float: none;
+                }
+
+                .cancelbtn {
+                    width: 100%;
+                }
+            }
+
+        </style>
+
+
+        <form class="modal-content animate" action="/index.html">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('Login').style.display = 'none'" class="close"
+                      title="Close Modal">&times;</span>
+                <img src="pictures/profile_exam.jpg" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required><br>
+
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <br>
+                <input type="checkbox" checked="checked"> Remember me
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('Login').style.display = 'none'"
+                        class="cancelbtn">Cancel
+                </button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+
+    </div>
+
+    <div id="Signup" class="modal">
+        <form class="modal-content animate" action="index.html">
+            <div class="container">
+                <label><b>First Name:</b></label>
+                <input type="text" placeholder="FirstName" name="fName" required>
+
+                <label><b>Last Name:</b></label>
+                <input type="text" placeholder="LastName" name="LName" required>
+
+                <label><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                <input type="checkbox" checked="checked"> Remember me
+                <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('Signup').style.display = 'none'"
+                            class="cancelbtn">Cancel
+                    </button>
+                    <button type="submit" class="Signup">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('Login');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+
+</div>
+
+<div>
+    <form method="post" action="" id="search_form">
+        <center>
+            <input style="width: 60%" type="text" placeholder="Street Address, City, State, Zip" id="listingSearch"
+                   name="search">
+            <input style="background-color: #4CAF50; color: white; padding: 11px 18px; border: none; cursor: pointer; width: 10%"
+                   type="button" value="Search" onClick="searchListing()"/>
+        </center>
+    </form>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 col-lg-2">
+            <div class="navbar">
+                <label><font size="5">search by:</font></label><br>
+                <hr>
+                <label><font size="5" color="green">$$: Price</font></label><br>
+                <font size="3">
+                    <input type="checkbox" id="lower_100K" name="price">
+                    <label for="lower_100k"> < 100,000 </label><br>
+
+                    <input type="checkbox" id="100K_TO_250K" name="price">
+                    <label for="100KTO250K">100,000 ~ 250,000</label><br>
+
+                    <input type="checkbox" id="250K_TO_550K" name="price">
+                    <label for="250KTO550K">250,000 ~ 550,000</label><br>
+
+                    <input type="checkbox" id="550K_TO_750K" name="price">
+                    <label for="550KTO750K">550,000 ~ 750,000</label><br>
+
+                    <input type="checkbox" id="750K_TO_1000K" name="price">
+                    <label for="750KTO1000K">750,000 ~ 1000,000</label><br>
+
+                    <input type="checkbox" id="750K_TO_1000K" name="price">
+                    <label for="Above1000K"> > 1000,000 </label><br>
+                </font>
+                <hr>
+                <label><font size="5" color="green">bedroom:</font></label><br>
+                <font size="3">
+                    <input type="checkbox" id="1bed" name="bed">
+                    <label for="1bed">1</label><br>
+
+                    <input type="checkbox" id="2bed" name="bed">
+                    <label for="1bed">2</label><br>
+
+                    <input type="checkbox" id="2bed" name="bed">
+                    <label for="1bed">2</label><br>
+
+                    <input type="checkbox" id="3bed" name="bed">
+                    <label for="1bed">3</label><br>
+
+                    <input type="checkbox" id="4bed" name="bed">
+                    <label for="1bed">4</label><br>
+
+                    <input type="checkbox" id="5bed" name="bed">
+                    <label for="1bed">5</label><br>
+
+                    <input type="checkbox" id=">5" name="bed">
+                    <label for=">5"> > 5</label><br>
+                </font>
+            </div>
+        </div>
+
+        <div class="col-sm-9 col-md-10 col-lg-10">
+            <div class="row">
+                <div class="column">
+
+                    <% if(data.length){
+
+                    for(var i = 0;i < data.length;i++) { %>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <img class="image" src="/images/house-5.png" class="img-rounded" alt="House image">
+                        </div>
+                        <div class="panel-body">
+
+                            <tr>
+                                <td><%= (i + 1) %></td>
+                                <td><%= data[i].address %></td>
+                                <td><%= data[i].city %></td>
+                                <td><%= data[i].state %></td>
+                                <td><%= data[i].zip_code %></td>
+                                <td>
+
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+
+                    <% }
+
+                    }else{ %>
+                    <tr>
+                        <td colspan="5">No Data</td>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <img class="example image" src="/images/house-5.png" class="img-rounded"
+                                     alt="House image">
+                            </div>
+                            <div class="panel-body">
+                                <div class="data-table"></div>
+                            </div>
+                        </div>
+                    </tr>
+                    <% } %>
+
+                    <div class="data-table">
+                        <table border="1" cellpadding="7" cellspacing="7">
+                            <tr>
+                                <th width="50px">No</th>
+                                <th>Address</th>
+                                <th>City</th>
+                                <th>State</th>
+                                <th>Zip Code</th>
+                            </tr>
+                            <% if(data.length){
+
+                            for(var i = 0;i < data.length;i++) { %>
+
+                            <tr>
+                                <td><%= (i + 1) %></td>
+                                <td><%= data[i].address %></td>
+                                <td><%= data[i].city %></td>
+                                <td><%= data[i].state %></td>
+                                <td><%= data[i].zip_code %></td>
+                                <td>
+
+                                </td>
+                            </tr>
+                            <% }
+
+                            }else{ %>
+                            <tr>
+                                <td colspan="5">No Data</td>
+                            </tr>
+                            <% } %>
+
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </html>
