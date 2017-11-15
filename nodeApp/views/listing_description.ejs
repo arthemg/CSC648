@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%=title%></title>
+        <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="./js/listingScripts.js"></script>
+        <link type="text/css" rel="stylesheet" href="./css/style.css">
+    </head>
+	
+<body>
+<p><a href="/">Back to index</a></p>
+
+<div class="data-table">
+    <table border="1" cellpadding="7" cellspacing="7">
+        <tr>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip Code</th>
+        </tr>
+                       
+        <% if(data.length){  %>
+        <tr>
+            <td><%=data[0].address%></td>
+            <td><%=data[0].city%></td>
+            <td><%=data[0].state%></td>
+            <td><%=data[0].zip_code%></td>
+        </tr>
+		
+	<%	} else{ %>
+			 <tr>
+				<td colspan="5">No Data</td>
+			 </tr>
+    <% 	} %>
+	
+    </table>
+</div>
+
+<img alt="Pic" src="/images/upload_images/<%=data[0].image%>.jpg" />
+
+<div class="page-data">
+     <ul class="err-area"></ul>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYSUWFvpVbz3iuStuGYjf0Ca4QJ4TBEgs">
+</script>
+
+<div id="map"></div>
+
+<script type="text/javascript">
+initMap("<%=data[0].address%>, <%=data[0].city%>, <%=data[0].state%>, <%=data[0].zip_code%>")
+</script>
+
+</body>
+</html>

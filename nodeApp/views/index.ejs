@@ -11,10 +11,10 @@
 <h1>Welcome to the CSC648</h1>
 
 <form method="post" action="" id="search_form">
-	<input type="text" placeholder="Search users" id="userSearch" name="search">
-	<input type="button" value="Search" onClick="searchUser()">
+	<input type="text" placeholder="Search listings" id="listingSearch" name="search" onkeydown="searchListingEnter()">
+	<input type="button" value="Search" id="listingSearchBtn" onClick="searchListing()">
 	<p><a href="api/user">All Users</a></p>
-	<p><a href="search_listings">Listing Search</a></p>
+	<p><a href="search_users">User Search</a></p>
 	<p><a href="api/listings">All Listings</a></p>
 </form>
 
@@ -22,29 +22,36 @@
     <table border="1" cellpadding="7" cellspacing="7">
         <tr>
             <th width="50px">Key</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Password</th>
-            <th>Action</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip Code</th>
+            <th>Description</th>
         </tr>
-<% if(data.length){
-for(var i = 0;i < data.length;i++) { %>
-<tr>
-    <td><%=(i+1)%></td>
-    <td><%=data[i].name%></td>
-    <td><%=data[i].email%></td>
-    <td><%=data[i].password%></td>
-    <td>
-    </td>
-</tr>
-        <% }
-        }else{ %>
-        <tr>
-            <td colspan="5">No Data</td>
-        </tr>
-        <% } %>
+		<% if(data.length){
 
-    </table>
+		for(var i = 0;i < data.length;i++) { %>
+
+		<tr>
+			<td><%=(i+1)%></td>
+			<td><%=data[i].address%></td>
+			<td><%=data[i].city%></td>
+			<td><%=data[i].state%></td>
+			<td><%=data[i].zip_code%></td>
+			<td>
+			<input type="button" value="See More" onClick="listingDescription(<%=data[i].listing_id%>)">
+			</td>
+		</tr>
+				<% }
+
+				}else{ %>
+				<tr>
+					<td colspan="6">No Data</td>
+				</tr>
+				<% } %>
+
+		</table>
 </div>
+
 </body>
 </html>

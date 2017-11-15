@@ -62,10 +62,12 @@ var addNewUser = function (req, res, next)
             res.sendStatus(200);
         });
     });
-
-
-
 };
+
+var getSearchUsersPage = function(req,res) {
+    res.render('search_users', {data:[]});
+};
+
 var searchUser = function(req, res, next)
 {
     var user = req.params.user;
@@ -90,7 +92,7 @@ var searchUser = function(req, res, next)
             if(rows.length < 1)
                 return res.send("User not found.");
             //console.log(rows, 'rows'); //debug console output
-            res.render('index',{data:rows});
+            res.render('search_users',{data:rows});
         });
 
     });
@@ -199,5 +201,6 @@ module.exports = {
     searchUser:searchUser,
     getUserToEdit:getUserToEdit,
     updateUserInfo:updateUserInfo,
-    deleteUser:deleteUser
+    deleteUser:deleteUser,
+	getSearchUsersPage:getSearchUsersPage
 };

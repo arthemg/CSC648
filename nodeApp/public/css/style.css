@@ -3,3 +3,4 @@ ul.err-area li{color:red}
 .data-table{float:left;display:inline-block}
 .data-table table{border-collapse:collapse;border:1px solid #ddd;}
 .page-data{float:left;display:inline-block;}
+#map{width:500px;height:500px;background-color:gray;}

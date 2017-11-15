@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="./js/userScripts.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body id="divResults">
+
+<h1>Search for users here</h1>
+
+<p><a href="/">Back to home page</a></p>
+	
+<form method="post" action="" id="search_form">
+	<input type="text" placeholder="Search users" id="userSearch" name="search" onkeydown="searchUserEnter()">
+	<input type="button" value="Search" id="userSearchBtn" onClick="searchUser()">
+</form>
+	
+<div class="data-table">
+    <table border="1" cellpadding="7" cellspacing="7">
+        <tr>
+            <th width="50px">Key</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Action</th>
+        </tr>
+<% if(data.length){
+
+for(var i = 0;i < data.length;i++) { %>
+
+<tr>
+    <td><%=(i+1)%></td>
+    <td><%=data[i].name%></td>
+    <td><%=data[i].email%></td>
+    <td><%=data[i].password%></td>
+    <td>
+
+    </td>
+</tr>
+        <% }
+
+        }else{ %>
+        <tr>
+            <td colspan="5">No Data</td>
+        </tr>
+        <% } %>
+
+    </table>
+</div>
+
+</body>
+</html>

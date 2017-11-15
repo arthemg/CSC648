@@ -6,7 +6,6 @@ var express  = require('express'),
     users = require('./modules/users'),
     listings = require('./modules/listings');
 
-
 /*Set EJS template Engine*/
 app.set('views','./views');
 app.set('view engine','ejs');
@@ -37,10 +36,6 @@ app.get('/',function(req,res){
     res.render('index', {data:[]});
 });
 
-app.get('/search_listings',function(req,res){
-    res.render('search_listings', {data:[]});
-});
-
 
 //Get pages before router
 
@@ -63,18 +58,22 @@ router.use(function(req, res, next) {
 //USERS EXTERNAL MODULES
 app.get('/api/user', users.getAllUsers);
 app.post('/api/user', users.addNewUser);
+app.get('/search_users', users.getSearchUsersPage);
 app.post('/search/:user', users.searchUser);
 app.get('/api/user/:user_id', users.getUserToEdit);
 app.put('/api/user/:user_id', users.updateUserInfo);
 app.delete('/api/user/:user_id', users.deleteUser);
 
-//LISITNGS EXTERNAL MODULES
+//LISTINGS EXTERNAL MODULES
 app.get('/api/listings', listings.getAllListings);
-app.post('/api/listings', listings.addNewListing);
-app.post('/searchListings/:listing', listings.searchListing);
+app.get('/api/add_listing', listings.getAddListingPage);
+app.post('/api/add_listing', listings.addNewListing);
+app.post('/search_listings/:listing', listings.searchListing);
 app.get('/api/listings/:listing_id', listings.getListingToEdit);
 app.put('/api/listings/:listing_id', listings.updateListingInfo);
 app.delete('/api/listings/:listing_id', listings.deleteListing);
+app.get('/api/listing_description/:listing_id', listings.getDescription);
+
 
 //now we need to apply our router here
 app.use('/api', router);

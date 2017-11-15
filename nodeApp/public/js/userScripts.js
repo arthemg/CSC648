@@ -80,7 +80,7 @@ function searchUser(){
 
     $.ajax({
 
-        url:"/fa17g12/search/" + user,
+        url:"fa17g12/search/" + user,
         type:"post",
         data:$("#search_form").serialize(),
         success:function(res){
@@ -109,4 +109,13 @@ function searchUser(){
         }
 
     });
+}
+
+function searchUserEnter(){
+	$('#userSearch').keydown(function(e) {
+		if (e.keyCode === 13) {
+			e.preventDefault();
+			$('#userSearchBtn').click();
+		}
+	})
 }
