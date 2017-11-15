@@ -23,9 +23,9 @@ app.use(
 
     connection(mysql,{
         host     : 'localhost',
-        user     : 'fa17g12',
-        password : 'csc648fa17g12', //set password if there is one
-        database : 'fa17g12', //set DB name here
+        user     : 'root',
+        password : '4521', //set password if there is one
+        database : 'test', //set DB name here
         debug    : false //set true if you wanna see debug logger
     },'request')
 
@@ -33,7 +33,20 @@ app.use(
 
 //Get home page
 app.get('/',function(req,res){
-    res.render('index', {data:[]});
+	req.getConnection(function(err,conn){
+
+		if (err) return next("Cannot Connect");
+
+		var query = conn.query('SELECT * FROM listings ',function(err,rows){
+
+			if(err){
+				console.log(err);
+				return next("Mysql error, check your query");
+			}
+
+			res.render('index',{title:"Bay Real Estate",data:rows});
+		});
+	});
 });
 
 
