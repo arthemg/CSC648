@@ -25,8 +25,6 @@ var getAddListingPage = function(req,res) {
 };
 
 var addNewListing = function (req,res,next) {
-    // console.log(req.files,' Request');
-    console.log(req.body, "REQUEST");
     //validation
     req.assert('address','Address is required').notEmpty();
     req.assert('city','City is required').notEmpty();
@@ -44,10 +42,13 @@ var addNewListing = function (req,res,next) {
         return;
     }
 
-    fs.rename(req.file.path,req.file.path + ".jpg", function(err){
-        console.log(err, 'err');
+    fs.rename(req.file.path,req.file.path + ".jpg", function(err) {
+        if (err) {
+            console.log(err, 'err');
+        }
+
+
         var file = req.file;
-        //var img_address = req.file.path + ".jpg";
         var db_img_address = '../images/upload_images/'+ file.filename + '.jpg';
 
         //get data
@@ -59,10 +60,6 @@ var addNewListing = function (req,res,next) {
             image: db_img_address
         };
 
-        // file.mv(img_address, function (err) {
-        //     if(err){
-        //         return res.status(500).send(err);
-        //     }
 
         //inserting into mysql
         req.getConnection(function (err, conn) {
@@ -80,9 +77,8 @@ var addNewListing = function (req,res,next) {
             res.sendStatus(200);
 
         });
-    })
+    });
 
-    //});
 
 };
 
@@ -149,6 +145,7 @@ var updateListingInfo = function (req, res, next) {
     req.assert('zip_code', 'Enter a zip code of 5 numbers').len(5, 5);
 
     var errors = req.validationErrors();
+
     if (errors) {
         if (!req.files) {
             var error = {param: 'name', msg: "Please select file to upload!"};
@@ -159,9 +156,11 @@ var updateListingInfo = function (req, res, next) {
     }
 
     fs.rename(req.file.path, req.file.path + ".jpg", function (err) {
-        console.log(err, 'err');
+        if(err){
+            console.log(err, 'err');
+        }
+
         var file = req.file;
-        //var img_address = req.file.path + ".jpg";
         var db_img_address = '../images/upload_images/' + file.filename + '.jpg';
 
 
