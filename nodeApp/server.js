@@ -4,15 +4,21 @@ var express  = require('express'),
     app = express(),
     expressValidator = require('express-validator'),
     users = require('./modules/users'),
-    listings = require('./modules/listings');
+    listings = require('./modules/listings'),
+    fileUpload = require('express-fileupload'),
+    busboy = require("then-busboy"),
+    multer = require('multer'),
+    upload = multer({dest: "./public/images/upload_images"}),
+    fs = require('fs');
+
 
 /*Set EJS template Engine*/
 app.set('views','./views');
 app.set('view engine','ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.urlencoded({ extended: true })); //support x-www-form-urlencoded
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false })); //support x-www-form-urlencoded
+app.use(bodyParser.json({}));
 app.use(expressValidator());
 
 /*MySql connection*/
@@ -23,9 +29,12 @@ app.use(
 
     connection(mysql,{
         host     : 'localhost',
-        user     : 'fa17g12',
-        password : 'csc648fa17g12', //set password if there is one
-        database : 'fa17g12', //set DB name here
+        user     : 'root',
+        password : 'b795fk99sw', //set password if there is one
+        database : 'test', //set DB name here
+        // user     : 'fa17g12',
+        // password : 'csc648fa17g12', //set password if there is one
+        // database : 'fa17g12', //set DB name here
         debug    : false //set true if you wanna see debug logger
     },'request')
 
@@ -80,7 +89,16 @@ app.delete('/api/user/:user_id', users.deleteUser);
 //LISTINGS EXTERNAL MODULES
 app.get('/api/listings', listings.getAllListings);
 app.get('/api/add_listing', listings.getAddListingPage);
-app.post('/api/add_listing', listings.addNewListing);
+app.post('/api/add_listing', upload.single('photo'), listings.addNewListing);
+// app.post('/api/add_listing', upload.single('photo'), function(req,res, next){
+//     fs.rename(req.file.path,req.file.path + ".jpg", function(err){
+//         console.log(err, 'err');
+//     })
+//     console.log(req.file, 'FILE');
+//    console.log(req, "FULL REQUEST");
+//     console.log(req.body, "REQ BODY");
+//     console.log(req.files, "REQ FILES");
+// });
 app.post('/search_listings/:listing', listings.searchListing);
 app.get('/api/listings/:listing_id', listings.getListingToEdit);
 app.put('/api/listings/:listing_id', listings.updateListingInfo);

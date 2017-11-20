@@ -2,9 +2,9 @@
 <html>
     <head>
         <title>Add listing</title>
-        <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
-        <script type="text/javascript" src="./js/listingScripts.js"></script>
-        <link rel="stylesheet" href="./css/style.css">
+        <script type="text/javascript" src="./../js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="./../js/listingScripts.js"></script>
+        <link rel="stylesheet" href="./../css/style.css">
     </head>
 	
 <body>
@@ -13,22 +13,22 @@
 </div>
 <div class="page-data">
     
-    <form method="post" enctype="multipart/form-data" action="" id="the-form">
+    <form method="post" action="" id="the-form" enctype="multipart/form-data">
         <table cellpadding="11">
         <tr>
-            <td class="label">Address</td><td>: <input type="text" name="address"></td>
+            <td class="label">Address</td><td>: <input type="text" id="address" name="address"></td>
          </tr>
         <tr>
-            <td class="label">City</td><td>: <input type="text" name="city"></td>
+            <td class="label">City</td><td>: <input type="text" id="city" name="city"></td>
          </tr>
           <tr>
-            <td class="label">State</td><td>: <input type="text" name="state"></td>
+            <td class="label">State</td><td>: <input type="text" id="state" name="state"></td>
          </tr>          
 		 <tr>
-            <td class="label">Zip Code</td><td>: <input type="text" name="zip_code"></td>
+            <td class="label">Zip Code</td><td>: <input type="text" id="zip_code" name="zip_code"></td>
          </tr>		
 		 <tr>
-            <td class="label">Upload Image</td><td>: <input type="file" name="image_file" id="img"></td>
+            <input class="form-control" type="file" name="uploaded_image" accept=""></td>
          </tr>
 		 
          <tr>

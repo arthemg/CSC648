@@ -8,20 +8,23 @@
 
     </head>
 <body>
-<form method="post" action="" id="the-form">
+<form method="post" action="" id="the-form" enctype="multipart/form-data">
     <table cellpadding="11">
     <tr>
-        <td class="label">Address</td><td>: <input type="text" name="address" value="<%=data[0].address%>"></td>
+        <td class="label">Address</td><td>: <input type="text" name="address" id="address" value="<%=data[0].address%>"></td>
      </tr>
     <tr>
-        <td class="label">City</td><td>: <input type="text" name="city" value="<%=data[0].city%>"></td>
+        <td class="label">City</td><td>: <input type="text" name="city" id="city" value="<%=data[0].city%>"></td>
      </tr>
       <tr>
-        <td class="label">State</td><td>: <input type="text" name="state" value="<%=data[0].state%>"></td>
+        <td class="label">State</td><td>: <input type="text" name="state" id="state" value="<%=data[0].state%>"></td>
      </tr>      
 	 <tr>
-        <td class="label">Zip Code</td><td>: <input type="text" name="zip_code" value="<%=data[0].zip_code%>"></td>
+        <td class="label">Zip Code</td><td>: <input type="text" name="zip_code" id="zip_code" value="<%=data[0].zip_code%>"></td>
      </tr>
+        <tr>
+            <input class="form-control" type="file" name="uploaded_image" accept=""/>
+        </tr>
      <tr>
         <td class="label"></td>
         <td>

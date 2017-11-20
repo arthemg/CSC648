@@ -1,13 +1,41 @@
+function clearFields() {
+    $('#address').val('');
+    $('#city').val('');
+    $('#state').val('');
+    $('#zip_code').val('');
+    $('input[type=file]').val('');
+
+
+}
 function saveListing(){
-	
+
+    var formData = new FormData();
+    // console.log($('#address').val(), "ADDRESSSS");
+    formData.append('address', $('#address').val());
+    console.log(formData.get('address'), "FORMDATA AdD");
+    formData.append('city', $('#city').val());
+    console.log(formData.get('city'), "FORMDATA City");
+    formData.append('state', $('#state').val());
+    console.log(formData.get('state'), "FORMDATA state");
+    formData.append('zip_code', $('#zip_code').val());
+    console.log(formData.get('zip_code'), "FORMDATA zip");
+    formData.append('photo', $('input[type=file]')[0].files[0]);
+    console.log(formData.get('photo'), "FORMDATA PH");
+
+    // console.log(formData, 'FORM');
     $.ajax({
 
-        url:"/fa17g12/api/add_listing",
-        type:"post",
-        data:$("#the-form").serialize(),
+        // url:"/fa17g12/api/add_listing",
+        url:"/api/add_listing",
+        type:"POST",
+        data: formData,
+        contentType: false,
+        processData: false,
         success:function(res){
-		
+
             window.location.href = '/api/listings';
+            //window.location.reload;
+            clearFields();
             return false;
         },
         error:function(xhr, status, error){
@@ -48,7 +76,8 @@ function editListing(listing_id) {
 
     console.log(listing_id, 'arg');
     $.ajax({
-        url: "/fa17g12/api/listings/" + listing_id,
+        // url: "/fa17g12/api/listings/" + listing_id,
+        url: "/api/listings/" + listing_id,
         type: "put",
         data: $("#the-form").serialize(),
         success: function (res) {
@@ -78,7 +107,8 @@ function searchListing(){
 	
 	$.ajax({
 
-		url:"/fa17g12/search_listings/" + listing,
+		// url:"/fa17g12/search_listings/" + listing,
+        url:"search_listings/" + listing,
 		type:"post",
 		data:$("#search_form").serialize(),
 		success:function(res){

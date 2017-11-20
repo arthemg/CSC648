@@ -1,4 +1,5 @@
 var express = require('express');
+var fs = require('fs');
 
 var getAllListings = function (req,res,next) {
         req.getConnection(function(err,conn){
@@ -24,44 +25,64 @@ var getAddListingPage = function(req,res) {
 };
 
 var addNewListing = function (req,res,next) {
-
+    // console.log(req.files,' Request');
+    console.log(req.body, "REQUEST");
     //validation
     req.assert('address','Address is required').notEmpty();
     req.assert('city','City is required').notEmpty();
     req.assert('state','State is required').len(2,2);
     req.assert('zip_code','Enter a zip code of 5 numbers').len(5,5);
-	
+
     var errors = req.validationErrors();
+
     if(errors){
+        if(!req.files){
+            var error = {param: 'name', msg: "Please select file to upload!"};
+            errors.push(error);
+        }
         res.status(422).json(errors);
         return;
     }
 
-    //get data
-    var data = {
-        address:req.body.address,
-        city:req.body.city,
-        state:req.body.state,
-        zip_code:req.body.zip_code
-    };
-	
-    //inserting into mysql
-    req.getConnection(function (err, conn){
+    fs.rename(req.file.path,req.file.path + ".jpg", function(err){
+        console.log(err, 'err');
+        var file = req.file;
+        //var img_address = req.file.path + ".jpg";
+        var db_img_address = '../images/upload_images/'+ file.filename + '.jpg';
 
-        if (err) return next("Cannot Connect");
+        //get data
+        var data = {
+            address:req.body.address,
+            city:req.body.city,
+            state:req.body.state,
+            zip_code:req.body.zip_code,
+            image: db_img_address
+        };
 
-        var query = conn.query("INSERT INTO listings set ? ",data, function(err, rows){
+        // file.mv(img_address, function (err) {
+        //     if(err){
+        //         return res.status(500).send(err);
+        //     }
 
-            if(err){
-                console.log(err);
-                return next("Mysql error, check your query");
-            }
+        //inserting into mysql
+        req.getConnection(function (err, conn) {
+
+            if (err) return next("Cannot Connect");
+
+            var query = conn.query("INSERT INTO listings set ? ", data, function (err, rows) {
+
+                if (err) {
+                    console.log(err);
+                    return next("Mysql error, check your query");
+                }
+            });
 
             res.sendStatus(200);
 
         });
+    })
 
-    });
+    //});
 
 };
 
