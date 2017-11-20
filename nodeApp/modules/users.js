@@ -1,11 +1,12 @@
 var express = require('express');
+var dbConnection = require('../config/db');
 
 var getAllUsers = function (req, res, next) {
-    req.getConnection(function (err, conn) {
+    // req.getConnection(function (err, conn) {
+    //
+    //     if (err) return next("Cannot Connect");
 
-        if (err) return next("Cannot Connect");
-
-        var query = conn.query('SELECT * FROM t_user ', function (err, rows) {
+        var query = dbConnection.query('SELECT * FROM t_user ', function (err, rows) {
 
             if (err) {
                 console.log(err);
@@ -18,7 +19,7 @@ var getAllUsers = function (req, res, next) {
 
         });
 
-    });
+   // });
 
 };
 
@@ -45,12 +46,12 @@ var addNewUser = function (req, res, next)
     };
 
     //inserting into mysql
-    req.getConnection(function (err, conn)
-    {
+    // req.getConnection(function (err, conn)
+    // {
+    //
+    //     if (err) return next("Cannot Connect");
 
-        if (err) return next("Cannot Connect");
-
-        var query = conn.query("INSERT INTO t_user set ? ",data, function(err, rows)
+        var query = dbConnection.query("INSERT INTO t_user set ? ",data, function(err, rows)
         {
 
             if (err)
@@ -61,7 +62,7 @@ var addNewUser = function (req, res, next)
 
             res.sendStatus(200);
         });
-    });
+    //});
 };
 
 var getSearchUsersPage = function(req,res) {
@@ -74,12 +75,12 @@ var searchUser = function(req, res, next)
     console.log(user, 'user');
 
 
-    req.getConnection(function(err,conn)
-    {
+    // req.getConnection(function(err,conn)
+    // {
+    //
+    //     if (err) return next("Cannot Connect");
 
-        if (err) return next("Cannot Connect");
-
-        var query = conn.query("SELECT * FROM t_user WHERE name LIKE ? ", user[0] + user[1] + user[2] + "%", function(err,rows)
+        var query = dbConnection.query("SELECT * FROM t_user WHERE name LIKE ? ", user[0] + user[1] + user[2] + "%", function(err,rows)
         {
 
             if(err)
@@ -95,7 +96,7 @@ var searchUser = function(req, res, next)
             res.render('search_users',{data:rows});
         });
 
-    });
+    //});
 
 };
 
@@ -104,11 +105,11 @@ var getUserToEdit = function (req, res, next){
 
         var user_id = req.params.user_id;
 
-        req.getConnection(function(err,conn){
+        // req.getConnection(function(err,conn){
+        //
+        //     if (err) return next("Cannot Connect");
 
-            if (err) return next("Cannot Connect");
-
-            var query = conn.query("SELECT * FROM t_user WHERE user_id = ? ",[user_id],function(err,rows){
+            var query = dbConnection.query("SELECT * FROM t_user WHERE user_id = ? ",[user_id],function(err,rows){
 
                 if(err){
                     console.log(err);
@@ -122,7 +123,7 @@ var getUserToEdit = function (req, res, next){
                 res.render('edit_user',{title:"Edit user",data:rows});
             });
 
-        });
+        //});
 
 
 };
@@ -152,11 +153,11 @@ var updateUserInfo = function (req, res, next)
      };
 
     //inserting into mysql
-    req.getConnection(function (err, conn){
+    // req.getConnection(function (err, conn){
+    //
+    //     if (err) return next("Cannot Connect");
 
-        if (err) return next("Cannot Connect");
-
-        var query = conn.query("UPDATE t_user set ? WHERE user_id = ? ",[data,user_id], function(err, rows){
+        var query = dbConnection.query("UPDATE t_user set ? WHERE user_id = ? ",[data,user_id], function(err, rows){
 
            if(err){
                 console.log(err);
@@ -167,7 +168,7 @@ var updateUserInfo = function (req, res, next)
 
         });
 
-     });
+     //});
 
 };
 
@@ -175,11 +176,11 @@ var deleteUser = function (req, res, next) {
 
     var user_id = req.params.user_id;
 
-     req.getConnection(function (err, conn) {
+     // req.getConnection(function (err, conn) {
+     //
+     //    if (err) return next("Cannot Connect");
 
-        if (err) return next("Cannot Connect");
-
-        var query = conn.query("DELETE FROM t_user  WHERE user_id = ? ",[user_id], function(err, rows){
+        var query = dbConnection.query("DELETE FROM t_user  WHERE user_id = ? ",[user_id], function(err, rows){
 
              if(err){
                 console.log(err);
@@ -191,7 +192,7 @@ var deleteUser = function (req, res, next) {
         });
         //console.log(query.sql);
 
-     });
+     //});
 };
 
 

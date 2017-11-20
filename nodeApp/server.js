@@ -8,7 +8,8 @@ var express  = require('express'),
     multer = require('multer'),
     upload = multer({dest: "./public/images/upload_images"}),
     fs = require('fs'),
-    passport = require('passport');
+    passport = require('passport'),
+    db = require('./config/db');
 
 
 /*Set EJS template Engine*/
@@ -20,32 +21,32 @@ app.use(bodyParser.urlencoded({ extended: false })); //support x-www-form-urlenc
 app.use(bodyParser.json({}));
 app.use(expressValidator());
 
-/*MySql connection*/
-var connection  = require('express-myconnection'),
-    mysql = require('mysql');
-
-app.use(
-
-    connection(mysql,{
-        host     : 'localhost',
-        user     : 'root',
-        password : 'b795fk99sw', //set password if there is one
-        database : 'test', //set DB name here
-        // user     : 'fa17g12',
-        // password : 'csc648fa17g12', //set password if there is one
-        // database : 'fa17g12', //set DB name here
-        debug    : false //set true if you wanna see debug logger
-    },'request')
-
-);
+// /*MySql connection*/
+// var connection  = require('express-myconnection'),
+//     mysql = require('mysql');
+//
+// app.use(
+//
+//     connection(mysql,{
+//         host     : 'localhost',
+//         user     : 'root',
+//         password : 'b795fk99sw', //set password if there is one
+//         database : 'test', //set DB name here
+//         // user     : 'fa17g12',
+//         // password : 'csc648fa17g12', //set password if there is one
+//         // database : 'fa17g12', //set DB name here
+//         debug    : false //set true if you wanna see debug logger
+//     },'request')
+//
+// );
 
 //Get home page
 app.get('/',function(req,res){
-	req.getConnection(function(err,conn){
+	//req.getConnection(function(err,conn){
 
-		if (err) return next("Cannot Connect");
+		//if (err) return next("Cannot Connect");
 
-		var query = conn.query('SELECT * FROM listings ',function(err,rows){
+		var query = db.query('SELECT * FROM listings ',function(err,rows){
 
 			if(err){
 				console.log(err);
@@ -54,7 +55,7 @@ app.get('/',function(req,res){
 
 			res.render('index',{title:"Bay Real Estate",data:rows});
 		});
-	});
+	//});
 });
 
 app.get('/login', function(req, res){
@@ -97,7 +98,7 @@ app.delete('/api/user/:user_id', users.deleteUser);
 app.get('/api/listings', listings.getAllListings);
 app.get('/api/add_listing', listings.getAddListingPage);
 app.post('/api/add_listing', upload.single('photo'), listings.addNewListing);
-app.post('/fa17g12/search_listings/:listing', listings.searchListing);
+app.post('/search_listings/:listing', listings.searchListing);
 app.get('/api/listings/:listing_id', listings.getListingToEdit);
 app.put('/api/listings/:listing_id', upload.single('photo'), listings.updateListingInfo);
 app.delete('/api/listings/:listing_id', listings.deleteListing);

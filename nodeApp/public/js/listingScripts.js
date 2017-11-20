@@ -52,8 +52,8 @@ function saveListing(){
 function deleteListing(listing_id){
 
     $.ajax({
-        // url:"/fa17g12/api/listings/" + listing_id,
-        url:"/api/listings/" + listing_id,
+        url:"/fa17g12/api/listings/" + listing_id,
+        // url:"/api/listings/" + listing_id,
         type: 'DELETE',
         success: function(res) {
 
@@ -81,8 +81,8 @@ function editListing(listing_id) {
 
     console.log(listing_id, 'arg');
     $.ajax({
-        // url: "/fa17g12/api/listings/" + listing_id,
-        url: "/api/listings/" + listing_id,
+        url: "/fa17g12/api/listings/" + listing_id,
+        // url: "/api/listings/" + listing_id,
         type: "put",
         // data: $("#the-form").serialize(),
         data: formData,
@@ -158,8 +158,8 @@ function listingDescription(listing_id) {
 	
     console.log(listing_id, 'arg');
     $.ajax({
-        // url: "/fa17g12/api/listing_description/" + listing_id,
-        url: "/api/listing_description/" + listing_id,
+        url: "/fa17g12/api/listing_description/" + listing_id,
+        // url: "/api/listing_description/" + listing_id,
         type: "get",
         success: function (res) {
 
