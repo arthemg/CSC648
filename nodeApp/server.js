@@ -63,6 +63,11 @@ app.get('/login', function(req, res){
     res.render('login',{title:"Login Page", message:''});
 })
 
+app.get('/signup', function(req, res){
+    res.render('signup',{title:"SignUp Page", message:''});
+})
+
+
 //Get pages before router
 
 //RESTful route
