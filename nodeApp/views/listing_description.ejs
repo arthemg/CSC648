@@ -2,9 +2,9 @@
 <html>
     <head>
         <title><%=title%></title>
-        <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
-		<script type="text/javascript" src="./js/listingScripts.js"></script>
-        <link type="text/css" rel="stylesheet" href="./css/style.css">
+        <script type="text/javascript" src="./../../js/jquery-1.10.2.min.js"></script>
+        <link rel="stylesheet" href="./../../css/style.css">
+        <script type="text/javascript" src="./../../js/listingScripts.js"></script>
     </head>
 	
 <body>
@@ -36,7 +36,7 @@
     </table>
 </div>
 
-<img alt="Pic" src="/images/upload_images/<%=data[0].image%>.jpg" />
+<img alt="Pic" src="../<%=data[0].image%>" />
 
 <div class="page-data">
      <ul class="err-area"></ul>

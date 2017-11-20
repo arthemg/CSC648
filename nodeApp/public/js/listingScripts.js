@@ -10,17 +10,13 @@ function clearFields() {
 function saveListing(){
 
     var formData = new FormData();
-    // console.log($('#address').val(), "ADDRESSSS");
+
     formData.append('address', $('#address').val());
-    console.log(formData.get('address'), "FORMDATA AdD");
     formData.append('city', $('#city').val());
-    console.log(formData.get('city'), "FORMDATA City");
     formData.append('state', $('#state').val());
-    console.log(formData.get('state'), "FORMDATA state");
     formData.append('zip_code', $('#zip_code').val());
-    console.log(formData.get('zip_code'), "FORMDATA zip");
     formData.append('photo', $('input[type=file]')[0].files[0]);
-    console.log(formData.get('photo'), "FORMDATA PH");
+
 
     // console.log(formData, 'FORM');
     $.ajax({
@@ -56,7 +52,8 @@ function saveListing(){
 function deleteListing(listing_id){
 
     $.ajax({
-        url:"/fa17g12/api/listings/" + listing_id,
+        // url:"/fa17g12/api/listings/" + listing_id,
+        url:"/api/listings/" + listing_id,
         type: 'DELETE',
         success: function(res) {
 
@@ -74,12 +71,23 @@ function deleteListing(listing_id){
 
 function editListing(listing_id) {
 
+    var formData = new FormData();
+
+    formData.append('address', $('#address').val());
+    formData.append('city', $('#city').val());
+    formData.append('state', $('#state').val());
+    formData.append('zip_code', $('#zip_code').val());
+    formData.append('photo', $('input[type=file]')[0].files[0]);
+
     console.log(listing_id, 'arg');
     $.ajax({
         // url: "/fa17g12/api/listings/" + listing_id,
         url: "/api/listings/" + listing_id,
         type: "put",
-        data: $("#the-form").serialize(),
+        // data: $("#the-form").serialize(),
+        data: formData,
+        contentType: false,
+        processData: false,
         success: function (res) {
 
             window.location.href = '/api/listings';
@@ -107,8 +115,8 @@ function searchListing(){
 	
 	$.ajax({
 
-		// url:"/fa17g12/search_listings/" + listing,
-        url:"search_listings/" + listing,
+		url:"/fa17g12/search_listings/" + listing,
+        // url:"search_listings/" + listing,
 		type:"post",
 		data:$("#search_form").serialize(),
 		success:function(res){
@@ -150,7 +158,8 @@ function listingDescription(listing_id) {
 	
     console.log(listing_id, 'arg');
     $.ajax({
-        url: "/fa17g12/api/listing_description/" + listing_id,
+        // url: "/fa17g12/api/listing_description/" + listing_id,
+        url: "/api/listing_description/" + listing_id,
         type: "get",
         success: function (res) {
 

@@ -140,37 +140,49 @@ var getListingToEdit = function(req, res,next){
 };
 
 var updateListingInfo = function (req, res, next) {
-        var listing_id = req.params.listing_id;
+    var listing_id = req.params.listing_id;
 
-        //validation
-        req.assert('address','Address is required').notEmpty();
-        req.assert('city','City is required').notEmpty();
-        req.assert('state','State is required').notEmpty();
-        req.assert('zip_code','Enter a zip code of 5 numbers').len(5,5);
+    //validation
+    req.assert('address', 'Address is required').notEmpty();
+    req.assert('city', 'City is required').notEmpty();
+    req.assert('state', 'State is required').notEmpty();
+    req.assert('zip_code', 'Enter a zip code of 5 numbers').len(5, 5);
 
-        var errors = req.validationErrors();
-        if(errors){
-            res.status(422).json(errors);
-            return;
+    var errors = req.validationErrors();
+    if (errors) {
+        if (!req.files) {
+            var error = {param: 'name', msg: "Please select file to upload!"};
+            errors.push(error);
         }
+        res.status(422).json(errors);
+        return;
+    }
+
+    fs.rename(req.file.path, req.file.path + ".jpg", function (err) {
+        console.log(err, 'err');
+        var file = req.file;
+        //var img_address = req.file.path + ".jpg";
+        var db_img_address = '../images/upload_images/' + file.filename + '.jpg';
+
 
         //get data
         var data = {
-            address:req.body.address,
-            city:req.body.city,
-            state:req.body.state,
-            zip_code:req.body.zip_code
+            address: req.body.address,
+            city: req.body.city,
+            state: req.body.state,
+            zip_code: req.body.zip_code,
+            image: db_img_address
 
         };
 
         //inserting into mysql
-        req.getConnection(function (err, conn){
+        req.getConnection(function (err, conn) {
 
             if (err) return next("Cannot Connect");
 
-            var query = conn.query("UPDATE listings set ? WHERE listing_id = ? ",[data,listing_id], function(err, rows){
+            var query = conn.query("UPDATE listings set ? WHERE listing_id = ? ", [data, listing_id], function (err, rows) {
 
-                if(err){
+                if (err) {
                     console.log(err);
                     return next("Mysql error, check your query");
                 }
@@ -180,6 +192,7 @@ var updateListingInfo = function (req, res, next) {
             });
 
         });
+    });
 };
 
 var deleteListing = function(req,res,next){

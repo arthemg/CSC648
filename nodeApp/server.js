@@ -9,7 +9,8 @@ var express  = require('express'),
     busboy = require("then-busboy"),
     multer = require('multer'),
     upload = multer({dest: "./public/images/upload_images"}),
-    fs = require('fs');
+    fs = require('fs'),
+    passport = require('passport');
 
 
 /*Set EJS template Engine*/
@@ -58,6 +59,9 @@ app.get('/',function(req,res){
 	});
 });
 
+app.get('/login', function(req, res){
+    res.render('login',{title:"Login Page", message:''});
+})
 
 //Get pages before router
 
@@ -90,18 +94,9 @@ app.delete('/api/user/:user_id', users.deleteUser);
 app.get('/api/listings', listings.getAllListings);
 app.get('/api/add_listing', listings.getAddListingPage);
 app.post('/api/add_listing', upload.single('photo'), listings.addNewListing);
-// app.post('/api/add_listing', upload.single('photo'), function(req,res, next){
-//     fs.rename(req.file.path,req.file.path + ".jpg", function(err){
-//         console.log(err, 'err');
-//     })
-//     console.log(req.file, 'FILE');
-//    console.log(req, "FULL REQUEST");
-//     console.log(req.body, "REQ BODY");
-//     console.log(req.files, "REQ FILES");
-// });
-app.post('/search_listings/:listing', listings.searchListing);
+app.post('/fa17g12/search_listings/:listing', listings.searchListing);
 app.get('/api/listings/:listing_id', listings.getListingToEdit);
-app.put('/api/listings/:listing_id', listings.updateListingInfo);
+app.put('/api/listings/:listing_id', upload.single('photo'), listings.updateListingInfo);
 app.delete('/api/listings/:listing_id', listings.deleteListing);
 app.get('/api/listing_description/:listing_id', listings.getDescription);
 
