@@ -35,7 +35,7 @@ var addNewListing = function (req, res, next) {
     var errors = req.validationErrors();
 
     if (errors) {
-        if (!req.files) {
+        if (!req.file) {
             var error = {param: 'name', msg: "Please select file to upload!"};
             errors.push(error);
         }
@@ -147,7 +147,7 @@ var updateListingInfo = function (req, res, next) {
     var errors = req.validationErrors();
 
     if (errors) {
-        if (!req.files) {
+        if (!req.file) {
             var error = {param: 'name', msg: "Please select file to upload!"};
             errors.push(error);
         }

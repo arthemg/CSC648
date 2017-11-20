@@ -58,11 +58,11 @@ app.get('/',function(req,res){
 	//});
 });
 
-app.get('/login', function(req, res){
+app.get('/fa17g12/login', function(req, res){
     res.render('login',{title:"Login Page", message:''});
 })
 
-app.get('/signup', function(req, res){
+app.get('/fa17g12/signup', function(req, res){
     res.render('signup',{title:"SignUp Page", message:''});
 })
 
