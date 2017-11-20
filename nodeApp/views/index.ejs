@@ -26,8 +26,8 @@
 
         <p>Login or Register with:</p>
 
-        <a href="/login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a>
-        <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
+        <a href="/fa17g12/login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a>
+        <a href="/fa17g12/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
     </div>
 
     <form method="post" action="" id="search_form">
@@ -60,7 +60,7 @@
                 <td><%= data[i].city %></td>
                 <td><%= data[i].state %></td>
                 <td><%= data[i].zip_code %></td>
-                <td><a href="#" onClick="listingDescription(<%= data[i].listing_id %>)"><img src="<%= data[i].image %>">
+                <td><a href="#" onClick="listingDescription(<%= data[i].listing_id %>)"><img src="./public/<%= data[i].image %>">
                     </a></td>
 
                 <td>
