@@ -5,11 +5,15 @@
     <script type="text/javascript" src="./js/userScripts.js"></script>
     <script type="text/javascript" src="./js/listingScripts.js"></script>
     <link rel="stylesheet" href="./css/style.css">
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
-	<style>
-		body        { padding-top:80px; }
-	</style>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <!-- load bootstrap css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <!-- load fontawesome -->
+    <style>
+        body {
+            padding-top: 80px;
+        }
+    </style>
 </head>
 <body id="divResults">
 
@@ -17,60 +21,62 @@
 <h1>Welcome to the CSC648</h1>
 <div class="container">
 
-	<div class="jumbotron text-center">
-		<h1><span class="fa fa-lock"></span> Node Authentication</h1>
+    <div class="jumbotron text-center">
+        <h1><span class="fa fa-lock"></span> Node Authentication</h1>
 
-		<p>Login or Register with:</p>
+        <p>Login or Register with:</p>
 
-		<a href="/login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a>
-		<a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
-	</div>
+        <a href="/login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a>
+        <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
+    </div>
 
-<form method="post" action="" id="search_form">
-	<input type="text" placeholder="Search listings" id="listingSearch" name="search" onkeydown="searchListingEnter()">
-	<input type="button" value="Search" id="listingSearchBtn" onClick="searchListing()">
-	<p><a href="api/listings">All Listings</a></p>
-	<p><a href="search_users">User Search</a></p>
-	<p><a href="api/user">All Users</a></p>
-</form>
+    <form method="post" action="" id="search_form">
+        <input type="text" placeholder="Search listings" id="listingSearch" name="search"
+               onkeydown="searchListingEnter()">
+        <input type="button" value="Search" id="listingSearchBtn" onClick="searchListing()">
+        <p><a href="api/listings">All Listings</a></p>
+        <p><a href="search_users">User Search</a></p>
+        <p><a href="api/user">All Users</a></p>
+    </form>
 
-<div class="data-table">
-    <table border="1" cellpadding="7" cellspacing="7">
-        <tr>
-            <th width="50px">Key</th>
-            <th>Address</th>
-            <th>City</th>
-            <th>State</th>
-            <th>Zip Code</th>
-            <th>Image</th>
-            <th>Description</th>
-        </tr>
-		<% if(data.length){
+    <div class="data-table">
+        <table border="1" cellpadding="7" cellspacing="7">
+            <tr>
+                <th width="50px">Key</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip Code</th>
+                <th>Image</th>
+                <th>Description</th>
+            </tr>
+            <% if(data.length){
 
-		for(var i = 0;i < data.length;i++) { %>
+            for(var i = 0;i < data.length;i++) { %>
 
-		<tr>
-			<td><%=(i+1)%></td>
-			<td><%=data[i].address%></td>
-            <td><%=data[i].city%></td>
-            <td><%=data[i].state%></td>
-			<td><%=data[i].zip_code%></td>
-            <td><a href="#" onClick="listingDescription(<%=data[i].listing_id%>)"><img src="<%=data[i].image%>"> </a></td>
+            <tr>
+                <td><%= (i + 1) %></td>
+                <td><%= data[i].address %></td>
+                <td><%= data[i].city %></td>
+                <td><%= data[i].state %></td>
+                <td><%= data[i].zip_code %></td>
+                <td><a href="#" onClick="listingDescription(<%= data[i].listing_id %>)"><img src="<%= data[i].image %>">
+                    </a></td>
 
-			<td>
-			<input type="button" value="See More" onClick="listingDescription(<%=data[i].listing_id%>)">
-			</td>
-		</tr>
-				<% }
+                <td>
+                    <input type="button" value="See More" onClick="listingDescription(<%= data[i].listing_id %>)">
+                </td>
+            </tr>
+            <% }
 
-				}else{ %>
-				<tr>
-					<td colspan="6">No Data</td>
-				</tr>
-				<% } %>
+            }else{ %>
+            <tr>
+                <td colspan="6">No Data</td>
+            </tr>
+            <% } %>
 
-		</table>
-</div>
+        </table>
+    </div>
 </div>
 </body>
 </html>
