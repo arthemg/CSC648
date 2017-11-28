@@ -21,16 +21,16 @@ function saveListing(){
     //console.log(formData, 'FORM');
     $.ajax({
 
-        // url:"/fa17g12/api/add_listing",
-        url:"/api/add_listing",
+        url:"/fa17g12/api/add_listing",
+        // url:"/api/add_listing",
         type:"POST",
         data: formData,
         contentType: false,
         processData: false,
         success:function(res){
 
-            // window.location.href = '/fa17g12/api/listings';
-            window.location.href = '/api/listings';
+            window.location.href = '/fa17g12/api/listings';
+            // window.location.href = '/api/listings';
             //window.location.reload;
             clearFields();
             return false;
