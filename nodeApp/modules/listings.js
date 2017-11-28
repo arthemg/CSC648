@@ -90,10 +90,6 @@ var searchListing = function (req, res, next) {
 
     var listing = req.params.listing;
 
-    // req.getConnection(function (err, conn) {
-    //
-    //     if (err) return next("Cannot Connect");
-
         var query = dbConnection.query("SELECT * FROM listings WHERE city LIKE ? ", listing[0] + listing[1] + listing[2] + "%", function (err, rows) {
 
             if (err) {
