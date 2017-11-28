@@ -19,7 +19,7 @@ module.exports = function(app, passport) {
     });
 
     // process the login form
-    app.post('/login', passport.authenticate('local-login', {
+    app.post('/fa17g12/login', passport.authenticate('local-login', {
 
             successRedirect : '/profile', // redirect to the secure profile section
             failureRedirect : '/fa17g12/login', // redirect back to the signup page if there is an error
