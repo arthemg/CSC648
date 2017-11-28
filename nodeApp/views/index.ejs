@@ -18,15 +18,21 @@
 <body id="divResults">
 
 <h1>Welcome to the CSC648</h1>
+<% if (typeof isSeller !== 'undefined' && isSeller !== '0') { %>
+<p><a href="api/listings">All Listings</a></p>
+<% } %>
 <div class="container">
 
     <div class="jumbotron text-center">
         <h1><span class="fa fa-lock"></span> Node Authentication</h1>
 
         <p>Login or Register with:</p>
-
-        <a href="/fa17g12/login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a>
-        <a href="/fa17g12/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
+        <% if(login === false) { %>
+        <a href="/login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a>
+        <% } else { %>
+        <a href="/logout" class="btn btn-default"><span class="fa fa-user"></span> Local Logout</a>
+        <% } %>
+        <a href="api/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
     </div>
 
     <form method="post" action="" id="search_form">
@@ -36,6 +42,7 @@
         <p><a href="api/listings">All Listings</a></p>
         <p><a href="search_users">User Search</a></p>
         <p><a href="api/user">All Users</a></p>
+       <p><a href="api/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a></p>
     </form>
 
     <div class="data-table">

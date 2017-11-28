@@ -12,10 +12,13 @@
     <table border="1" cellpadding="7" cellspacing="7">
         <tr>
             <th width="50px">No</th>
-            <th>Name</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone</th>
             <th>Email</th>
             <th>Password</th>
-            <th>Action</th>
+            <th>Seller</th>
+            <th>License</th>
         </tr>
                        
         <% if(data.length){ 
@@ -25,8 +28,13 @@
         <tr>
             <td><%=(i+1)%></td>
             <td><%=data[i].name%></td>
+            <td><%=data[i].lname%></td>
+            <td><%=data[i].phone%></td>
             <td><%=data[i].email%></td>
             <td><%=data[i].password%></td>
+            <td><%=data[i].seller%></td>
+            <td><%=data[i].license%></td>
+
             <td>
                 <a class="a-inside edit" href="/fa17g12/api/user/<%=data[i].user_id%>">Edit</a>
                
