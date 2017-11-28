@@ -31,7 +31,8 @@ function addNewUser(){
 function deleteUser(user_id){
 
     $.ajax({
-        url:"/fa17g12/api/user/"+user_id,
+        // url:"/fa17g12/api/user/"+user_id,
+        url:"/api/user/"+user_id,
         type: 'DELETE',
         success: function(res) {
 
@@ -111,6 +112,79 @@ function searchUser(){
     });
 }
 
+function registerNewUser() {
+    var seller;
+    var license;
+
+    var form = {
+        first_name: '',
+        last_name:'',
+        phone: '',
+        email: '',
+        password: '',
+        seller: '',
+        license: ''
+    };
+
+
+    if($('#seller').is(":checked"))
+    {
+        seller = 1;
+        license = $('#license').val();
+    }
+    else
+    {
+        seller = 0;
+        license = "NULL";
+
+    }
+
+    form.first_name =  $('#fname').val();
+    form.last_name = $('#lname').val();
+    form.phone = $('#phone').val();
+    form.email = $('#email').val();
+    form.password = $('#password').val();
+    form.seller = seller;
+    form.license = license;
+    //
+    // form = {
+    //     first_name: $('#fname').val(),
+    //     last_name: $('#lname').val(),
+    //     phone: $('#phone').val(),
+    //     email: $('#email').val(),
+    //     password: $('#password').val(),
+    //     seller: seller,
+    //     license: license
+    // };
+
+    $.ajax({
+        url:"/api/signup",
+        type:"POST",
+        data: form,
+        success:function(res){
+
+            //window.location.reload();
+            window.location.href = '/';
+            //window.location.reload;
+            //clearFields();
+            return false;
+        },
+        error:function(xhr, status, error){
+
+            console.log(xhr.responseText);
+            var err = '';
+            $.each(JSON.parse(xhr.responseText) , function(i, item) {
+
+                err +='<li>'+item.msg+'</li>';
+            });
+            $(".err-area").html(err);
+            return false;
+        }
+
+    });
+};
+
+
 function searchUserEnter(){
 	$('#userSearch').keydown(function(e) {
 		if (e.keyCode === 13) {
@@ -119,3 +193,33 @@ function searchUserEnter(){
 		}
 	})
 }
+
+function userLogin(){
+    $.ajax({
+        url: "/login",
+        type: "POST",
+        data: $("#user_login").serialize(),
+
+        success: function (res) {
+
+            console.log(res, 'res123');
+            //window.location.reload();
+            window.location.href = '/';
+            //window.location.reload;
+            //clearFields();
+            return false;
+        },
+        error: function (xhr, status, error) {
+
+            console.log(xhr.responseText);
+            var err = '';
+            $.each(JSON.parse(xhr.responseText), function (i, item) {
+
+                err += '<li>' + item.msg + '</li>';
+            });
+            $(".err-area").html(err);
+            return false;
+        }
+    })
+
+};

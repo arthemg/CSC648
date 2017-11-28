@@ -3,11 +3,12 @@ var fs = require('fs');
 var dbConnection = require('../config/db');
 
 var getAllListings = function (req, res, next) {
+    var id = req.app.locals.user_id;
     // req.dbConnection(function (err, conn) {
     //
     //     if (err) return next("Cannot Connect");
 
-        var query = dbConnection.query('SELECT * FROM listings ', function (err, rows) {
+        var query = dbConnection.query('SELECT * FROM listings WHERE user_id = ?',[id], function (err, rows) {
 
             if (err) {
                 console.log(err);
@@ -26,6 +27,7 @@ var getAddListingPage = function (req, res) {
 };
 
 var addNewListing = function (req, res, next) {
+    console.log(req.app.locals, 'REQUEST APPP');
     //validation
     req.assert('address', 'Address is required').notEmpty();
     req.assert('city', 'City is required').notEmpty();
@@ -58,7 +60,8 @@ var addNewListing = function (req, res, next) {
             city: req.body.city,
             state: req.body.state,
             zip_code: req.body.zip_code,
-            image: db_img_address
+            image: db_img_address,
+            user_id: req.app.locals.user_id
         };
 
 

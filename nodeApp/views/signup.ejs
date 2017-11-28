@@ -1,11 +1,13 @@
 <!-- views/signup.ejs -->
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Node Authentication</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
-    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="./../js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="./../js/userScripts.js"></script>
+    <link rel="stylesheet" href="./../css/style.css">
     <style>
         body 		{ padding-top:80px; }
     </style>
@@ -13,7 +15,7 @@
 <body>
 <div class="container">
 
-    <div class="col-sm-6 col-sm-offset-3">
+    <div class="page-data">
 
         <h1><span class="fa fa-sign-in"></span> Signup</h1>
 
@@ -22,44 +24,49 @@
         <div class="alert alert-danger"><%= message %></div>
         <% } %>
 
-        <!-- LOGIN FORM -->
-        <form action="/signup" method="post">
+
+        <form method="post" action="" id="the-form">
             <div class="form-group">
                 <label>First Name</label>
-                <input type="text" class="form-control" name="fname">
+                <input type="text" id="fname" name="fname1">
             </div>
             <div class="form-group">
                 <label>Last Name</label>
-                <input type="text" class="form-control" name="lname">
+                <input type="text"  id="lname" name="lname1">
             </div>
             <div class="form-group">
                 <label>Phone Number</label>
-                <input type="text" class="form-control" name="email">
+                <input type="text"  id="phone" name="phone1">
             </div>
+
             <div class="form-group">
                 <label>Email</label>
-                <input type="text" class="form-control" name="email">
+                <input type="text"  id="email" name="email1">
             </div>
             <div class="form-group">
                 <label>Password</label>
-                <input type="password" class="form-control" name="password">
+                <input type="password" id="password" name="password1">
             </div>
-                <label>Are you RealEstate Agent or Private Seller?</label>
-                <input type="checkbox" class="form-control" name="chkname" id="seller">
 
-                <input type="text"placeholder="Please Enter your RealEstate Licence or Driver's License" class="form-control" name="license" id="license">
+        <label>Are you RealEstate Agent or Private Seller?</label>
+        <input type="checkbox"  name="seller1" id="seller">
 
+    <input type="text" placeholder="Please Enter your RealEstate Licence or Driver's License" class="form-control" name="license1" id="license">
 
-            <button type="submit" class="btn btn-warning btn-lg">Signup</button>
+            <input type="button" value="Submit" onclick="registerNewUser()">
         </form>
-
+    </div>
         <hr>
 
-        <p>Already have an account? <a href="/fa17g12/login">Login</a></p>
-        <p>Or go <a href="/fa17g12/">home</a>.</p>
+        <p>Already have an account? <a href="/login">Login</a></p>
+        <p>Or go <a href="/">home</a>.</p>
 
     </div>
 
 </div>
+<div class="page-data">
+    <ul class="err-area"></ul>
+</div>
+
 </body>
 </html>
