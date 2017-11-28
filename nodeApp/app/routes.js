@@ -12,7 +12,7 @@ module.exports = function(app, passport) {
     // LOGIN ===============================
     // =====================================
     // show the login form
-    app.get('/login', function(req, res) {
+    app.get('/fa17g12/login', function(req, res) {
 
         // render the page and pass in any flash data if it exists
         res.render('login.ejs', { message: req.flash('loginMessage') });
@@ -22,7 +22,7 @@ module.exports = function(app, passport) {
     app.post('/login', passport.authenticate('local-login', {
 
             successRedirect : '/profile', // redirect to the secure profile section
-            failureRedirect : '/login', // redirect back to the signup page if there is an error
+            failureRedirect : '/fa17g12/login', // redirect back to the signup page if there is an error
             failureFlash : true // allow flash messages
         }),
         function(req, res) {
@@ -34,7 +34,7 @@ module.exports = function(app, passport) {
                 req.session.cookie.expires = false;
             }
             console.log(res, "RESPONSE");
-            res.redirect('/');
+            res.redirect('/fa17g12/');
         });
 
     app.use(function (req, res, next) {
@@ -81,7 +81,7 @@ module.exports = function(app, passport) {
     // =====================================
     // LOGOUT ==============================
     // =====================================
-    app.get('/logout', function(req, res) {
+    app.get('/fa17g12/logout', function(req, res) {
         app.locals = {};
         req.logout();
         res.redirect('/');
@@ -96,5 +96,5 @@ function isLoggedIn(req, res, next) {
         return next();
 
     // if they aren't redirect them to the home page
-    res.redirect('/');
+    res.redirect('/fa17g12/');
 }

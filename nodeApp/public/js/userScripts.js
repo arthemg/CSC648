@@ -31,8 +31,8 @@ function addNewUser(){
 function deleteUser(user_id){
 
     $.ajax({
-        // url:"/fa17g12/api/user/"+user_id,
-        url:"/api/user/"+user_id,
+        url:"/fa17g12/api/user/"+user_id,
+        // url:"/api/user/"+user_id,
         type: 'DELETE',
         success: function(res) {
 
