@@ -12,17 +12,17 @@ module.exports = function(app, passport) {
     // LOGIN ===============================
     // =====================================
     // show the login form
-    app.get('/fa17g12/login', function(req, res) {
+    app.get('/api/login', function(req, res) {
 
         // render the page and pass in any flash data if it exists
-        res.render('login.ejs', { message: req.flash('loginMessage') });
+        res.render('login', { message: req.flash('loginMessage') });
     });
 
     // process the login form
-    app.post('/fa17g12/login', passport.authenticate('local-login', {
+    app.post('/api/login', passport.authenticate('local-login', {
 
-            successRedirect : '/profile', // redirect to the secure profile section
-            failureRedirect : '/fa17g12/login', // redirect back to the signup page if there is an error
+            successRedirect : '/fa17g12/api/profile', // redirect to the secure profile section
+            failureRedirect : '/api/login', // redirect back to the signup page if there is an error
             failureFlash : true // allow flash messages
         }),
         function(req, res) {
@@ -66,14 +66,14 @@ module.exports = function(app, passport) {
     // =====================================
     // we will want this protected so you have to be logged in to visit
     // we will use route middleware to verify this (the isLoggedIn function)
-    app.get('/profile', isLoggedIn, function(req, res) {
+    app.get('/api/profile', isLoggedIn, function(req, res) {
         console.log(req.user, "We got it REquset");
         console.log("WE GOT IT");
         app.locals = {
             isSeller: req.user.seller,
             user_id: req.user.user_id
         };
-        res.render('profile.ejs', {
+        res.render('profile', {
             user : req.user // get the user out of session and pass to template
         });
     });
@@ -81,10 +81,10 @@ module.exports = function(app, passport) {
     // =====================================
     // LOGOUT ==============================
     // =====================================
-    app.get('/fa17g12/logout', function(req, res) {
+    app.get('/api/logout', function(req, res) {
         app.locals = {};
         req.logout();
-        res.redirect('/');
+        res.redirect('/fa17g12/');
     });
 };
 
