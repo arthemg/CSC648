@@ -2,7 +2,8 @@ function addNewUser(){
 
     $.ajax({
 
-        url:"/fa17g12/api/user",
+        // url:"/fa17g12/api/user",
+        url:"/api/user",
         type:"post",
         data:$("#the-form").serialize(),
         success:function(res){
@@ -31,7 +32,8 @@ function addNewUser(){
 function deleteUser(user_id){
 
     $.ajax({
-        url:"/fa17g12/api/user/"+user_id,
+        // url:"/fa17g12/api/user/"+user_id,
+        url:"/api/user/"+user_id,
         // url:"/api/user/"+user_id,
         type: 'DELETE',
         success: function(res) {
@@ -52,12 +54,14 @@ function editUser(user_id) {
 
     console.log(user_id, 'arg');
     $.ajax({
-        url: "/fa17g12/api/user/" + user_id,
+        // url: "/fa17g12/api/user/" + user_id,
+        url: "/api/user/" + user_id,
         type: "put",
         data: $("#the-form").serialize(),
         success: function (res) {
 
-            window.location.href = '/fa17g12/api/user';
+            // window.location.href = '/fa17g12/api/user';
+            window.location.href = '/api/user';
             return false;
         },
         error: function (xhr, status, error) {
@@ -81,7 +85,8 @@ function searchUser(){
 
     $.ajax({
 
-        url:"fa17g12/search/" + user,
+        // url:"fa17g12/search/" + user,
+        url:"/search/" + user,
         type:"post",
         data:$("#search_form").serialize(),
         success:function(res){
@@ -158,13 +163,15 @@ function registerNewUser() {
     // };
 
     $.ajax({
-        url:"/fa17g12/api/signup",
+        // url:"/fa17g12/api/signup",
+        url:"/api/signup",
         type:"POST",
         data: form,
         success:function(res){
 
             //window.location.reload();
-            window.location.href = '/fa17g12/';
+            // window.location.href = '/fa17g12/';
+            window.location.href = '/';
             //window.location.reload;
             //clearFields();
             return false;
@@ -196,7 +203,8 @@ function searchUserEnter(){
 
 function userLogin(){
     $.ajax({
-        url: "/fa17g12/api/login",
+        // url: "/fa17g12/api/login",
+        url: "/api/login",
         type: "POST",
         data: $("#user_login").serialize(),
 
@@ -204,7 +212,8 @@ function userLogin(){
 
             console.log(res, 'res123');
             //window.location.reload();
-            window.location.href = '/fa17g12/';
+            // window.location.href = '/fa17g12/';
+            window.location.href = '/';
             //window.location.reload;
             //clearFields();
             return false;

@@ -20,8 +20,8 @@ module.exports = function(app, passport) {
 
     // process the login form
     app.post('/api/login', passport.authenticate('local-login', {
-
-            successRedirect : '/fa17g12/api/profile', // redirect to the secure profile section
+            // successRedirect : '/fa17g12/api/profile', // redirect to the secure profile section
+            successRedirect : '/api/profile', // redirect to the secure profile section
             failureRedirect : '/api/login', // redirect back to the signup page if there is an error
             failureFlash : true // allow flash messages
         }),
@@ -34,7 +34,8 @@ module.exports = function(app, passport) {
                 req.session.cookie.expires = false;
             }
             console.log(res, "RESPONSE");
-            res.redirect('/fa17g12/');
+            // res.redirect('/fa17g12/');
+            res.redirect('/');
         });
 
     app.use(function (req, res, next) {
@@ -84,7 +85,9 @@ module.exports = function(app, passport) {
     app.get('/api/logout', function(req, res) {
         app.locals = {};
         req.logout();
-        res.redirect('/fa17g12/');
+        // res.redirect('/fa17g12/');
+        res.redirect('/');
+
     });
 };
 
@@ -96,5 +99,6 @@ function isLoggedIn(req, res, next) {
         return next();
 
     // if they aren't redirect them to the home page
-    res.redirect('/fa17g12/');
+    // res.redirect('/fa17g12/');
+    res.redirect('/');
 }
