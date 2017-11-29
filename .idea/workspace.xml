@@ -1,243 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09005b32-482f-45b4-b172-b51a00c02a0b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/cookie-signature/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/cookie/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/crc/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/crc/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/crc/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/crc/lib/crc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/crc/lib/crc1.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/crc/lib/crc16.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/crc/lib/crc16_ccitt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/crc/lib/crc16_modbus.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/crc/lib/crc24.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/crc/lib/crc32.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/crc/lib/crc8.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/crc/lib/crc8_1wire.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/crc/lib/create.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/crc/lib/hex.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/crc/lib/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/crc/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/debug/.jshintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/debug/History.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/debug/browser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/debug/debug.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/escape-html/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/escape-html/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/escape-html/component.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/express/node_modules/depd/History.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/express/node_modules/depd/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/express/node_modules/depd/Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/express/node_modules/depd/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/express/node_modules/depd/lib/compat/buffer-concat.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/express/node_modules/depd/lib/compat/callsite-tostring.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/express/node_modules/depd/lib/compat/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/express/node_modules/depd/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/lodash.isboolean/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/lodash.isboolean/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/lodash.isboolean/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/lodash.isboolean/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/lodash.isempty/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/lodash.isempty/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/lodash.isempty/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/lodash.isempty/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/lodash.isplainobject/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/lodash.isplainobject/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/lodash.isplainobject/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/lodash.isplainobject/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/merge-descriptors/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/merge-descriptors/component.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/methods/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/methods/test/methods.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/mime/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/mime/types/mime.types" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/mime/types/node.types" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/ms/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/negotiator/lib/negotiator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/path-to-regexp/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/path-to-regexp/component.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/path-to-regexp/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/qs/.jshintignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/qs/.jshintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/qs/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/qs/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/qs/CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/qs/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/qs/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/send/node_modules/depd/History.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/send/node_modules/depd/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/send/node_modules/depd/Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/send/node_modules/depd/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/send/node_modules/depd/lib/compat/buffer-concat.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/send/node_modules/depd/lib/compat/callsite-tostring.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/send/node_modules/depd/lib/compat/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/send/node_modules/depd/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/shortid/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/shortid/Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/shortid/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/shortid/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/shortid/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/shortid/lib/alphabet.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/shortid/lib/decode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/shortid/lib/encode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/shortid/lib/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/shortid/lib/is-valid.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/shortid/lib/random/random-byte-browser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/shortid/lib/random/random-byte.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/shortid/lib/random/random-from-seed.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/shortid/lib/util/cluster-worker-id-browser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/shortid/lib/util/cluster-worker-id.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/shortid/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/node_modules/utils-merge/.travis.yml" afterPath="" />
+    <list default="true" id="8b715e37-8fd4-4c40-980e-6118081fee18" name="Default" comment="updata routes for front end">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/app/routes.js" afterPath="$PROJECT_DIR$/nodeApp/app/routes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/config/db.js" afterPath="$PROJECT_DIR$/nodeApp/config/db.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/modules/listings.js" afterPath="$PROJECT_DIR$/nodeApp/modules/listings.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/modules/users.js" afterPath="$PROJECT_DIR$/nodeApp/modules/users.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/accepts/HISTORY.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/accepts/HISTORY.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/accepts/LICENSE" afterPath="$PROJECT_DIR$/nodeApp/node_modules/accepts/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/accepts/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/accepts/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/accepts/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/accepts/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/accepts/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/accepts/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/cookie-signature/History.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/cookie-signature/History.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/cookie-signature/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/cookie-signature/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/cookie-signature/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/cookie-signature/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/cookie/LICENSE" afterPath="$PROJECT_DIR$/nodeApp/node_modules/cookie/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/cookie/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/cookie/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/cookie/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/cookie/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/cookie/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/cookie/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/debug/.npmignore" afterPath="$PROJECT_DIR$/nodeApp/node_modules/debug/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/debug/Makefile" afterPath="$PROJECT_DIR$/nodeApp/node_modules/debug/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/debug/Readme.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/debug/Readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/debug/component.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/debug/component.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/debug/node.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/debug/node.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/debug/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/debug/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/destroy/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/destroy/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/destroy/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/destroy/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/destroy/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/destroy/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/ee-first/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/ee-first/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/ee-first/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/ee-first/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/ee-first/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/ee-first/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/escape-html/Readme.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/escape-html/Readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/escape-html/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/escape-html/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/escape-html/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/escape-html/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/etag/HISTORY.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/etag/HISTORY.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/etag/LICENSE" afterPath="$PROJECT_DIR$/nodeApp/node_modules/etag/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/etag/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/etag/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/etag/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/etag/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/etag/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/etag/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/finalhandler/HISTORY.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/finalhandler/HISTORY.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/finalhandler/LICENSE" afterPath="$PROJECT_DIR$/nodeApp/node_modules/finalhandler/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/finalhandler/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/finalhandler/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/finalhandler/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/finalhandler/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/finalhandler/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/finalhandler/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/fresh/HISTORY.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/fresh/HISTORY.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/fresh/LICENSE" afterPath="$PROJECT_DIR$/nodeApp/node_modules/fresh/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/fresh/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/fresh/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/fresh/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/fresh/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/fresh/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/fresh/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/ipaddr.js/Cakefile" afterPath="$PROJECT_DIR$/nodeApp/node_modules/ipaddr.js/Cakefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/ipaddr.js/LICENSE" afterPath="$PROJECT_DIR$/nodeApp/node_modules/ipaddr.js/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/ipaddr.js/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/ipaddr.js/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/ipaddr.js/bower.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/ipaddr.js/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/ipaddr.js/ipaddr.min.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/ipaddr.js/ipaddr.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/ipaddr.js/lib/ipaddr.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/ipaddr.js/lib/ipaddr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/ipaddr.js/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/ipaddr.js/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/ipaddr.js/src/ipaddr.coffee" afterPath="$PROJECT_DIR$/nodeApp/node_modules/ipaddr.js/src/ipaddr.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/ipaddr.js/test/ipaddr.test.coffee" afterPath="$PROJECT_DIR$/nodeApp/node_modules/ipaddr.js/test/ipaddr.test.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/merge-descriptors/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/merge-descriptors/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/merge-descriptors/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/merge-descriptors/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/merge-descriptors/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/merge-descriptors/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/methods/History.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/methods/History.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/methods/LICENSE" afterPath="$PROJECT_DIR$/nodeApp/node_modules/methods/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/methods/Readme.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/methods/Readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/methods/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/methods/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/methods/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/methods/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/mime-db/HISTORY.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/mime-db/HISTORY.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/mime-db/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/mime-db/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/mime-db/db.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/mime-db/db.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/mime-db/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/mime-db/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/mime-types/HISTORY.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/mime-types/HISTORY.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/mime-types/LICENSE" afterPath="$PROJECT_DIR$/nodeApp/node_modules/mime-types/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/mime-types/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/mime-types/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/mime-types/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/mime-types/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/mime-types/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/mime-types/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/mime/LICENSE" afterPath="$PROJECT_DIR$/nodeApp/node_modules/mime/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/mime/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/mime/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/mime/mime.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/mime/mime.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/mime/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/mime/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/ms/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/ms/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/ms/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/ms/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/ms/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/ms/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/negotiator/LICENSE" afterPath="$PROJECT_DIR$/nodeApp/node_modules/negotiator/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/negotiator/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/negotiator/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/negotiator/lib/charset.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/negotiator/lib/charset.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/negotiator/lib/encoding.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/negotiator/lib/encoding.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/negotiator/lib/language.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/negotiator/lib/language.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/negotiator/lib/mediaType.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/negotiator/lib/mediaType.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/negotiator/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/negotiator/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/on-finished/HISTORY.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/on-finished/HISTORY.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/on-finished/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/on-finished/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/on-finished/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/on-finished/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/on-finished/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/on-finished/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/path-to-regexp/History.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/path-to-regexp/History.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/path-to-regexp/Readme.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/path-to-regexp/Readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/path-to-regexp/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/path-to-regexp/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/path-to-regexp/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/path-to-regexp/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/proxy-addr/HISTORY.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/proxy-addr/HISTORY.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/proxy-addr/LICENSE" afterPath="$PROJECT_DIR$/nodeApp/node_modules/proxy-addr/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/proxy-addr/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/proxy-addr/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/proxy-addr/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/proxy-addr/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/proxy-addr/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/proxy-addr/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/qs/CHANGELOG.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/qs/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/qs/LICENSE" afterPath="$PROJECT_DIR$/nodeApp/node_modules/qs/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/qs/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/qs/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/qs/lib/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/qs/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/qs/lib/parse.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/qs/lib/parse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/qs/lib/stringify.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/qs/lib/stringify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/qs/lib/utils.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/qs/lib/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/qs/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/qs/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/qs/test/parse.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/qs/test/parse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/qs/test/stringify.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/qs/test/stringify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/range-parser/HISTORY.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/range-parser/HISTORY.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/range-parser/LICENSE" afterPath="$PROJECT_DIR$/nodeApp/node_modules/range-parser/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/range-parser/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/range-parser/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/range-parser/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/range-parser/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/range-parser/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/range-parser/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/send/History.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/send/History.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/send/LICENSE" afterPath="$PROJECT_DIR$/nodeApp/node_modules/send/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/send/Readme.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/send/Readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/send/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/send/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/send/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/send/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/serve-static/HISTORY.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/serve-static/HISTORY.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/serve-static/LICENSE" afterPath="$PROJECT_DIR$/nodeApp/node_modules/serve-static/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/serve-static/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/serve-static/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/serve-static/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/serve-static/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/serve-static/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/serve-static/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/type-is/HISTORY.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/type-is/HISTORY.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/type-is/LICENSE" afterPath="$PROJECT_DIR$/nodeApp/node_modules/type-is/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/type-is/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/type-is/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/type-is/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/type-is/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/type-is/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/type-is/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/utils-merge/LICENSE" afterPath="$PROJECT_DIR$/nodeApp/node_modules/utils-merge/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/utils-merge/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/utils-merge/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/utils-merge/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/utils-merge/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/vary/HISTORY.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/vary/HISTORY.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/vary/LICENSE" afterPath="$PROJECT_DIR$/nodeApp/node_modules/vary/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/vary/README.md" afterPath="$PROJECT_DIR$/nodeApp/node_modules/vary/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/vary/index.js" afterPath="$PROJECT_DIR$/nodeApp/node_modules/vary/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/node_modules/vary/package.json" afterPath="$PROJECT_DIR$/nodeApp/node_modules/vary/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/package-lock.json" afterPath="$PROJECT_DIR$/nodeApp/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/package.json" afterPath="$PROJECT_DIR$/nodeApp/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/public/js/listingScripts.js" afterPath="$PROJECT_DIR$/nodeApp/public/js/listingScripts.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/public/js/userScripts.js" afterPath="$PROJECT_DIR$/nodeApp/public/js/userScripts.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/server.js" afterPath="$PROJECT_DIR$/nodeApp/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/views/all_listings.ejs" afterPath="$PROJECT_DIR$/nodeApp/views/all_listings.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/views/index.ejs" afterPath="$PROJECT_DIR$/nodeApp/views/index.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/views/login.ejs" afterPath="$PROJECT_DIR$/nodeApp/views/login.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/views/signup.ejs" afterPath="$PROJECT_DIR$/nodeApp/views/signup.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/views/user.ejs" afterPath="$PROJECT_DIR$/nodeApp/views/user.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -249,41 +21,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listingScripts.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nodeApp/public/js/listingScripts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2505">
+              <caret line="167" column="47" lean-forward="false" selection-start-line="167" selection-start-column="40" selection-end-line="167" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nodeApp/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1904">
-              <caret line="136" column="8" lean-forward="false" selection-start-line="136" selection-start-column="4" selection-end-line="136" selection-end-column="8" />
+            <state relative-caret-position="1095">
+              <caret line="73" column="5" lean-forward="false" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listings.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nodeApp/modules/listings.js">
+      <file leaf-file-name="userScripts.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nodeApp/public/js/userScripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nodeApp/views/index.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_listing.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nodeApp/views/add_listing.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="44" selection-end-column="31" />
+            <state relative-caret-position="3210">
+              <caret line="214" column="47" lean-forward="false" selection-start-line="214" selection-start-column="40" selection-end-line="214" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -292,58 +64,28 @@
       <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nodeApp/app/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="689">
-              <caret line="94" column="26" lean-forward="false" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
+            <state relative-caret-position="330">
+              <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nodeApp/config/db.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="request.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nodeApp/node_modules/passport/lib/http/request.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1148">
-              <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="passport.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="passport.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nodeApp/config/passport.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-23">
-              <caret line="104" column="26" lean-forward="false" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nodeApp/views/profile.ejs">
+      <file leaf-file-name="db.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nodeApp/config/db.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nodeApp/modules/users.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1316">
-              <caret line="94" column="47" lean-forward="false" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="47" />
+            <state relative-caret-position="270">
+              <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -353,23 +95,16 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>favicon.ico</find>
-      <find>sign</find>
-      <find>fav</find>
-      <find>console.</find>
-      <find>formDa</find>
-      <find>console</find>
-      <find>user1</find>
-      <find>user_id</find>
-      <find>express</find>
-      <find>ses</find>
+      <find>fa17g12</find>
     </findStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -379,26 +114,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/nodeApp/users.js" />
-        <option value="$PROJECT_DIR$/nodeApp/public/js/scripts.js" />
-        <option value="$PROJECT_DIR$/nodeApp/config/db.js" />
-        <option value="$PROJECT_DIR$/nodeApp/scripts/create_database.js" />
-        <option value="$PROJECT_DIR$/nodeApp/config/passportDBConfig.js" />
-        <option value="$PROJECT_DIR$/nodeApp/package.json" />
-        <option value="$PROJECT_DIR$/nodeApp/views/add_listing.ejs" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/nodeApp/public/js/listingScripts.js" />
-        <option value="$PROJECT_DIR$/nodeApp/views/user.ejs" />
-        <option value="$PROJECT_DIR$/nodeApp/views/signup.ejs" />
-        <option value="$PROJECT_DIR$/nodeApp/modules/users.js" />
-        <option value="$PROJECT_DIR$/nodeApp/config/passport.js" />
-        <option value="$PROJECT_DIR$/nodeApp/views/login.ejs" />
         <option value="$PROJECT_DIR$/nodeApp/public/js/userScripts.js" />
-        <option value="$PROJECT_DIR$/nodeApp/views/profile.ejs" />
-        <option value="$PROJECT_DIR$/nodeApp/views/index.ejs" />
-        <option value="$PROJECT_DIR$/nodeApp/server.js" />
-        <option value="$PROJECT_DIR$/nodeApp/views/all_listings.ejs" />
-        <option value="$PROJECT_DIR$/nodeApp/modules/listings.js" />
         <option value="$PROJECT_DIR$/nodeApp/app/routes.js" />
+        <option value="$PROJECT_DIR$/nodeApp/server.js" />
+        <option value="$PROJECT_DIR$/nodeApp/config/db.js" />
       </list>
     </option>
   </component>
@@ -408,15 +129,17 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="#JAVA_INTERNAL" />
+  </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/nodeApp/node_modules" />
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="32" />
     <option name="y" value="23" />
-    <option name="width" value="1648" />
-    <option name="height" value="1027" />
+    <option name="width" value="1280" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -433,57 +156,70 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="CSC648" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CSC648" type="462c0819:PsiDirectoryNode" />
+              <item name="csc648-fall17-team12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc648-fall17-team12" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="CSC648" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CSC648" type="462c0819:PsiDirectoryNode" />
+              <item name="csc648-fall17-team12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc648-fall17-team12" type="462c0819:PsiDirectoryNode" />
               <item name="nodeApp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="CSC648" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CSC648" type="462c0819:PsiDirectoryNode" />
+              <item name="csc648-fall17-team12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc648-fall17-team12" type="462c0819:PsiDirectoryNode" />
               <item name="nodeApp" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="CSC648" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CSC648" type="462c0819:PsiDirectoryNode" />
+              <item name="csc648-fall17-team12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc648-fall17-team12" type="462c0819:PsiDirectoryNode" />
               <item name="nodeApp" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="CSC648" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CSC648" type="462c0819:PsiDirectoryNode" />
+              <item name="csc648-fall17-team12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc648-fall17-team12" type="462c0819:PsiDirectoryNode" />
               <item name="nodeApp" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="CSC648" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CSC648" type="462c0819:PsiDirectoryNode" />
+              <item name="csc648-fall17-team12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc648-fall17-team12" type="462c0819:PsiDirectoryNode" />
               <item name="nodeApp" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="csc648-fall17-team12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc648-fall17-team12" type="462c0819:PsiDirectoryNode" />
+              <item name="nodeApp" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="csc648-fall17-team12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc648-fall17-team12" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="ignore_missing_gitignore" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -579,50 +315,44 @@
       <listeners />
     </configuration>
   </component>
-  <component name="SbtLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-  </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="09005b32-482f-45b4-b172-b51a00c02a0b" name="Default" comment="" />
-      <created>1508820034524</created>
+      <changelist id="8b715e37-8fd4-4c40-980e-6118081fee18" name="Default" comment="" />
+      <created>1511980898859</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1508820034524</updated>
-      <workItem from="1508820039025" duration="618000" />
-      <workItem from="1508823385565" duration="214000" />
-      <workItem from="1508889454038" duration="6402000" />
-      <workItem from="1509430948930" duration="355000" />
-      <workItem from="1511211786123" duration="53088000" />
-      <workItem from="1511839190137" duration="207000" />
+      <updated>1511980898859</updated>
+      <workItem from="1511980906979" duration="4876000" />
+      <workItem from="1511987562319" duration="269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60884000" />
+    <option name="totallyTimeSpent" value="5145000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="32" y="23" width="1648" height="1027" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="773" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32890856" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22317597" sideWeight="0.50364965" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40343347" sideWeight="0.49635038" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19026549" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2366127" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2536349" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -634,38 +364,9 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22317597" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21167883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -673,12 +374,16 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updata routes for front end" />
+    <option name="LAST_COMMIT_MESSAGE" value="updata routes for front end" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/search_listings.ejs">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -686,333 +391,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/node_modules/passport/lib/http/request.js">
+    <entry file="file://$PROJECT_DIR$/nodeApp/public/js/listingScripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1148">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        <state relative-caret-position="2505">
+          <caret line="167" column="47" lean-forward="false" selection-start-line="167" selection-start-column="40" selection-end-line="167" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/config/passport.js">
+    <entry file="file://$PROJECT_DIR$/nodeApp/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1456">
-          <caret line="104" column="26" lean-forward="true" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
+        <state relative-caret-position="1095">
+          <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/profile.ejs">
+    <entry file="file://$PROJECT_DIR$/nodeApp/public/js/userScripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/modules/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1316">
-          <caret line="94" column="47" lean-forward="false" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="47" />
+        <state relative-caret-position="3210">
+          <caret line="214" column="47" lean-forward="false" selection-start-line="214" selection-start-column="40" selection-end-line="214" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nodeApp/app/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1316">
-          <caret line="94" column="26" lean-forward="true" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
+        <state relative-caret-position="330">
+          <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1106">
-          <caret line="79" column="9" lean-forward="false" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/public/js/userScripts.js">
+    <entry file="file://$PROJECT_DIR$/nodeApp/config/passport.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/listings.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/search_listings.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/edit_listing.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/user.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/public/js/listingScripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1442">
-          <caret line="103" column="25" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="103" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/user.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/public/js/scripts.js" />
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/listings.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/edit_listing.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/users.js" />
-    <entry file="file://$PROJECT_DIR$/nodeApp/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/public/js/scripts.js" />
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/edit.ejs" />
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/edit_listing.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/users.js" />
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/listings.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/scripts/create_database.js" />
-    <entry file="file://$PROJECT_DIR$/nodeApp/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/search_users.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="32" column="4" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/signup.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/listings.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/edit_user.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/user.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="4" column="83" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/login.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="8" column="79" lean-forward="false" selection-start-line="8" selection-start-column="79" selection-end-line="8" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/public/js/listingScripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/public/js/userScripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2783">
-          <caret line="206" column="12" lean-forward="false" selection-start-line="206" selection-start-column="12" selection-end-line="206" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/all_listings.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="24" column="48" lean-forward="false" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/search_listings.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/add_listing.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="44" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1904">
-          <caret line="136" column="8" lean-forward="false" selection-start-line="136" selection-start-column="4" selection-end-line="136" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/modules/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1316">
-          <caret line="94" column="47" lean-forward="false" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/config/passportDBConfig.js" />
-    <entry file="file://$PROJECT_DIR$/nodeApp/modules/listings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/node_modules/passport/lib/http/request.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1148">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nodeApp/config/db.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        <state relative-caret-position="315">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodeApp/public/js/jquery-1.10.2.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodeApp/public/js/listingScripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2505">
+          <caret line="167" column="47" lean-forward="false" selection-start-line="167" selection-start-column="40" selection-end-line="167" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nodeApp/app/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="94" column="26" lean-forward="false" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
+        <state relative-caret-position="330">
+          <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/views/profile.ejs">
+    <entry file="file://$PROJECT_DIR$/nodeApp/public/js/userScripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        <state relative-caret-position="3210">
+          <caret line="214" column="47" lean-forward="false" selection-start-line="214" selection-start-column="40" selection-end-line="214" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nodeApp/config/passport.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="104" column="26" lean-forward="false" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodeApp/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" column="5" lean-forward="false" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodeApp/config/db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -1020,6 +508,17 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArquillianSettingsConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
