@@ -202,18 +202,18 @@ var getSignupForm = function(req, res){
 
 var registerUser = function (req, res, next)
 {
-    //console.log(req.body,"REQUEST");
+    console.log(req.body,"REQUEST");
 
     req.assert('first_name','First Name is required').notEmpty();
     req.assert('last_name','Last Name is required').notEmpty();
-    req.assert('phone','First Name is required', 'Should be numbers Only!').len(10, 20).isNumeric();
+    req.assert('phone','Phone Number must have atleast 10 digits!', 'Should be numbers Only!').len(10, 20).isNumeric();
     req.assert('email','Email is required').isEmail();
     req.assert('password', 'Password is required', 'Must be at least 6 characters long').len(6, 20).notEmpty();
 
     var errors = req.validationErrors();
 
     if(errors){
-        res.status(422).json(errors);
+        res.status(420).json(errors);
         return;
     }
 

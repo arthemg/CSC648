@@ -158,13 +158,13 @@ function registerNewUser() {
     // };
 
     $.ajax({
-        url:"/api/signup",
+        url:"/fa17g12/api/signup",
         type:"POST",
         data: form,
         success:function(res){
 
             //window.location.reload();
-            window.location.href = '/';
+            window.location.href = '/fa17g12/';
             //window.location.reload;
             //clearFields();
             return false;
@@ -196,7 +196,7 @@ function searchUserEnter(){
 
 function userLogin(){
     $.ajax({
-        url: "/login",
+        url: "/fa17g12/api/login",
         type: "POST",
         data: $("#user_login").serialize(),
 
@@ -204,7 +204,7 @@ function userLogin(){
 
             console.log(res, 'res123');
             //window.location.reload();
-            window.location.href = '/';
+            window.location.href = '/fa17g12/';
             //window.location.reload;
             //clearFields();
             return false;
