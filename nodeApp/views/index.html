@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="./js/userScripts.js"></script>
+    <script type="text/javascript" src="./js/listingScripts.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/3-col-portfolio.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.ejs">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">About</a>
+                </li>   
+                <li class="nav-item">
+                    <a class="btn btn-primary" style="padding: 10px 18px" href="./login.ejs">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary" style="padding: 10px 18px" href="./signup.ejs">Sign up</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    
+<!-- Page Content -->
+<div class="container">
+    <!-- Page Heading -->
+    <div class="my-4">Welcome to the CSC648
+        <center>
+            <form method="post" action="" id="search_form">
+                <input style="padding: 10px 18px; width: 60%" type="text" placeholder="Street Address, City, State, Zip" id="listingSearch" name="search" onkeydown="searchListingEnter()">
+                <input class="btn btn-primary" style="padding: 10px 18px;" type="button" value="Search" id="listingSearchBtn" onClick="searchListing()">
+            </form>
+        </center>
+    </div>
+    <!--
+    <% if(data.length){
+
+            for(var i = 0;i < data.length;i++) { %>
+
+            <tr>
+                <td><%= (i + 1) %></td>
+                <td><%= data[i].address %></td>
+                <td><%= data[i].city %></td>
+                <td><%= data[i].state %></td>
+                <td><%= data[i].zip_code %></td>
+                <td><a href="#" onClick="listingDescription(<%= data[i].listing_id %>)"><img src="./public/<%= data[i].image %>">
+                    </a></td>
+                <td>
+                    <input type="button" value="See More" onClick="listingDescription(<%= data[i].listing_id %>)">
+                </td>
+            </tr>
+            <% }
+
+            }else{ %>
+            <tr>
+                <td colspan="6">No Data</td>
+            </tr>
+            <% } %>
+-->
+    <% if(data.length){
+        for(var i = 0;i < data.length;i++) { %>
+            <tr>
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+                <td><a href="#" onClick="listingDescription(<%= data[i].listing_id %>)"><img class="card-img-top" src="./public/<%= data[i].image %>" alt="House image"></td>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="#">Project One</a>
+                    </h4>
+                    <p class="card-text">
+                        <label style="margin-right: 2px">Address:</label>
+                        <td><%= data[i].address %></td><br>
+                        <label style="margin-right: 31px">City:</label>    
+                        <td><%= data[i].city %></td><br>
+                        <label style="margin-right: 22px">State:</label>
+                        <td><%= data[i].state %></td><br>
+                        <label>ZipCode:</label>    
+                        <td><%= data[i].zip_code %></td><br>
+                    </p>
+                    <td><input type="button" value="See More" onClick="listingDescription(<%= data[i].listing_id %>)"></td>
+                </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project Two</a>
+              </h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt="House image" width="460" height="345"></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project Three</a>
+              </h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project Four</a>
+              </h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project Five</a>
+              </h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </tr>
+            <% }
+
+            }else{ %>
+            <tr>
+                <td colspan="6">No Data</td>
+            </tr>
+            <% } %>
+      <!-- /.row -->
+
+      <!-- Pagination
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+ -->
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+
+<html>
+<head>
+    
+</head>
+<body id="divResults">
+<h1>Welcome to the CSC648</h1>
+<% if (typeof isSeller !== 'undefined' && isSeller !== '0') { %>
+<p><a href="api/listings">All Listings</a></p>
+<% } %>
+<div class="container">
+
+    <div class="jumbotron text-center">
+        <h1><span class="fa fa-lock"></span> Node Authentication</h1>
+
+        <p>Login or Register with:</p>
+        <% if(login === false) { %>
+        <a href="api/login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a>
+        <% } else { %>
+        <a href="api/logout" class="btn btn-default"><span class="fa fa-user"></span> Local Logout</a>
+        <% } %>
+        <a href="api/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
+    </div>
+
+    <form method="post" action="" id="search_form">
+        <input type="text" placeholder="Search listings" id="listingSearch" name="search"
+               onkeydown="searchListingEnter()">
+        <input type="button" value="Search" id="listingSearchBtn" onClick="searchListing()">
+        <p><a href="api/listings">All Listings</a></p>
+        <p><a href="search_users">User Search</a></p>
+        <p><a href="api/user">All Users</a></p>
+       <!--<p><a href="api/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a></p>-->
+    </form>
+
+    <div class="data-table">
+        <table border="1" cellpadding="7" cellspacing="7">
+            <tr>
+                <th width="50px">Key</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip Code</th>
+                <th>Image</th>
+                <th>Description</th>
+            </tr>
+            <% if(data.length){
+
+            for(var i = 0;i < data.length;i++) { %>
+
+            <tr>
+                <td><%= (i + 1) %></td>
+                <td><%= data[i].address %></td>
+                <td><%= data[i].city %></td>
+                <td><%= data[i].state %></td>
+                <td><%= data[i].zip_code %></td>
+                <td><a href="#" onClick="listingDescription(<%= data[i].listing_id %>)"><img src="./public/<%= data[i].image %>">
+                    </a></td>
+                <td>
+                    <input type="button" value="See More" onClick="listingDescription(<%= data[i].listing_id %>)">
+                </td>
+            </tr>
+            <% }
+
+            }else{ %>
+            <tr>
+                <td colspan="6">No Data</td>
+            </tr>
+            <% } %>
+
+        </table>
+    </div>
+</div>
+</body>
+</html>

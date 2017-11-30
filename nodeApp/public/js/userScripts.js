@@ -1,7 +1,6 @@
 function addNewUser(){
 
     $.ajax({
-
         url:"/api/user",
         type:"post",
         data:$("#the-form").serialize(),
@@ -56,7 +55,6 @@ function editUser(user_id) {
         type: "put",
         data: $("#the-form").serialize(),
         success: function (res) {
-
             window.location.href = '/api/user';
             return false;
         },
@@ -81,7 +79,8 @@ function searchUser(){
 
     $.ajax({
 
-        url:"fa17g12/search/" + user,
+        // url:"fa17g12/search/" + user,
+        url:"/search/" + user,
         type:"post",
         data:$("#search_form").serialize(),
         success:function(res){
@@ -158,13 +157,15 @@ function registerNewUser() {
     // };
 
     $.ajax({
-        url:"/fa17g12/api/signup",
+        // url:"/fa17g12/api/signup",
+        url:"/api/signup",
         type:"POST",
         data: form,
         success:function(res){
 
             //window.location.reload();
-            window.location.href = '/fa17g12/';
+            // window.location.href = '/fa17g12/';
+            window.location.href = '/';
             //window.location.reload;
             //clearFields();
             return false;
@@ -196,7 +197,8 @@ function searchUserEnter(){
 
 function userLogin(){
     $.ajax({
-        url: "/fa17g12/api/login",
+        // url: "/fa17g12/api/login",
+        url: "/api/login",
         type: "POST",
         data: $("#user_login").serialize(),
 
@@ -204,7 +206,8 @@ function userLogin(){
 
             console.log(res, 'res123');
             //window.location.reload();
-            window.location.href = '/fa17g12/';
+            // window.location.href = '/fa17g12/';
+            window.location.href = '/';
             //window.location.reload;
             //clearFields();
             return false;
