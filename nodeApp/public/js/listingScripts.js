@@ -21,8 +21,8 @@ function saveListing(){
     //console.log(formData, 'FORM');
     $.ajax({
 
-        // url:"/fa17g12/api/add_listing",
         url:"/api/add_listing",
+        // url:"/api/add_listing",
         type:"POST",
         data: formData,
         contentType: false,
@@ -90,8 +90,6 @@ function editListing(listing_id) {
         contentType: false,
         processData: false,
         success: function (res) {
-
-            // window.location.href = '/fa17g12/api/listings';
             window.location.href = '/api/listings';
             return false;
         },
@@ -164,8 +162,6 @@ function listingDescription(listing_id) {
         url: "/api/listing_description/" + listing_id,
         type: "get",
         success: function (res) {
-
-            // window.location.href = '/fa17g12/api/listing_description/' + listing_id;
             window.location.href = '/api/listing_description/' + listing_id;
             return false;
         },
