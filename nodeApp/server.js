@@ -63,10 +63,10 @@ app.use(function (req,res, next) {
 //     connection(mysql,{
 //         host     : 'localhost',
 //         user     : 'root',
-//         password : 'b795fk99sw', //set password if there is one
+//         password : '5191', //set password if there is one
 //         database : 'test', //set DB name here
-//         // user     : 'fa17g12',
-//         // password : 'csc648fa17g12', //set password if there is one
+        // user     : 'fa17g12',
+        // password : 'csc648fa17g12', //set password if there is one
 //         // database : 'fa17g12', //set DB name here
 //         debug    : false //set true if you wanna see debug logger
 //     },'request')
@@ -145,7 +145,7 @@ app.get('/api/listing_description/:listing_id', listings.getDescription);
 app.use('/api', router);
 
 //start Server
-var server = app.listen(17012, function () {
+var server = app.listen(17010, function () {
 
     console.log("Listening to port %s", server.address().port);
 
