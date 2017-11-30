@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b715e37-8fd4-4c40-980e-6118081fee18" name="Default" comment="updata routes for front end">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeApp/public/css/blog-home.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeApp/views/vendor/bootstrap/css/bootstrap-grid.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeApp/views/vendor/bootstrap/css/bootstrap-grid.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeApp/views/vendor/bootstrap/css/bootstrap-reboot.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeApp/views/vendor/bootstrap/css/bootstrap-reboot.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeApp/views/vendor/bootstrap/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeApp/views/vendor/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeApp/views/vendor/bootstrap/js/bootstrap.bundle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeApp/views/vendor/bootstrap/js/bootstrap.bundle.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeApp/views/vendor/bootstrap/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeApp/views/vendor/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeApp/views/vendor/jquery/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeApp/views/vendor/jquery/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="8b715e37-8fd4-4c40-980e-6118081fee18" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/public/css/blog-home.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/views/vendor/bootstrap/css/bootstrap-grid.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/views/vendor/bootstrap/css/bootstrap-grid.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/views/vendor/bootstrap/css/bootstrap-reboot.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/views/vendor/bootstrap/css/bootstrap-reboot.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/views/vendor/bootstrap/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/views/vendor/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/views/vendor/bootstrap/js/bootstrap.bundle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/views/vendor/bootstrap/js/bootstrap.bundle.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/views/vendor/bootstrap/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/views/vendor/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/views/vendor/jquery/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/nodeApp/views/vendor/jquery/jquery.min.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodeApp/views/index.ejs" afterPath="$PROJECT_DIR$/nodeApp/views/index.ejs" />
     </list>
@@ -62,18 +61,8 @@
       <file leaf-file-name="index.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nodeApp/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blog-home.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nodeApp/public/css/blog-home.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="15">
+              <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -134,7 +123,9 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>fa17g12</find>
+      <find>min.css</find>
       <find>end</find>
+      <find>style</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -215,18 +206,6 @@
               <item name="csc648-fall17-team12" type="b2602c69:ProjectViewProjectNode" />
               <item name="csc648-fall17-team12" type="462c0819:PsiDirectoryNode" />
               <item name="nodeApp" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="csc648-fall17-team12" type="b2602c69:ProjectViewProjectNode" />
-              <item name="csc648-fall17-team12" type="462c0819:PsiDirectoryNode" />
-              <item name="nodeApp" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="csc648-fall17-team12" type="b2602c69:ProjectViewProjectNode" />
-              <item name="csc648-fall17-team12" type="462c0819:PsiDirectoryNode" />
-              <item name="nodeApp" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -262,6 +241,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/nodeApp/views" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/nodeApp/public/css" />
     </key>
@@ -379,7 +361,7 @@
       <workItem from="1511991348457" duration="1250000" />
       <workItem from="1511997723497" duration="2854000" />
       <workItem from="1512014778229" duration="30000" />
-      <workItem from="1512032995893" duration="543000" />
+      <workItem from="1512032995893" duration="5241000" />
     </task>
     <task id="LOCAL-00001" summary="updata routes for front end">
       <created>1511987837951</created>
@@ -388,11 +370,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511987837951</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update for the main page.">
+      <created>1512033705982</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1512033705982</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10175000" />
+    <option name="totallyTimeSpent" value="14873000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="0" />
@@ -434,7 +423,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updata routes for front end" />
-    <option name="LAST_COMMIT_MESSAGE" value="updata routes for front end" />
+    <MESSAGE value="update for the main page." />
+    <option name="LAST_COMMIT_MESSAGE" value="update for the main page." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -800,14 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nodeApp/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nodeApp/config/db.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -840,10 +822,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/nodeApp/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/nodeApp/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="39" />
+        <state relative-caret-position="15">
+          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
           <folding />
         </state>
       </provider>
