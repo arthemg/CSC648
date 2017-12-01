@@ -27,7 +27,6 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <% if(login === false) { %>
-<<<<<<< HEAD:nodeApp/views/index.ejs
                 <li class="nav-item">
                     <a class="btn btn-primary" style="padding: 8px 18px" href="api/login">Sign In</a>
                 </li>
@@ -37,17 +36,6 @@
                 </li>
                 <% } %>
                 <li class="nav-item">
-=======
-                    <li class="nav-item">
-                        <a class="btn btn-primary" style="padding: 8px 18px" href="api/login">Sign In</a>
-                    </li>
-                <% } else { %>
-                    <li class="nav-item">
-                    <a class="btn btn-primary" style="padding: 8px 18px" href="api/logout">Logout</a>
-                    </li>
-                <% } %>    
-                <li class="nav-item">
->>>>>>> 1013b50bf680a67aab89c03fdea3e6664bad0d57:nodeApp/views/index.ejs
                     <a class="btn btn-primary" style="padding: 8px 18px; margin-left: 10px;" href="api/signup">Sign up</a>
                 </li>
             </ul>
@@ -70,7 +58,6 @@
             </form>
         </center>
     </div>
-<<<<<<< HEAD:nodeApp/views/index.ejs
 
     <!--listing-->
     <% if(data.length){ %>
@@ -98,153 +85,7 @@
         </tr>
         <% } %>
     </div>
+</div>>
     <% }else{ %>
     <tr><td colspan="6">No Data</td></tr>
-    <% } %>
-
-=======
-    
-    <!--listing-->
-    <% if(data.length){ %>
-        <div class="row">
-            <% for(var i = 0;i < data.length;i++) { %>
-                <tr>
-                    <div class="col-lg-4 col-sm-6 portfolio-item" style="margin-bottom: 5px">
-                        <div class="card h-100">
-                            <td><a href="#" onClick="listingDescription(<%= data[i].listing_id %>)"><img class="card-img-top" src="./public/<%= data[i].image %>" alt="House image"></td>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    <label style="margin-right: 2px">Address:</label>
-                                    <td><%= data[i].address %></td><br>
-                                    <label style="margin-right: 31px">City:</label>    
-                                    <td><%= data[i].city %></td><br>
-                                    <label style="margin-right: 22px">State:</label>
-                                    <td><%= data[i].state %></td><br>
-                                    <label>ZipCode:</label>    
-                                    <td><%= data[i].zip_code %></td><br>
-                                </p>
-                                <td><input type="button" value="See More" onClick="listingDescription(<%= data[i].listing_id %>)"></td>
-                            </div>
-                        </div>
-                    </div>
-                </tr>
-            <% } %>
-        </div>
-    <% }else{ %>
-        <tr><td colspan="6">No Data</td></tr>
-    <% } %>
-        
->>>>>>> 1013b50bf680a67aab89c03fdea3e6664bad0d57:nodeApp/views/index.ejs
-    <!-- Pagination
-      <ul class="pagination justify-content-center">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-            <span class="sr-only">Previous</span>
-          </a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">1</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">2</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">3</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-            <span class="sr-only">Next</span>
-          </a>
-        </li>
-<<<<<<< HEAD:nodeApp/views/index.ejs
-      </ul>
-    -->
-</div>
-<!-- /.container -->
-=======
-      </ul>  
-    -->
-</div>
-<!-- /.container -->
-
->>>>>>> 1013b50bf680a67aab89c03fdea3e6664bad0d57:nodeApp/views/index.ejs
-<!-- Footer -->
-<div class="py-5 bg-dark" style="position: relative; left: 0; right: 0; bottom: 0">
-    <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
-    </div>
-    <!-- /.container -->
-</div>
-</body>
-</html>
-
-<!--
-<html>
-<body id="divResults">
-<div class="container">
-    <div class="jumbotron text-center">
-        <h1><span class="fa fa-lock"></span> Node Authentication</h1>
-        <p>Login or Register with:</p>
-        <% if(login === false) { %>
-        <a href="api/login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a>
-        <% } else { %>
-        <a href="api/logout" class="btn btn-default"><span class="fa fa-user"></span> Local Logout</a>
-        <% } %>
-        <a href="api/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
-    </div>
-    <form method="post" action="" id="search_form">
-        <input type="text" placeholder="Search listings" id="listingSearch" name="search"
-               onkeydown="searchListingEnter()">
-        <input type="button" value="Search" id="listingSearchBtn" onClick="searchListing()">
-        <p><a href="api/listings">All Listings</a></p>
-        <p><a href="search_users">User Search</a></p>
-        <p><a href="api/user">All Users</a></p>
-       <p><a href="api/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a></p>
-    </form>
-    <div class="data-table">
-        <table border="1" cellpadding="7" cellspacing="7">
-            <tr>
-                <th width="50px">Key</th>
-                <th>Address</th>
-                <th>City</th>
-                <th>State</th>
-                <th>Zip Code</th>
-                <th>Image</th>
-                <th>Description</th>
-            </tr>
-            <% if(data.length){
-<<<<<<< HEAD:nodeApp/views/index.ejs
-for(var i = 0;i < data.length;i++) { %>
-=======
-            for(var i = 0;i < data.length;i++) { %>
->>>>>>> 1013b50bf680a67aab89c03fdea3e6664bad0d57:nodeApp/views/index.ejs
-            <tr>
-                <td><%= (i + 1) %></td>
-                <td><%= data[i].address %></td>
-                <td><%= data[i].city %></td>
-                <td><%= data[i].state %></td>
-                <td><%= data[i].zip_code %></td>
-                <td><a href="#" onClick="listingDescription(<%= data[i].listing_id %>)"><img src="./public/<%= data[i].image %>">
-                    </a></td>
-                <td>
-                    <input type="button" value="See More" onClick="listingDescription(<%= data[i].listing_id %>)">
-                </td>
-            </tr>
-            <% }
-<<<<<<< HEAD:nodeApp/views/index.ejs
-}else{ %>
-=======
-            }else{ %>
->>>>>>> 1013b50bf680a67aab89c03fdea3e6664bad0d57:nodeApp/views/index.ejs
-            <tr>
-                <td colspan="6">No Data</td>
-            </tr>
-            <% } %>
-        </table>
-    </div>
-</div>
-</body>
-</html>
--->
+<% } %>
