@@ -27,6 +27,7 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <% if(login === false) { %>
+<<<<<<< HEAD:nodeApp/views/index.ejs
                 <li class="nav-item">
                     <a class="btn btn-primary" style="padding: 8px 18px" href="api/login">Sign In</a>
                 </li>
@@ -36,6 +37,17 @@
                 </li>
                 <% } %>
                 <li class="nav-item">
+=======
+                    <li class="nav-item">
+                        <a class="btn btn-primary" style="padding: 8px 18px" href="api/login">Sign In</a>
+                    </li>
+                <% } else { %>
+                    <li class="nav-item">
+                    <a class="btn btn-primary" style="padding: 8px 18px" href="api/logout">Logout</a>
+                    </li>
+                <% } %>    
+                <li class="nav-item">
+>>>>>>> 1013b50bf680a67aab89c03fdea3e6664bad0d57:nodeApp/views/index.ejs
                     <a class="btn btn-primary" style="padding: 8px 18px; margin-left: 10px;" href="api/signup">Sign up</a>
                 </li>
             </ul>
@@ -58,6 +70,7 @@
             </form>
         </center>
     </div>
+<<<<<<< HEAD:nodeApp/views/index.ejs
 
     <!--listing-->
     <% if(data.length){ %>
@@ -89,6 +102,39 @@
     <tr><td colspan="6">No Data</td></tr>
     <% } %>
 
+=======
+    
+    <!--listing-->
+    <% if(data.length){ %>
+        <div class="row">
+            <% for(var i = 0;i < data.length;i++) { %>
+                <tr>
+                    <div class="col-lg-4 col-sm-6 portfolio-item" style="margin-bottom: 5px">
+                        <div class="card h-100">
+                            <td><a href="#" onClick="listingDescription(<%= data[i].listing_id %>)"><img class="card-img-top" src="./public/<%= data[i].image %>" alt="House image"></td>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <label style="margin-right: 2px">Address:</label>
+                                    <td><%= data[i].address %></td><br>
+                                    <label style="margin-right: 31px">City:</label>    
+                                    <td><%= data[i].city %></td><br>
+                                    <label style="margin-right: 22px">State:</label>
+                                    <td><%= data[i].state %></td><br>
+                                    <label>ZipCode:</label>    
+                                    <td><%= data[i].zip_code %></td><br>
+                                </p>
+                                <td><input type="button" value="See More" onClick="listingDescription(<%= data[i].listing_id %>)"></td>
+                            </div>
+                        </div>
+                    </div>
+                </tr>
+            <% } %>
+        </div>
+    <% }else{ %>
+        <tr><td colspan="6">No Data</td></tr>
+    <% } %>
+        
+>>>>>>> 1013b50bf680a67aab89c03fdea3e6664bad0d57:nodeApp/views/index.ejs
     <!-- Pagination
       <ul class="pagination justify-content-center">
         <li class="page-item">
@@ -112,10 +158,18 @@
             <span class="sr-only">Next</span>
           </a>
         </li>
+<<<<<<< HEAD:nodeApp/views/index.ejs
       </ul>
     -->
 </div>
 <!-- /.container -->
+=======
+      </ul>  
+    -->
+</div>
+<!-- /.container -->
+
+>>>>>>> 1013b50bf680a67aab89c03fdea3e6664bad0d57:nodeApp/views/index.ejs
 <!-- Footer -->
 <div class="py-5 bg-dark" style="position: relative; left: 0; right: 0; bottom: 0">
     <div class="container">
@@ -161,7 +215,11 @@
                 <th>Description</th>
             </tr>
             <% if(data.length){
+<<<<<<< HEAD:nodeApp/views/index.ejs
 for(var i = 0;i < data.length;i++) { %>
+=======
+            for(var i = 0;i < data.length;i++) { %>
+>>>>>>> 1013b50bf680a67aab89c03fdea3e6664bad0d57:nodeApp/views/index.ejs
             <tr>
                 <td><%= (i + 1) %></td>
                 <td><%= data[i].address %></td>
@@ -175,7 +233,11 @@ for(var i = 0;i < data.length;i++) { %>
                 </td>
             </tr>
             <% }
+<<<<<<< HEAD:nodeApp/views/index.ejs
 }else{ %>
+=======
+            }else{ %>
+>>>>>>> 1013b50bf680a67aab89c03fdea3e6664bad0d57:nodeApp/views/index.ejs
             <tr>
                 <td colspan="6">No Data</td>
             </tr>
