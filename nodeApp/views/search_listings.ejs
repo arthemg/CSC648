@@ -11,44 +11,40 @@
 <h1>Search for listings here</h1>
 
 <p><a href="/">Back to user search</a></p>
-	
+
 <form method="post" action="" id="search_form">
-	<input type="text" placeholder="Search listings" id="listingSearch" name="search">
-	<input type="button" value="Search" onClick="searchListing()">
+    <input type="text" placeholder="Search listings" id="listingSearch" name="search">
+    <input type="button" value="Search" onClick="searchListing()">
 </form>
-	
-<div class="data-table">
-    <table border="1" cellpadding="7" cellspacing="7">
-        <tr>
-            <th width="50px">Key</th>
-            <th>Address</th>
-            <th>City</th>
-            <th>State</th>
-            <th>Zip Code</th>
-        </tr>
-<% if(data.length){
 
-for(var i = 0;i < data.length;i++) { %>
-
-<tr>
-    <td><%=(i+1)%></td>
-    <td><%=data[i].address%></td>
-    <td><%=data[i].city%></td>
-    <td><%=data[i].state%></td>
-    <td><%=data[i].zip_code%></td>
-
-    </td>
-</tr>
-        <% }
-
-        }else{ %>
-        <tr>
-            <td colspan="5">No Data</td>
-        </tr>
-        <% } %>
-
-    </table>
+<% if(data.length){ %>
+<div class="row">
+    <% for(var i = 0;i < data.length;i++) { %>
+    <tr>
+        <div class="col-lg-4 col-sm-6 portfolio-item" style="margin: 10px 10px;">
+            <div class="card h-100">
+                <td><a href="#" onClick="listingDescription(<%= data[i].listing_id %>)"><img class="card-img-top" src="./public/<%= data[i].image %>" alt="House image"></td>
+                <div class="card-body">
+                    <p class="card-text">
+                        <label style="margin-right: 2px">Address:</label>
+                    <td><%= data[i].address %></td><br>
+                    <label style="margin-right: 31px">City:</label>
+                    <td><%= data[i].city %></td><br>
+                    <label style="margin-right: 22px">State:</label>
+                    <td><%= data[i].state %></td><br>
+                    <label>ZipCode:</label>
+                    <td><%= data[i].zip_code %></td><br>
+                    </p>
+                    <td><input type="button" value="See More" onClick="listingDescription(<%= data[i].listing_id %>)"></td>
+                </div>
+            </div>
+        </div>
+    </tr>
+    <% } %>
 </div>
+<% }else{ %>
+<tr><td colspan="6">No Data</td></tr>
+<% } %>
 
 </body>
 </html>
