@@ -1,4 +1,4 @@
-body{background:#fff;width:100%}
+ody{background:#fff;width:100%}
 ul.err-area li{color:red}
 .data-table{float:left;display:inline-block}
 .data-table table{border-collapse:collapse;border:1px solid #ddd;}
@@ -11,4 +11,22 @@ ul.err-area li{color:red}
 }
 #seller:checked ~ #license {
     display:block;
+}
+
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.pagination {
+  margin-bottom: 30px;
 }
