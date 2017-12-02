@@ -21,16 +21,16 @@ function saveListing(){
     //console.log(formData, 'FORM');
     $.ajax({
 
-        url:"/api/add_listing",
-        // url:"/api/add_listing",
+
+        url:"fa17g12/api/add_listing",
         type:"POST",
         data: formData,
         contentType: false,
         processData: false,
         success:function(res){
 
-            // window.location.href = '/fa17g12/api/listings';
-            window.location.href = '/api/listings';
+            window.location.href = '/fa17g12/api/listings';
+            // window.location.href = '/api/listings';
             //window.location.reload;
             clearFields();
             return false;
@@ -53,8 +53,8 @@ function saveListing(){
 function deleteListing(listing_id){
 
     $.ajax({
-        // url:"/fa17g12/api/listings/" + listing_id,
-        url:"/api/listings/" + listing_id,
+        url:"/fa17g12/api/listings/" + listing_id,
+        // url:"/api/listings/" + listing_id,
         type: 'DELETE',
         success: function(res) {
 
@@ -82,15 +82,15 @@ function editListing(listing_id) {
 
     console.log(listing_id, 'arg');
     $.ajax({
-        // url: "/fa17g12/api/listings/" + listing_id,
-        url: "/api/listings/" + listing_id,
+        url: "/fa17g12/api/listings/" + listing_id,
+        // url: "/api/listings/" + listing_id,
         type: "put",
         // data: $("#the-form").serialize(),
         data: formData,
         contentType: false,
         processData: false,
         success: function (res) {
-            window.location.href = '/api/listings';
+            window.location.href = 'fa17g12/api/listings';
             return false;
         },
         error: function (xhr, status, error) {
@@ -158,11 +158,11 @@ function listingDescription(listing_id) {
 	
     console.log(listing_id, 'arg');
     $.ajax({
-        // url: "/fa17g12/api/listing_description/" + listing_id,
-        url: "/api/listing_description/" + listing_id,
+        url: "/fa17g12/api/listing_description/" + listing_id,
+        // url: "/api/listing_description/" + listing_id,
         type: "get",
         success: function (res) {
-            window.location.href = '/api/listing_description/' + listing_id;
+            window.location.href = 'fa17g12/api/listing_description/' + listing_id;
             return false;
         },
         error: function (xhr, status, error) {
