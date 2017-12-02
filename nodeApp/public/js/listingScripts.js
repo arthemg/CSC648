@@ -21,8 +21,8 @@ function saveListing(){
     //console.log(formData, 'FORM');
     $.ajax({
 
-        url:"/fa17g12/api/add_listing",
-        // url:"/api/add_listing",
+
+        url:"fa17g12/api/add_listing",
         type:"POST",
         data: formData,
         contentType: false,
@@ -90,8 +90,7 @@ function editListing(listing_id) {
         contentType: false,
         processData: false,
         success: function (res) {
-
-            window.location.href = '/fa17g12/api/listings';
+            window.location.href = 'fa17g12/api/listings';
             return false;
         },
         error: function (xhr, status, error) {
@@ -116,8 +115,8 @@ function searchListing(){
 	
 	$.ajax({
 
-		url:"/fa17g12/search_listings/" + listing,
-        // url:"search_listings/" + listing,
+		// url:"/fa17g12/search_listings/" + listing,
+        url:"search_listings/" + listing,
 		type:"post",
 		data:$("#search_form").serialize(),
 		success:function(res){
@@ -163,8 +162,7 @@ function listingDescription(listing_id) {
         // url: "/api/listing_description/" + listing_id,
         type: "get",
         success: function (res) {
-
-            window.location.href = '/fa17g12/api/listing_description/' + listing_id;
+            window.location.href = 'fa17g12/api/listing_description/' + listing_id;
             return false;
         },
         error: function (xhr, status, error) {
