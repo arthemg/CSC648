@@ -162,7 +162,7 @@ function listingDescription(listing_id) {
         // url: "/api/listing_description/" + listing_id,
         type: "get",
         success: function (res) {
-            window.location.href = 'fa17g12/api/listing_description/' + listing_id;
+            window.location.href = '/fa17g12/api/listing_description/' + listing_id;
             return false;
         },
         error: function (xhr, status, error) {
