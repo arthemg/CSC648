@@ -145,7 +145,7 @@ app.get('/api/listing_description/:listing_id', listings.getDescription);
 app.use('/api', router);
 
 //start Server
-var server = app.listen(17010, function () {
+var server = app.listen(17012, function () {
 
     console.log("Listening to port %s", server.address().port);
 
