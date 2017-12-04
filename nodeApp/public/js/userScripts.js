@@ -1,7 +1,7 @@
 function addNewUser(){
 
     $.ajax({
-        url:"/api/user",
+        url:"/fa17g12/api/user",
         type:"post",
         data:$("#the-form").serialize(),
         success:function(res){
@@ -30,7 +30,7 @@ function addNewUser(){
 function deleteUser(user_id){
 
     $.ajax({
-        url:"/api/user/"+user_id,
+        url:"/fa17g12/api/user/"+user_id,
         // url:"/api/user/"+user_id,
         type: 'DELETE',
         success: function(res) {
@@ -51,11 +51,11 @@ function editUser(user_id) {
 
     console.log(user_id, 'arg');
     $.ajax({
-        url: "/api/user/" + user_id,
+        url: "/fa17g12/api/user/" + user_id,
         type: "put",
         data: $("#the-form").serialize(),
         success: function (res) {
-            window.location.href = '/api/user';
+            window.location.href = '/fa17g12/api/user';
             return false;
         },
         error: function (xhr, status, error) {
@@ -79,7 +79,7 @@ function searchUser(){
 
     $.ajax({
 
-        url:"fa17g12/search/" + user,
+        url:"/fa17g12/search/" + user,
         // url:"/search/" + user,
         type:"post",
         data:$("#search_form").serialize(),
