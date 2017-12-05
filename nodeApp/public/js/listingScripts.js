@@ -163,10 +163,6 @@ function listingDescription(listing_id) {
         // url: "/api/listing_description/" + listing_id,
         type: "get",
         success: function (res) {
-<<<<<<< HEAD
-
-=======
->>>>>>> b1226c5e7938954123b6261e2a51c1a63b6a12c0
             window.location.href = '/fa17g12/api/listing_description/' + listing_id;
             return false;
         },
