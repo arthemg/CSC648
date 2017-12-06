@@ -112,50 +112,67 @@ function editListing(listing_id) {
 function searchListing(){
 
     var listing = $('#listingSearch').val();
-    console.log(listing);
 
-    $.ajax({
+	//this checks for empty search
+	if (listing){
+		
+		console.log(listing);
+		sessionStorage.searchString = listing;
+	
+		$.ajax({
 
-        url:"/fa17g12/search_listings/" + listing,
-        // url:"search_listings/" + listing,
-        type:"post",
-        data:$("#search_form").serialize(),
-        success:function(res){
+			url:"/fa17g12/search_listings/" + listing,
+			// url:"search_listings/" + listing,
+			type:"post",
+			data:$("#search_form").serialize(),
+			success:function(res){
 
-            console.log(res, 'response');
+				console.log(res, 'response');
 
 
-            var html = res;
-            $('#divResults').html(html);
-            //window.location.reload();
+				var html = res;
+				$('#divResults').html(html);
+				//window.location.reload();
 
-            return false;
-        },
-        error:function(xhr, status, error){
+				return false;
+			},
+			error:function(xhr, status, error){
 
-            console.log(error);
-            console.log(xhr.responseText);
-            var err = '';
-            $.each(JSON.parse(xhr.responseText) , function(i, item) {
+				console.log(error);
+				console.log(xhr.responseText);
+				var err = '';
+				$.each(JSON.parse(xhr.responseText) , function(i, item) {
 
-                err +='<li>'+item.msg+'</li>';
-            });
-            $(".err-area").html(err);
-            return false;
-        }
-    });
+					err +='<li>'+item.msg+'</li>';
+				});
+				$(".err-area").html(err);
+				return false;
+			}
+		});
+	}
+	else{
+		error = "Please enter a query.";
+        document.getElementById("err-area").innerHTML = error;
+		console.log('something');
+		return false;
+	}
 }
 
-function searchListingEnter(){
-    $('#listingSearch').keydown(function(e) {
-        if (e.keyCode === 13) {
-            e.preventDefault();
-            $('#listingSearchBtn').click();
-        }
-    })
+function searchListingEnter(e){
+		e = e || window.event;
+		if (e.keyCode === 13) {
+			// e.preventDefault();
+			$("#listingSearchBtn").click();
+			return false;
+		}
+		else {
+			return true;
+		}
 }
 
 function listingDescription(listing_id) {
+
+	sessionStorage.returnString = $('#listingSearch').val();
 
     console.log(listing_id, 'arg');
     $.ajax({
@@ -207,5 +224,66 @@ function initMap(address) {
         } else {
             alert('Geocode was not successful for the following reason: ' + status);
         }
+    });
+}
+
+function getSearchString() {
+	
+	var search = sessionStorage.searchString;
+	var backToSearchWord = sessionStorage.returnString;
+	
+	if (search != "" && search != null){
+		
+			document.getElementById("listingSearch").value = search;
+			sessionStorage.removeItem("searchString");
+	}
+	else if (backToSearchWord != "" && backToSearchWord != null){
+		
+		if(sessionStorage.clicked == "1"){
+			document.getElementById("listingSearch").value = backToSearchWord;
+			sessionStorage.removeItem("returnString");
+			sessionStorage.removeItem("clicked");
+		}
+		else{
+			sessionStorage.removeItem("returnString");
+			sessionStorage.removeItem("clicked");
+		}
+	}
+	else{
+		return false;
+	}
+	
+}
+
+function backToSearch(){
+	
+	if (sessionStorage.returnString == ""){
+		return false;
+	}
+	
+	var requery = sessionStorage.returnString;
+	sessionStorage.clicked = "1";
+	
+    console.log(requery, 'arg');
+    $.ajax({
+        url: "/fa17g12/",
+        type: "get",
+        success: function (res) {
+
+            window.location.href = '/fa17g12/returnSearch/' + requery;
+            return false;
+        },
+        error: function (xhr, status, error) {
+
+            console.log(xhr.responseText);
+            var err = '';
+            $.each(JSON.parse(xhr.responseText), function (i, item) {
+
+                err += '<li>' + item.msg + '</li>';
+            });
+            $(".err-area").html(err);
+            return false;
+        }
+
     });
 }

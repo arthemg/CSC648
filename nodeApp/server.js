@@ -53,32 +53,11 @@ app.use(function (req,res, next) {
 
 })
 
-
-// /*MySql connection*/
-// var connection  = require('express-myconnection'),
-//     mysql = require('mysql');
-//
-// app.use(
-//
-//     connection(mysql,{
-//         host     : 'localhost',
-//         user     : 'root',
-//         password : '5191', //set password if there is one
-//         database : 'test', //set DB name here
-        // user     : 'fa17g12',
-        // password : 'csc648fa17g12', //set password if there is one
-//         // database : 'fa17g12', //set DB name here
-//         debug    : false //set true if you wanna see debug logger
-//     },'request')
-//
-// );
-
 //Get home page
 app.get('/', function (req, res) {
-    //req.getConnection(function(err,conn){
-
-    //if (err) return next("Cannot Connect");
-
+	
+	var returning = false;
+	
     var query = db.query('SELECT * FROM listings ', function (err, rows) {
 
         if (err) {
@@ -86,19 +65,9 @@ app.get('/', function (req, res) {
             return next("Mysql error, check your query");
         }
 
-        res.render('index', {title: "Bay Real Estate", data: rows});
+        res.render('index', {title: "Bay Real Estate", data: rows, returning: returning});
     });
-    //});
 });
-
-// app.get('/login', function(req, res){
-//     res.render('login',{title:"Login Page", message:''});
-// })
-
-// app.get('/api/signup', function(req, res){
-//     res.render('signup',{title:"SignUp Page", message:''});
-// })
-
 
 //Get pages before router
 
@@ -139,6 +108,7 @@ app.get('/api/listings/:listing_id', listings.getListingToEdit);
 app.put('/api/listings/:listing_id', upload.single('photo'), listings.updateListingInfo);
 app.delete('/api/listings/:listing_id', listings.deleteListing);
 app.get('/api/listing_description/:listing_id', listings.getDescription);
+app.get('/returnSearch/:requery', listings.returnToSearch);
 
 
 //now we need to apply our router here
