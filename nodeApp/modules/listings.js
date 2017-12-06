@@ -4,22 +4,17 @@ var dbConnection = require('../config/db');
 
 var getAllListings = function (req, res, next) {
     var id = req.app.locals.user_id;
-    // req.dbConnection(function (err, conn) {
-    //
-    //     if (err) return next("Cannot Connect");
+	
+	var query = dbConnection.query('SELECT * FROM listings WHERE user_id = ?',[id], function (err, rows) {
 
-        var query = dbConnection.query('SELECT * FROM listings WHERE user_id = ?',[id], function (err, rows) {
+		if (err) {
+			console.log(err);
+			return next("Mysql error, check your query");
+		}
 
-            if (err) {
-                console.log(err);
-                return next("Mysql error, check your query");
-            }
+		res.render('all_listings', {title: "RESTful Crud Example", data: rows});
 
-            res.render('all_listings', {title: "RESTful Crud Example", data: rows});
-
-        });
-
-    //});
+	});
 };
 
 var getAddListingPage = function (req, res) {
@@ -64,74 +59,76 @@ var addNewListing = function (req, res, next) {
             user_id: req.app.locals.user_id
         };
 
+		
+		var query = dbConnection.query("INSERT INTO listings set ? ", data, function (err, rows) {
 
-        //inserting into mysql
-        // req.getConnection(function (err, conn) {
-        //
-        //     if (err) return next("Cannot Connect");
+			if (err) {
+				console.log(err);
+				return next("Mysql error, check your query");
+			}
+		});
 
-            var query = dbConnection.query("INSERT INTO listings set ? ", data, function (err, rows) {
-
-                if (err) {
-                    console.log(err);
-                    return next("Mysql error, check your query");
-                }
-            });
-
-            res.sendStatus(200);
-
-        //});
+		res.sendStatus(200);
     });
-
-
 };
 
 var searchListing = function (req, res, next) {
 
     var listing = req.params.listing;
+	var returning = false;
 
-        var query = dbConnection.query("SELECT * FROM listings WHERE city LIKE ? ", listing[0] + listing[1] + listing[2] + "%", function (err, rows) {
+	//like search 1-4 characters
+	var searchWord = "%";
+	if (listing.length > 0 && listing.length < 5){
+		
+		for(i = 0; i < listing.length; i++){
+			searchWord = searchWord + listing[i];
+		}
+	}
+	else{
+		//like search maximum 5 characters
+		searchWord = "%" + listing[0] + listing[1] + listing[2] + listing[3] + listing[4] + "%";
+	}
+	searchWord = searchWord + "%";
+	
+	
+	var queryString = "SELECT * FROM listings WHERE city LIKE ? OR address LIKE ? OR zip_code LIKE ? "
+	var filter = [searchWord, searchWord, searchWord];
+	
+	var query = dbConnection.query(queryString, filter, function (err, rows) {
 
-            if (err) {
-                console.log(err);
-                return next("Mysql error, check your query");
-            }
+		if (err) {
+			console.log(err);
+			return next("Mysql error, check your query");
+		}
 
-            //if listing not found
-            if (rows.length < 1)
-                return res.send("Listing not found.");
+		//if listing not found
+		if (rows.length < 1){
+			//return res.send("Listing not found.");
+		}
 
-            res.render('index', {data: rows});
-        });
-
-    //});
-
+		res.render('index', {data: rows, returning: returning});
+	});
 };
 
 var getListingToEdit = function (req, res, next) {
 
     var listing_id = req.params.listing_id;
+	
+	
+	var query = dbConnection.query("SELECT * FROM listings WHERE listing_id = ? ", [listing_id], function (err, rows) {
 
-    // req.getConnection(function (err, conn) {
-    //
-    //     if (err) return next("Cannot Connect");
+		if (err) {
+			console.log(err);
+			return next("Mysql error, check your query");
+		}
 
-        var query = dbConnection.query("SELECT * FROM listings WHERE listing_id = ? ", [listing_id], function (err, rows) {
+		//if listing not found
+		if (rows.length < 1)
+			return res.send("Listing Not found");
 
-            if (err) {
-                console.log(err);
-                return next("Mysql error, check your query");
-            }
-
-            //if listing not found
-            if (rows.length < 1)
-                return res.send("Listing Not found");
-
-            res.render('edit_listing', {title: "Edit listing", data: rows});
-        });
-
-    //});
-
+		res.render('edit_listing', {title: "Edit listing", data: rows});
+	});
 };
 
 var updateListingInfo = function (req, res, next) {
@@ -172,24 +169,18 @@ var updateListingInfo = function (req, res, next) {
             image: db_img_address
 
         };
+		
 
-        //inserting into mysql
-        // req.getConnection(function (err, conn) {
-        //
-        //     if (err) return next("Cannot Connect");
+		var query = dbConnection.query("UPDATE listings set ? WHERE listing_id = ? ", [data, listing_id], function (err, rows) {
 
-            var query = dbConnection.query("UPDATE listings set ? WHERE listing_id = ? ", [data, listing_id], function (err, rows) {
+			if (err) {
+				console.log(err);
+				return next("Mysql error, check your query");
+			}
 
-                if (err) {
-                    console.log(err);
-                    return next("Mysql error, check your query");
-                }
+			res.sendStatus(200);
 
-                res.sendStatus(200);
-
-            });
-
-        //});
+		});
     });
 };
 
@@ -197,49 +188,75 @@ var deleteListing = function (req, res, next) {
 
     var listing_id = req.params.listing_id;
 
-    // req.getConnection(function (err, conn) {
-    //
-    //     if (err) return next("Cannot Connect");
 
-        var query = dbConnection.query("DELETE FROM listings  WHERE listing_id = ? ", [listing_id], function (err, rows) {
+	var query = dbConnection.query("DELETE FROM listings  WHERE listing_id = ? ", [listing_id], function (err, rows) {
 
-            if (err) {
-                console.log(err);
-                return next("Mysql error, check your query");
-            }
+		if (err) {
+			console.log(err);
+			return next("Mysql error, check your query");
+		}
 
-            res.sendStatus(200);
+		res.sendStatus(200);
 
-        });
-        //console.log(query.sql);
-
-    //});
+	});
 };
 
 var getDescription = function (req, res, next) {
 
     var listing_id = req.params.listing_id;
 
-    // req.getConnection(function (err, conn) {
-    //
-    //     if (err) return next("Cannot Connect");
+	
+	var query = dbConnection.query("SELECT * FROM listings WHERE listing_id = ? ", [listing_id], function (err, rows) {
 
-        var query = dbConnection.query("SELECT * FROM listings WHERE listing_id = ? ", [listing_id], function (err, rows) {
+		if (err) {
+			console.log(err);
+			return next("Mysql error, check your query");
+		}
 
-            if (err) {
-                console.log(err);
-                return next("Mysql error, check your query");
-            }
+		//if listing not found
+		if (rows.length < 1){
+			return res.send("Listing Not found");
+		}
 
-            //if listing not found
-            if (rows.length < 1)
-                return res.send("Listing Not found");
+		res.render('listing_description', {title: "Listing Description", data: rows});
+	});
+};
 
-            res.render('listing_description', {title: "Listing Description", data: rows});
-        });
+var returnToSearch = function (req, res, next) {
 
-    //});
+    var listing = req.params.requery;
+	var returning = true;
+	
+	var searchWord = "%";
+	if (listing.length > 0 && listing.length < 5){
+		
+		for(i = 0; i < listing.length; i++){
+			searchWord = searchWord + listing[i];
+		}
+	}
+	else{
+		searchWord = "%" + listing[0] + listing[1] + listing[2] + listing[3] + listing[4] + "%";
+	}
+	searchWord = searchWord + "%";
+	
+	
+	var queryString = "SELECT * FROM listings WHERE city LIKE ? OR address LIKE ? OR zip_code LIKE ? "
+	var filter = [searchWord, searchWord, searchWord];
+	
+	var query = dbConnection.query(queryString, filter, function (err, rows) {
 
+		if (err) {
+			console.log(err);
+			return next("Mysql error, check your query");
+		}
+
+		//if listing not found
+		if (rows.length < 1) {
+			return res.send("Listing not found.");
+		}
+
+		res.render('index', {title: "Search", data: rows, returning: returning});
+	});
 };
 
 module.exports = {
@@ -250,5 +267,6 @@ module.exports = {
     updateListingInfo: updateListingInfo,
     deleteListing: deleteListing,
     getDescription: getDescription,
-    getAddListingPage: getAddListingPage
+    getAddListingPage: getAddListingPage,
+	returnToSearch: returnToSearch
 }
