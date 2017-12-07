@@ -1,48 +1,64 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Add listing</title>
-        <script type="text/javascript" src="./../js/jquery-1.10.2.min.js"></script>
-        <script type="text/javascript" src="./../js/listingScripts.js"></script>
-        <link rel="stylesheet" href="./../css/style.css">
-    </head>
-	
+<head>
+    <title>Add listing</title>
+    <script type="text/javascript" src="./../js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="./../js/listingScripts.js"></script>
+    <link rel="stylesheet" href="./../css/style.css">
+    <style>
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 15px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+    </style>
+
+</head>
+
 <body>
-<p><a href="/api/listings">Cancel</a></p>
+<p><a href="/api/listings" class="btn btn-secondary">Cancel</a></p>
 
 </div>
 <div class="page-data">
-    
+
     <form method="post" action="" id="the-form" enctype="multipart/form-data">
         <table cellpadding="11">
-        <tr>
-            <td class="label">Address</td><td>: <input type="text" id="address" name="address"></td>
-         </tr>
-        <tr>
-            <td class="label">City</td><td>: <input type="text" id="city" name="city"></td>
-         </tr>
-          <tr>
-            <td class="label">State</td><td>: <input type="text" id="state" name="state"></td>
-         </tr>          
-		 <tr>
-            <td class="label">Zip Code</td><td>: <input type="text" id="zip_code" name="zip_code"></td>
-         </tr>		
-		 <tr>
-            <input class="form-control" type="file" name="uploaded_image" accept=""></td>
-         </tr>
-		 
-         <tr>
-            <td class="label"></td>
-            <td>
-                &nbsp; <input type="button" value="Submit" onclick="saveListing()">
-            </td>
-         </tr>
+            <tr>
+                <td class="label">Address</td>
+                <td>: <input type="text" id="address" name="address"></td>
+            </tr>
+            <tr>
+                <td class="label">City</td>
+                <td>: <input type="text" id="city" name="city"></td>
+            </tr>
+            <tr>
+                <td class="label">State</td>
+                <td>: <input type="text" id="state" name="state"></td>
+            </tr>
+            <tr>
+                <td class="label">Zip Code</td>
+                <td>: <input type="text" id="zip_code" name="zip_code"></td>
+            </tr>
+            <tr>
+                <input class="form-control" class="btn btn-secondary" type="file" name="uploaded_image" accept=""></td>
+            </tr>
+
+            <tr>
+                <td class="label"></td>
+                <td>
+                    &nbsp; <input type="button" class="btn btn-secondary" value="Submit" onclick="saveListing()">
+                </td>
+            </tr>
         </table>
     </form>
 </div>
 
 <div class="page-data">
-     <ul class="err-area"></ul>
+    <ul class="err-area"></ul>
 </div>
 
 </body>
