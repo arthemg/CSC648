@@ -69,6 +69,30 @@ app.get('/', function (req, res) {
     });
 });
 
+//About pages
+app.get('/about', function (req, res){
+	res.render('about/about', {title: "About Us", data: []});
+});
+app.get('/about/art', function (req, res){
+	res.render('about/art', {title: "About Art", data: []});
+});
+app.get('/about/bert', function (req, res){
+	res.render('about/bert', {title: "About Bert", data: []});
+});
+app.get('/about/david', function (req, res){
+	res.render('about/david', {title: "About David", data: []});
+});
+app.get('/about/jason', function (req, res){
+	res.render('about/jason', {title: "About Jason", data: []});
+});
+app.get('/about/jiawen', function (req, res){
+	res.render('about/jiawen', {title: "About Jiawen", data: []});
+});
+app.get('/about/jordan', function (req, res){
+	res.render('about/jordan', {title: "About Jordan", data: []});
+});
+//end of about pages
+
 //Get pages before router
 
 //RESTful route
