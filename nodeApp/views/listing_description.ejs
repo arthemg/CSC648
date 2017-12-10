@@ -96,10 +96,10 @@
                         <div class="col-md-12">
                             <div class="form-group has-error has-danger">
                                 <label for="form_message">Message *</label>
-                                <textarea id="buyerMessage" name="message" class="form-control" onkeydown="return messageSellerEnter(event)"
-                                          placeholder="Message for me *" rows="4" required="required"
-                                          data-error="Please,leave us a message."></textarea>
-                                <!--<input type="textarea" class="form-control" id="buyerMessage" onkeydown="return messageSellerEnter(event)">-->
+                                <!--<textarea id="buyerMessage" name="message" class="form-control" onkeydown="return messageSellerEnter(event)"-->
+                                          <!--placeholder="Message for me *" rows="4" required="required"-->
+                                          <!--data-error="Please,leave us a message."></textarea>-->
+                                <input type="text" class="form-control" id="buyerMessage" rows="4" onkeydown="return messageSellerEnter(event)">
                                 <div class="help-block with-errors">
                                     <ul class="list-unstyled">
                                         <li>Please,leave us a message.</li>
@@ -108,8 +108,7 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <!--<input type="submit" class="btn btn-success btn-send disabled" value="Send message">-->
-                            <input type="button" class="btn btn-warning btn-lg" class="btn btn-success btn-send disabled" value="send message" id="message-button"
+                            <input type="button" class="btn btn-warning btn-lg" value="Send Message" id="message-button"
                                    onclick="messageSeller(<%= data[0].user_id %>)">
                         </div>
                     </div>
