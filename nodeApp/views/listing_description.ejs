@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title><%=title%></title>
-        <script type="text/javascript" src="./../../js/jquery-1.10.2.min.js"></script>
-        <link rel="stylesheet" href="./../../css/style.css">
-        <script type="text/javascript" src="./../../js/listingScripts.js"></script>
-        <script type="text/javascript" src="./../../js/userScripts.js"></script>
-    </head>
-	
+<head>
+    <title><%= title %></title>
+    <script type="text/javascript" src="./../../js/jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" href="./../../css/style.css">
+    <script type="text/javascript" src="./../../js/listingScripts.js"></script>
+    <script type="text/javascript" src="./../../js/userScripts.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+</head>
+
 <body>
 
 <p><a onclick="backToSearch()" href="/fa17g12/">Back to Search</a></p>
@@ -21,54 +23,25 @@
             <th>State</th>
             <th>Zip Code</th>
         </tr>
-                       
-        <% if(data.length){  %>
+
+        <% if(data.length){ %>
         <tr>
-            <td><%=data[0].address%></td>
-            <td><%=data[0].city%></td>
-            <td><%=data[0].state%></td>
-            <td><%=data[0].zip_code%></td>
+            <td><%= data[0].address %></td>
+            <td><%= data[0].city %></td>
+            <td><%= data[0].state %></td>
+            <td><%= data[0].zip_code %></td>
         </tr>
-		
-	<%	} else{ %>
-			 <tr>
-				<td colspan="5">No Data</td>
-			 </tr>
-    <% 	} %>
-	
+
+        <% } else{ %>
+        <tr>
+            <td colspan="5">No Data</td>
+        </tr>
+        <% } %>
+
     </table>
 </div>
 
-<img alt="Pic" src="../<%=data[0].image%>" />
-
-<!-- MESSAGE FORM -->
-<div class="page-data">
-		
-		<div>Contact Seller</div>
-        <form method="post" action="" id="message-form">
-            <div class="form-group">
-                <label>Name:</label>
-                <input type="text" class="form-control" id="buyerName" onkeydown="return messageSellerEnter(event)">
-            </div>
-            <div class="form-group">
-                <label>Phone Number:</label>
-                <input type="text" class="form-control" id="buyerPhone" onkeydown="return messageSellerEnter(event)">
-            </div>
-
-            <div class="form-group">
-                <label>Email:</label>
-                <input type="text" class="form-control" id="buyerEmail" onkeydown="return messageSellerEnter(event)">
-            </div>
-            <div class="form-group">
-                <label>Message:</label>
-                <input type="text" class="form-control" id="buyerMessage" onkeydown="return messageSellerEnter(event)">
-            </div>
-			
-            <input type="button" class="btn btn-warning btn-lg" value="Submit" id="message-button" onclick="messageSeller(<%=data[0].user_id%>)">
-        </form>
-
-     <ul class="err-area"></ul>
-</div>
+<img alt="Pic" src="../<%= data[0].image %>"/>
 
 <!-- MAP -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYSUWFvpVbz3iuStuGYjf0Ca4QJ4TBEgs">
@@ -76,8 +49,82 @@
 
 <div id="map"></div>
 
+<div><strong>Contact Seller</strong></div>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-8 col-lg-offset-2">
+
+            <!--<h1>Contact form Tutorial from <a href="http://bootstrapious.com">Bootstrapious.com</a></h1>-->
+
+            <form id="contact-form" method="post" role="form" novalidate="true">
+
+                <div class="messages"></div>
+
+                <div class="controls">
+
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <div class="form-group" class="controls" class="row">
+                                <div class="col-md-28">
+                                    <label>Name*</label>
+                                    <input type="text" class="form-control" id="buyerName" onkeydown="return messageSellerEnter(event)">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="text" class="form-control" id="buyerPhone" onkeydown="return messageSellerEnter(event)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Email*</label>
+                                <input type="text" class="form-control" id="buyerEmail" onkeydown="return messageSellerEnter(event)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group has-error has-danger">
+                                <label for="form_message">Message *</label>
+                                <textarea id="buyerMessage" name="message" class="form-control" onkeydown="return messageSellerEnter(event)"
+                                          placeholder="Message for me *" rows="4" required="required"
+                                          data-error="Please,leave us a message."></textarea>
+                                <!--<input type="textarea" class="form-control" id="buyerMessage" onkeydown="return messageSellerEnter(event)">-->
+                                <div class="help-block with-errors">
+                                    <ul class="list-unstyled">
+                                        <li>Please,leave us a message.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <!--<input type="submit" class="btn btn-success btn-send disabled" value="Send message">-->
+                            <input type="button" class="btn btn-warning btn-lg" class="btn btn-success btn-send disabled" value="send message" id="message-button"
+                                   onclick="messageSeller(<%= data[0].user_id %>)">
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+        </div><!-- /.8 -->
+
+    </div> <!-- /.row-->
+
+</div>
+
 <script type="text/javascript">
-initMap("<%=data[0].address%>, <%=data[0].city%>, <%=data[0].state%>, <%=data[0].zip_code%>")
+    initMap("<%= data[0].address %>, <%= data[0].city %>, <%= data[0].state %>, <%= data[0].zip_code %>")
 </script>
 
 </body>
