@@ -226,3 +226,71 @@ function userLogin(){
     })
 
 };
+
+function messageSeller(user_id) {
+	
+    var form = {
+        name: '',
+        phone: '',
+        email: '',
+		message: ''
+    };
+
+    form.name =  $('#buyerName').val();
+    form.phone = $('#buyerPhone').val();
+    form.email = $('#buyerEmail').val();
+	form.message = $('#buyerMessage').val();
+
+    $.ajax({
+        url:"/fa17g12/api/message_seller/" + user_id,
+        // url:"/api/message_seller/" + user_id,
+        type:"POST",
+        data: form,
+        success:function(res){
+			document.getElementById("message-form").reset();
+			alert("Message was sent!");
+        },
+        error:function(xhr, status, error){
+
+            console.log(xhr.responseText);
+            var err = '';
+            $.each(JSON.parse(xhr.responseText) , function(i, item) {
+
+                err +='<li>'+item.msg+'</li>';
+            });
+            $(".err-area").html(err);
+            return false;
+        }
+    });
+};
+
+function messageSellerEnter(e){
+	e = e || window.event;
+	if (e.keyCode === 13) {
+		// e.preventDefault();
+		$("#message-button").click();
+		return false;
+	}
+	else {
+		return true;
+	}
+}
+
+function deleteMessage(message_id){
+	$.ajax({
+        url:"/fa17g12/api/delete_message/" + message_id,
+        // url:"/api/delete_message/" + message_id,
+        type: 'DELETE',
+        success: function(res) {
+
+            window.location.reload();
+            return false;
+        },
+        error:function(xhr, status, error){
+
+            console.log(xhr.responseText);
+            alert("Error deleting");
+            return false;
+        }
+    });
+}

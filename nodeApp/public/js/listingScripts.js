@@ -181,6 +181,7 @@ function listingDescription(listing_id) {
         type: "get",
         success: function (res) {
             window.location.href = '/fa17g12/api/listing_description/' + listing_id;
+            // window.location.href = '/api/listing_description/' + listing_id;
             return false;
         },
         error: function (xhr, status, error) {
@@ -266,10 +267,10 @@ function backToSearch(){
 	
     console.log(requery, 'arg');
     $.ajax({
-        url: "/fa17g12/",
         type: "get",
         success: function (res) {
 
+            // window.location.href = '/returnSearch/' + requery;
             window.location.href = '/fa17g12/returnSearch/' + requery;
             return false;
         },

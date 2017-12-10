@@ -4,11 +4,13 @@
         <title><%=title%></title>
         <script type="text/javascript" src="./../js/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" src="./../js/listingScripts.js"></script>
+        <script type="text/javascript" src="./../js/userScripts.js"></script>
         <link rel="stylesheet" href="./../css/style.css">
     </head>
 <body>
 <p><a href="/fa17g12/">Back to home page</a></p>
 
+<!--- LISTING DISPLAY --->
 <div class="data-table">
     <table border="1" cellpadding="7" cellspacing="7">
         <tr>
@@ -30,7 +32,6 @@
             <td><%=data[i].city%></td>
             <td><%=data[i].state%></td>
             <td><%=data[i].zip_code%></td>
-            <td><%=data[i].user_id%></td>
             <td><img src="<%=data[i].image%>"> </td>
 
 			<td>
@@ -39,6 +40,41 @@
                
                 <a class="a-inside delete" href="javascript:void(0)" onClick="deleteListing(<%=data[i].listing_id%>)">Delete</a>
                
+            </td>
+        </tr>
+    <% }
+    
+     }else{ %>
+         <tr>
+            <td colspan="5">No Data</td>
+         </tr>
+    <% } %>
+                                      
+    </table>
+</div>
+
+<!--- MESSAGE DISPLAY --->
+<div class="data-table">
+    <table border="1" cellpadding="7" cellspacing="7">
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Message</th>
+        </tr>
+                       
+        <% if(messages.length){ 
+                        
+         for(var i = 0;i < messages.length;i++) { %>
+         
+        <tr>
+            <td><%=messages[i].name%></td>
+            <td><%=messages[i].phone%></td>
+            <td><%=messages[i].email%></td>
+            <td><%=messages[i].message%></td>
+
+			<td>
+			<a class="a-inside delete" href="javascript:void(0)" onClick="deleteMessage(<%=messages[i].message_id%>)">Delete</a> 
             </td>
         </tr>
     <% }

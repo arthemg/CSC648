@@ -121,6 +121,8 @@ app.put('/api/user/:user_id', users.updateUserInfo);
 app.delete('/api/user/:user_id', users.deleteUser);
 app.get('/api/signup', users.getSignupForm);
 app.post('/api/signup',users.registerUser);
+app.post('/api/message_seller/:user_id', users.messageToSeller);
+app.delete('/api/delete_message/:message_id', users.deleteMessage);
 
 
 //LISTINGS EXTERNAL MODULES

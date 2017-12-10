@@ -7,7 +7,8 @@ var connection = mysql.createConnection({
     user     : 'fa17g12',
     password : 'csc648fa17g12', //set password if there is one
     database : 'fa17g12', //set DB name here
-    debug    : false //set true if you wanna see debug logger
+    debug    : false, //set true if you wanna see debug logger
+	multipleStatements: true
 });
 
 connection.connect(function(err) {

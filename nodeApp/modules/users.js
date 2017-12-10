@@ -19,9 +19,6 @@ var getAllUsers = function (req, res, next) {
             res.render('user', {title: "Users", data: rows});
 
         });
-
-   // });
-
 };
 
 //post data to DB | POST
@@ -131,9 +128,9 @@ var getUserToEdit = function (req, res, next){
 
 var updateUserInfo = function (req, res, next)
 {
-        var user_id = req.params.user_id;
+	var user_id = req.params.user_id;
 
-        // console.log(req.params, 'User Id in updateUser');
+	// console.log(req.params, 'User Id in updateUser');
 
     //validation
     req.assert('name','Name is required').notEmpty();
@@ -256,6 +253,57 @@ var registerUser = function (req, res, next)
 
 };
 
+var messageToSeller = function (req, res, next)
+{
+	console.log(req.body,"REQUEST");
+
+    req.assert('name','Name is required').notEmpty();
+    req.assert('phone','Phone Number must have atleast 10 digits!', 'Should be numbers Only!').len(10, 20).isNumeric();
+    req.assert('email','Email is required').isEmail();
+    req.assert('message', 'Message is required').notEmpty();
+
+    var errors = req.validationErrors();
+
+    if(errors){
+        res.status(420).json(errors);
+        return;
+    }
+
+	var data = {
+		name:req.body.name,
+		phone:req.body.phone,
+		email:req.body.email,
+		message:req.body.message,
+		user_id:req.params.user_id
+	};
+
+	dbConnection.query("INSERT INTO messages set ? ", data, function(err, rows)
+	{
+
+		if (err)
+		{
+			console.log(err);
+			return next("Mysql error, check your query");
+		}
+
+		res.sendStatus(200);
+	});
+};
+
+var deleteMessage = function (req, res, next) {
+
+    var message_id = req.params.message_id;
+
+    var query = dbConnection.query("DELETE FROM messages WHERE message_id = ? ",[message_id], function(err, rows){
+		
+		if(err){
+			console.log(err);
+			return next("Mysql error, check your query");
+		}
+
+		res.sendStatus(200);
+	});
+};
 
 module.exports = {
     getAllUsers: getAllUsers,
@@ -266,5 +314,7 @@ module.exports = {
     deleteUser:deleteUser,
 	getSearchUsersPage:getSearchUsersPage,
     getSignupForm:getSignupForm,
-    registerUser:registerUser
+    registerUser:registerUser,
+	messageToSeller:messageToSeller,
+	deleteMessage:deleteMessage
 };

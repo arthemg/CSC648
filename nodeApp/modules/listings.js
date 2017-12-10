@@ -5,15 +5,17 @@ var dbConnection = require('../config/db');
 var getAllListings = function (req, res, next) {
     var id = req.app.locals.user_id;
 	
-	var query = dbConnection.query('SELECT * FROM listings WHERE user_id = ?',[id], function (err, rows) {
+	var queryString = 'SELECT * FROM listings WHERE user_id = ?; SELECT * FROM messages WHERE user_id = ?; '
+
+	
+	var query = dbConnection.query(queryString,[id, id], function (err, rows) {
 
 		if (err) {
 			console.log(err);
 			return next("Mysql error, check your query");
 		}
-
-		res.render('all_listings', {title: "RESTful Crud Example", data: rows});
-
+			
+		res.render('all_listings', {title: "Dashboard", data: rows[0], messages: rows[1]});
 	});
 };
 
