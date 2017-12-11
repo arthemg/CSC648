@@ -49,71 +49,40 @@
 
 <div id="map"></div>
 
+
+
 <div><strong>Contact Seller</strong></div>
 <div class="container">
 
     <div class="row">
 
-        <div class="col-lg-8 col-lg-offset-2">
+        <div class="col-lg-6 col-lg-offset-2">
 
             <!--<h1>Contact form Tutorial from <a href="http://bootstrapious.com">Bootstrapious.com</a></h1>-->
 
-            <form id="contact-form" method="post" role="form" novalidate="true">
-
-                <div class="messages"></div>
-
-                <div class="controls">
-
-                    <div class="row">
-                        <div class="col-md-6">
-
-                            <div class="form-group" class="controls" class="row">
-                                <div class="col-md-28">
-                                    <label>Name*</label>
-                                    <input type="text" class="form-control" id="buyerName" onkeydown="return messageSellerEnter(event)">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Phone Number</label>
-                                <input type="text" class="form-control" id="buyerPhone" onkeydown="return messageSellerEnter(event)">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Email*</label>
-                                <input type="text" class="form-control" id="buyerEmail" onkeydown="return messageSellerEnter(event)">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group has-error has-danger">
-                                <label for="form_message">Message *</label>
-                                <!--<textarea id="buyerMessage" name="message" class="form-control" onkeydown="return messageSellerEnter(event)"-->
-                                          <!--placeholder="Message for me *" rows="4" required="required"-->
-                                          <!--data-error="Please,leave us a message."></textarea>-->
-                                <input type="text" class="form-control" id="buyerMessage" rows="4" onkeydown="return messageSellerEnter(event)">
-                                <div class="help-block with-errors">
-                                    <ul class="list-unstyled">
-                                        <li>Please,leave us a message.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <input type="button" class="btn btn-warning btn-lg" value="Send Message" id="message-button"
-                                   onclick="messageSeller(<%= data[0].user_id %>)">
-                        </div>
+            <form method="post" action="" id="message-form" role="form" novalidate="true">
+                <div class="form-group" class="controls" class="row">
+                    <div class="col-md-28">
+                        <label>Name:</label>
+                        <input type="text" class="form-control" id="buyerName" onkeydown="return messageSellerEnter(event)">
                     </div>
                 </div>
+                <div class="form-group">
+                    <label>Phone Number:</label>
+                    <input type="text" class="form-control" id="buyerPhone" onkeydown="return messageSellerEnter(event)">
+                </div>
 
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" id="buyerEmail" onkeydown="return messageSellerEnter(event)">
+                </div>
+                <div class="form-group">
+                    <label>Message:</label>
+                    <input type="text" class="form-control" id="buyerMessage" onkeydown="return messageSellerEnter(event)">
+                </div>
+
+                <input type="button" class="btn btn-warning btn-lg" value="Submit" id="message-button"
+                       onclick="messageSeller(<%= data[0].user_id %>)">
             </form>
 
         </div><!-- /.8 -->
