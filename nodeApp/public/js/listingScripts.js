@@ -15,6 +15,11 @@ function saveListing(){
     formData.append('city', $('#city').val());
     formData.append('state', $('#state').val());
     formData.append('zip_code', $('#zip_code').val());
+    formData.append('price', $('#price').val());
+    formData.append('beds', $('#beds').val());
+    formData.append('bath', $('#bath').val());
+    formData.append('area', $('#area').val());
+    formData.append('description', $('#description').val());
     formData.append('photo', $('input[type=file]')[0].files[0]);
 
 
@@ -108,6 +113,56 @@ function editListing(listing_id) {
 
     });
 }
+
+function UploadMulPics(listing_id, y)
+{
+    var formData = new FormData();
+    // console.log(listing_id, "Listing ID");
+    var fileLength =  $('input[type=file]')[y].files.length;
+    // console.log(fileLength, "File Length");
+    for (var i = 0; i< fileLength; i++)
+    {
+        formData.append("photos",$('input[type=file]')[y].files[i]);
+        console.log($('input[type=file]')[y].files[i], "File name");
+
+    }
+    $.ajax({
+        url: "/fa17g12/api/listings/" + listing_id,
+        // url: "/api/listings/" + listing_id,
+        type: "post",
+        // data: $("#the-form").serialize(),
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (res) {
+            // console.log(res, "RESPONSE");
+            //window.location.href = '/api/listings';
+            // console.log(res);
+            var err = '';
+            $.each(res, function (i, item) {
+
+            err += '<li>' + item.msg + '</li>';
+            });
+            $(".success-area").html(err);
+
+            $('input[type=file]').val('');
+            return false;
+        },
+        error: function (xhr, status, error) {
+
+            console.log(xhr.responseText);
+            var err = '';
+            $.each(JSON.parse(xhr.responseText), function (i, item) {
+
+                err += '<li>' + item.msg + '</li>';
+            });
+            $(".err-area").html(err);
+            return false;
+        }
+
+    });
+}
+
 
 function searchListing(){
 
@@ -271,8 +326,14 @@ function backToSearch(){
         success: function (res) {
 
             // window.location.href = '/returnSearch/' + requery;
-            window.location.href = '/fa17g12/returnSearch/' + requery;
-            return false;
+            if(typeof requery !== 'undefined'){
+                window.location.href = '/fa17g12/returnSearch/' + requery;
+                return false;
+            }
+            else{
+                window.location.href = '/fa17g12/';
+                return false;
+            }
         },
         error: function (xhr, status, error) {
 

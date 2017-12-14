@@ -127,6 +127,7 @@ app.delete('/api/delete_message/:message_id', users.deleteMessage);
 
 //LISTINGS EXTERNAL MODULES
 app.get('/api/listings', listings.getAllListings);
+app.post('/api/listings/:listing_id', upload.array('photos',3), listings.upLoadMulPics)
 app.get('/api/add_listing', listings.getAddListingPage);
 app.post('/api/add_listing', upload.single('photo'), listings.addNewListing);
 app.post('/search_listings/:listing', listings.searchListing);

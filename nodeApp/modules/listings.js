@@ -30,7 +30,11 @@ var addNewListing = function (req, res, next) {
     req.assert('city', 'City is required').notEmpty();
     req.assert('state', 'State is required').len(2, 2);
     req.assert('zip_code', 'Enter a zip code of 5 numbers').len(5, 5);
-
+    req.assert('price', 'Price is required').notEmpty();
+    req.assert('beds', 'Number of Bedrooms is required').notEmpty();
+    req.assert('bath', 'Number of Bathrooms is required').notEmpty();
+    req.assert('area', 'Area is required').notEmpty();
+    req.assert('description', 'Description is required').notEmpty();
     var errors = req.validationErrors();
 
     if (errors) {
@@ -57,8 +61,14 @@ var addNewListing = function (req, res, next) {
             city: req.body.city,
             state: req.body.state,
             zip_code: req.body.zip_code,
+            price: req.body.price,
+            beds: req.body.beds,
+            bath: req.body.bath,
+            area: req.body.area,
+            description: req.body.description,
             image: db_img_address,
             user_id: req.app.locals.user_id
+
         };
 
 		
@@ -207,21 +217,20 @@ var getDescription = function (req, res, next) {
 
     var listing_id = req.params.listing_id;
 
-	
-	var query = dbConnection.query("SELECT * FROM listings WHERE listing_id = ? ", [listing_id], function (err, rows) {
+    var queryString = 'SELECT * FROM listings WHERE listing_id = ?; SELECT * FROM property_images WHERE listing_id = ?; '
 
-		if (err) {
-			console.log(err);
-			return next("Mysql error, check your query");
-		}
 
-		//if listing not found
-		if (rows.length < 1){
-			return res.send("Listing Not found");
-		}
+    var query = dbConnection.query(queryString,[listing_id, listing_id], function (err, rows) {
 
-		res.render('listing_description', {title: "Listing Description", data: rows});
-	});
+        if (err) {
+            console.log(err);
+            return next("Mysql error, check your query");
+        }
+
+        console.log(rows, "ROWS");
+        res.render('listing_description', {title: "Listing Description", data: rows[0], images: rows[1]});
+        // res.render('all_listings', {title: "Dashboard", data: rows[0], messages: rows[1]});
+    });
 };
 
 var returnToSearch = function (req, res, next) {
@@ -261,6 +270,42 @@ var returnToSearch = function (req, res, next) {
 	});
 };
 
+
+var upLoadMulPics = function (req,res,next)
+{
+    var listing = req.params.listing_id;
+
+        if (req.files.length === 0) {
+            res.status(422).json([{param: 'name', msg: "Please select up to 3 files to upload!"}]);
+            return;
+        }
+
+        var sql = "INSERT INTO property_images (listing_id, images) VALUES ?";
+        var values = [];
+
+    for (var i = 0; i < req.files.length; i++) {
+        var filePath = req.files[i].path + ".jpg";
+        var arr = []
+        arr.push(listing);
+        arr.push('../images/upload_images/'+ req.files[i].filename + '.jpg');
+        values.push(arr)
+        fs.rename(req.files[i].path, filePath, function (err) {
+            if (err) {
+                console.log(err, 'err');
+            }
+
+        })
+
+
+    }
+
+    dbConnection.query(sql, [values], function (err) {
+        if(err) throw err;
+        res.status(200).json([{param: 'name', msg: "Files Uploaded Successfully!"}]);
+    })
+
+};
+
 module.exports = {
     getAllListings: getAllListings,
     addNewListing: addNewListing,
@@ -270,5 +315,6 @@ module.exports = {
     deleteListing: deleteListing,
     getDescription: getDescription,
     getAddListingPage: getAddListingPage,
-	returnToSearch: returnToSearch
+	returnToSearch: returnToSearch,
+    upLoadMulPics:upLoadMulPics
 }

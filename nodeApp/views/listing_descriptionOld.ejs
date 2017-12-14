@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link data-require="bootstrap@4.0.5" data-semver="4.0.5" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script data-require="bootstrap@4.0.5" data-semver="4.0.5" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./../../js/listingScripts.js"></script>
+    <script type="text/javascript" src="./../../js/userScripts.js"></script>
+    <link rel="stylesheet" href="./../../css/style.css">
+
+
+
+</head>
+
+<body>
+
+<p><a onclick="backToSearch()" href="/fa17g12/">Back to Search</a></p>
+
+<!-- LISTING DESCRIPTION -->
+<div class="data-table">
+    <table border="1" cellpadding="7" cellspacing="7">
+        <tr>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip Code</th>
+        </tr>
+
+        <% if(data.length){ %>
+        <tr>
+            <td><%= data[0].address %></td>
+            <td><%= data[0].city %></td>
+            <td><%= data[0].state %></td>
+            <td><%= data[0].zip_code %></td>
+        </tr>
+
+        <% } else{ %>
+        <tr>
+            <td colspan="5">No Data</td>
+        </tr>
+        <% } %>
+
+    </table>
+</div>
+
+<img alt="Pic" src="../<%= data[0].image %>"/>
+
+
+<div id="carouselExampleSlidesOnly" data-interval="1500" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+        <% for(var i = 0; i < images.length; i++){ %>
+        <% if(i === 0){ %>
+          <div class="carousel-item active">
+              <img style="height:100px;width:250px;" class="d-block img-fluid" src="../<%=images[i].images%>"/>
+          </div>
+        <%} else { %>
+          <div class="carousel-item">
+              <img style="height:100px;width:250px;" class="d-block img-fluid" src="../<%=images[i].images%>"/>
+          </div>
+        <% } %>
+        <%} %>
+    </div>
+</div>
+
+<!--<div id="carouselExampleSlidesOnly123" data-interval="500"  class="carousel slide" data-ride="carousel">-->
+    <!--<div class="carousel-inner" role="listbox">-->
+        <!--<div class="carousel-item active">-->
+            <!--<img style="height:100px;width:250px;" class="d-block img-fluid" src="../../images/upload_images/40123e56bfc20eacbd024d0b65d4a2fe.jpg" alt="blah">-->
+        <!--</div>-->
+
+        <!--<div class="carousel-item">-->
+            <!--<img style="height:100px;width:250px;" class="d-block img-fluid" src="../../images/upload_images/4d50a09f00b981b7cc742775a685fffd.jpg">-->
+        <!--</div>-->
+
+        <!--<div class="carousel-item">-->
+            <!--<img style="height:100px;width:250px;" class="d-block img-fluid" src="../../images/upload_images/4d50a09f00b981b7cc742775a685fffd.jpg">-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+
+
+<!-- MAP -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYSUWFvpVbz3iuStuGYjf0Ca4QJ4TBEgs">
+</script>
+
+<div id="map"></div>
+
+
+
+<div><strong>Contact Seller</strong></div>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-6 col-lg-offset-2">
+
+            <!--<h1>Contact form Tutorial from <a href="http://bootstrapious.com">Bootstrapious.com</a></h1>-->
+
+            <form method="post" action="" id="message-form" role="form" novalidate="true">
+                <div class="form-group" class="controls" class="row">
+                    <div class="col-md-28">
+                        <label>Name:</label>
+                        <input type="text" class="form-control" id="buyerName" onkeydown="return messageSellerEnter(event)">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number:</label>
+                    <input type="text" class="form-control" id="buyerPhone" onkeydown="return messageSellerEnter(event)">
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" id="buyerEmail" onkeydown="return messageSellerEnter(event)">
+                </div>
+                <div class="form-group">
+                    <label>Message:</label>
+                    <input type="text" class="form-control" id="buyerMessage" onkeydown="return messageSellerEnter(event)">
+                </div>
+
+                <input type="button" class="btn btn-warning btn-lg" value="Submit" id="message-button"
+                       onclick="messageSeller(<%= data[0].user_id %>)">
+            </form>
+
+        </div><!-- /.8 -->
+
+    </div> <!-- /.row-->
+
+</div>
+
+<script type="text/javascript">
+    initMap("<%= data[0].address %>, <%= data[0].city %>, <%= data[0].state %>, <%= data[0].zip_code %>")
+</script>
+
+</body>
+</html>

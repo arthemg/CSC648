@@ -41,6 +41,12 @@
                 <a class="a-inside delete" href="javascript:void(0)" onClick="deleteListing(<%=data[i].listing_id%>)">Delete</a>
                
             </td>
+            <form method="post" action="/api/listings/<%=data[i].listing_id%>" id="the-form" enctype="multipart/form-data">
+            <td>
+                <input class="form-control" type="file" name="uploaded_image" value="uploading_img" multiple />
+                <input type="button" class="btn btn-secondary" value="Submit" onclick="UploadMulPics(<%=data[i].listing_id%>, <%=i%>)">
+            </td>
+            </form>
         </tr>
     <% }
     
@@ -62,11 +68,11 @@
             <th>Email</th>
             <th>Message</th>
         </tr>
-                       
-        <% if(messages.length){ 
-                        
+
+        <% if(messages.length){
+
          for(var i = 0;i < messages.length;i++) { %>
-         
+
         <tr>
             <td><%=messages[i].name%></td>
             <td><%=messages[i].phone%></td>
@@ -74,22 +80,23 @@
             <td><%=messages[i].message%></td>
 
 			<td>
-			<a class="a-inside delete" href="javascript:void(0)" onClick="deleteMessage(<%=messages[i].message_id%>)">Delete</a> 
+			<a class="a-inside delete" href="javascript:void(0)" onClick="deleteMessage(<%=messages[i].message_id%>)">Delete</a>
             </td>
         </tr>
     <% }
-    
+
      }else{ %>
          <tr>
             <td colspan="5">No Data</td>
          </tr>
     <% } %>
-                                      
+
     </table>
 </div>
 
 <div class="page-data">
      <ul class="err-area"></ul>
+    <ul class="success-area"></ul>
 </div>
 
 <p><a href="/fa17g12/api/add_listing">Add a listing</a></p>

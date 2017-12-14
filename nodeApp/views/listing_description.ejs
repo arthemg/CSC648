@@ -1,99 +1,249 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title><%= title %></title>
-    <script type="text/javascript" src="./../../js/jquery-1.10.2.min.js"></script>
-    <link rel="stylesheet" href="./../../css/style.css">
-    <script type="text/javascript" src="./../../js/listingScripts.js"></script>
-    <script type="text/javascript" src="./../../js/userScripts.js"></script>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-</head>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <!--OUR STUFF-->
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+        <script type="text/javascript" src="./../../js/listingScripts.js"></script>
+        <script type="text/javascript" src="./../../js/userScripts.js"></script>
+        <link rel="stylesheet" href="./../../css/style.css">
+        <!--END OUR STUFF-->
 
-<body>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Property  page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<p><a onclick="backToSearch()" href="/fa17g12/">Back to Search</a></p>
-
-<!-- LISTING DESCRIPTION -->
-<div class="data-table">
-    <table border="1" cellpadding="7" cellspacing="7">
-        <tr>
-            <th>Address</th>
-            <th>City</th>
-            <th>State</th>
-            <th>Zip Code</th>
-        </tr>
-
-        <% if(data.length){ %>
-        <tr>
-            <td><%= data[0].address %></td>
-            <td><%= data[0].city %></td>
-            <td><%= data[0].state %></td>
-            <td><%= data[0].zip_code %></td>
-        </tr>
-
-        <% } else{ %>
-        <tr>
-            <td colspan="5">No Data</td>
-        </tr>
-        <% } %>
-
-    </table>
-</div>
-
-<img alt="Pic" src="../<%= data[0].image %>"/>
-
-<!-- MAP -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYSUWFvpVbz3iuStuGYjf0Ca4QJ4TBEgs">
-</script>
-
-<div id="map"></div>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
 
 
+        <link rel="stylesheet" href="./../../css/assets/css/normalize.css">
+        <link rel="stylesheet" href="./../../css/assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./../../css/assets/css/fontello.css">
+        <link href="./../../css/assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
+        <link href="./../../css/assets/fonts/icon-7-stroke/css/helper.css" rel="stylesheet">
+        <link href="./../../css/assets/css/animate.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="./../../css/assets/css/bootstrap-select.min.css">
+        <link rel="stylesheet" href="./../../css/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../../css/assets/css/icheck.min_all.css">
+        <link rel="stylesheet" href="./../../css/assets/css/price-range.css">
+        <link rel="stylesheet" href="./../../css/assets/css/owl.carousel.css">
+        <link rel="stylesheet" href="./../../css/assets/css/owl.theme.css">
+        <link rel="stylesheet" href="./../../css/assets/css/owl.transitions.css">
+        <link rel="stylesheet" href="./../../css/assets/css/lightslider.min.css">
+        <link rel="stylesheet" href="./../../css/assets/css/style.css">
+        <link rel="stylesheet" href="./../../css/assets/css/responsive.css">
+    </head>
+    <body>
 
-<div><strong>Contact Seller</strong></div>
-<div class="container">
+        <div id="preloader">
+            <div id="status">&nbsp;</div>
+        </div>
+        <!-- Body content -->
 
-    <div class="row">
+        <nav class="navbar navbar-default ">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
 
-        <div class="col-lg-6 col-lg-offset-2">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse yamm" id="navigation">
+                    <div class="button navbar-right" style="margin-top:10px;">
+                        <% if(login === false) { %>
+                        <a class="navbar-btn nav-button wow bounceInRight login"  href="/api/login" data-wow-delay="0.4s">Login</a>
+                        <% } else { %>
+                        <a class="navbar-btn nav-button wow bounceInRight login"  href="/api/logout" data-wow-delay="0.4s">Logout</a>
+                        <% } %>
+                    </div>
+                    <ul class="main-nav nav navbar-nav navbar-right">
+                        <li class="dropdown ymm-sw " data-wow-delay="0.1s">
+                            <a onclick="backToSearch()" href="/fa17g12/" >Home </a>
+                        </li>
+                        <% if (typeof isSeller !== 'undefined' && isSeller !== '0') { %>
+                        <li class="dropdown ymm-sw " data-wow-delay="0.1s">
+                            <a href="api/listings" >My Dashboard </a>
+                        </li>
+                        <% } %>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <!-- End of nav bar -->
 
-            <!--<h1>Contact form Tutorial from <a href="http://bootstrapious.com">Bootstrapious.com</a></h1>-->
-
-            <form method="post" action="" id="message-form" role="form" novalidate="true">
-                <div class="form-group" class="controls" class="row">
-                    <div class="col-md-28">
-                        <label>Name:</label>
-                        <input type="text" class="form-control" id="buyerName" onkeydown="return messageSellerEnter(event)">
+        <div class="page-head"> 
+            <div class="container">
+                <div class="row">
+                    <div class="page-head-content">
+                        <h1 class="page-title"><%= data[0].address %>, <%= data[0].city %>, <%= data[0].state%> </h1>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label>Phone Number:</label>
-                    <input type="text" class="form-control" id="buyerPhone" onkeydown="return messageSellerEnter(event)">
+            </div>
+        </div>
+        <!-- End page header -->
+
+        <!-- propertxy area -->
+        <div class="content-area single-property" style="background-color: #FCFCFC;">
+            <div class="container">
+
+                <div class="clearfix padding-top-40">
+                    <div class="col-md-8 single-property-content ">
+                        <div class="row">
+                            <div class="light-slide-item">            
+                                <div class="clearfix">
+                                    <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+                                        <% for(var i = 0; i < images.length; i++){ %>
+                                        <li data-thumb="../<%=images[i].images%>">
+                                            <img src="../<%=images[i].images%>" />
+                                        </li>
+                                        <%} %>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="single-property-wrapper">
+                            <div class="single-property-header">                                          
+                                <h1 class="property-title pull-left"><%= data[0].address %>, <%= data[0].city %>, <%= data[0].state%></h1>
+                                <span class="property-price pull-right">$<%= data[0].price%></span>
+                            </div>
+
+                            <div class="property-meta entry-meta clearfix ">  
+                               <div class="col-xs-3 col-sm-3 col-md-3 p-b-15">
+                                    <span class="property-info icon-area">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48">
+                                        <path class="meta-icon" fill="#FFA500" d="M46 16v-12c0-1.104-.896-2.001-2-2.001h-12c0-1.103-.896-1.999-2.002-1.999h-11.997c-1.105 0-2.001.896-2.001 1.999h-12c-1.104 0-2 .897-2 2.001v12c-1.104 0-2 .896-2 2v11.999c0 1.104.896 2 2 2v12.001c0 1.104.896 2 2 2h12c0 1.104.896 2 2.001 2h11.997c1.106 0 2.002-.896 2.002-2h12c1.104 0 2-.896 2-2v-12.001c1.104 0 2-.896 2-2v-11.999c0-1.104-.896-2-2-2zm-4.002 23.998c0 1.105-.895 2.002-2 2.002h-31.998c-1.105 0-2-.896-2-2.002v-31.999c0-1.104.895-1.999 2-1.999h31.998c1.105 0 2 .895 2 1.999v31.999zm-5.623-28.908c-.123-.051-.256-.078-.387-.078h-11.39c-.563 0-1.019.453-1.019 1.016 0 .562.456 1.017 1.019 1.017h8.935l-20.5 20.473v-8.926c0-.562-.455-1.017-1.018-1.017-.564 0-1.02.455-1.02 1.017v11.381c0 .562.455 1.016 1.02 1.016h11.39c.562 0 1.017-.454 1.017-1.016 0-.563-.455-1.019-1.017-1.019h-8.933l20.499-20.471v8.924c0 .563.452 1.018 1.018 1.018.561 0 1.016-.455 1.016-1.018v-11.379c0-.132-.025-.264-.076-.387-.107-.249-.304-.448-.554-.551z"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="property-info-entry">
+                                        <span class="property-info-label">Area</span>
+                                        <span class="property-info-value"><%= data[0].area%></span>
+                                    </span>
+                                </div>
+
+                                <div class="col-xs-3 col-sm-3 col-md-3 p-b-15">
+                                    <span class="property-info-icon icon-bed">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48">
+                                        <path class="meta-icon" fill="#FFA500" d="M21 48.001h-19c-1.104 0-2-.896-2-2v-31c0-1.104.896-2 2-2h19c1.106 0 2 .896 2 2v31c0 1.104-.895 2-2 2zm0-37.001h-19c-1.104 0-2-.895-2-1.999v-7.001c0-1.104.896-2 2-2h19c1.106 0 2 .896 2 2v7.001c0 1.104-.895 1.999-2 1.999zm25 37.001h-19c-1.104 0-2-.896-2-2v-31c0-1.104.896-2 2-2h19c1.104 0 2 .896 2 2v31c0 1.104-.896 2-2 2zm0-37.001h-19c-1.104 0-2-.895-2-1.999v-7.001c0-1.104.896-2 2-2h19c1.104 0 2 .896 2 2v7.001c0 1.104-.896 1.999-2 1.999z"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="property-info-entry">
+                                        <span class="property-info-label">Bedrooms</span>
+                                        <span class="property-info-value"><%= data[0].beds%></span>
+                                    </span>
+                                </div>
+
+                                <div class="col-xs-3 col-sm-3 col-md-3 p-b-15">
+                                    <span class="property-info-icon icon-bath">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48">
+                                        <path class="meta-icon" fill="#FFA500" d="M37.003 48.016h-4v-3.002h-18v3.002h-4.001v-3.699c-4.66-1.65-8.002-6.083-8.002-11.305v-4.003h-3v-3h48.006v3h-3.001v4.003c0 5.223-3.343 9.655-8.002 11.305v3.699zm-30.002-24.008h-4.001v-17.005s0-7.003 8.001-7.003h1.004c.236 0 7.995.061 7.995 8.003l5.001 4h-14l5-4-.001.01.001-.009s.938-4.001-3.999-4.001h-1s-4 0-4 3v17.005000000000003h-.001z"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="property-info-entry">
+                                        <span class="property-info-label">Bathrooms</span>
+                                        <span class="property-info-value"><%= data[0].bath  %></span>
+                                    </span>
+                                </div>
+
+                            </div>
+                            <!-- .property-meta -->
+
+                            <div class="section">
+                                <h4 class="s-property-title">Description</h4>
+                                <div class="s-property-content">
+                                    <p><%= data[0].description%></p>
+                                </div>
+                            </div>
+                            <!-- End description area  -->
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 p0">
+                        <aside class="sidebar sidebar-property blog-asside-right">
+                            <div class="panel panel-default sidebar-menu wow fadeInRight animated" >
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Contact Seller</h3>
+                                </div>
+                                <div class="panel-body search-widget">
+                                    <form action="" class=" form-inline"> 
+                                        <fieldset>
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <input type="text" class="form-control" placeholder="Full Name" id="buyerName" onkeydown="return messageSellerEnter(event)">
+                                                    <input type="text" class="form-control" placeholder="Phone Number" id="buyerPhone" onkeydown="return messageSellerEnter(event)">
+                                                    <input type="text" class="form-control" placeholder="Email" id="buyerEmail" onkeydown="return messageSellerEnter(event)">
+                                                    <textarea class="form-control" placeholder="Message" id="buyerMessage" onkeydown="return messageSellerEnter(event)"></textarea>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset >
+                                            <div class="row">
+                                                <div class="col-xs-12">  
+                                                    <input class="button btn largesearch-btn" value="Send" type="submit" onclick="messageSeller(<%= data[0].user_id %>)">
+                                                </div>  
+                                            </div>
+                                        </fieldset>                                     
+                                    </form>
+                                </div>
+                                <div class="panel-body search-widget">
+                                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYSUWFvpVbz3iuStuGYjf0Ca4QJ4TBEgs">
+                                    </script>
+
+                                    <div id="map"></div>
+                                </div>
+
+                            </div>
+
+
+                        </aside>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="text" class="form-control" id="buyerEmail" onkeydown="return messageSellerEnter(event)">
-                </div>
-                <div class="form-group">
-                    <label>Message:</label>
-                    <input type="text" class="form-control" id="buyerMessage" onkeydown="return messageSellerEnter(event)">
-                </div>
+            </div>
+        </div>
 
-                <input type="button" class="btn btn-warning btn-lg" value="Submit" id="message-button"
-                       onclick="messageSeller(<%= data[0].user_id %>)">
-            </form>
 
-        </div><!-- /.8 -->
+        <script src="./../../css/assets/js/jquery-1.10.2.min.js"></script>
+        <script src="./../../css/bootstrap/js/bootstrap.min.js"></script>
+        <script src="./../../css/assets/js/bootstrap-select.min.js"></script>
+        <script src="./../../css/assets/js/bootstrap-hover-dropdown.js"></script>
+        <script src="./../../css/assets/js/easypiechart.min.js"></script>
+        <script src="./../../css/assets/js/jquery.easypiechart.min.js"></script>
+        <script src="./../../css/assets/js/owl.carousel.min.js"></script>
+        <script src="./../../css/assets/js/wow.js"></script>
+        <script src="./../../css/assets/js/icheck.min.js"></script>
+        <script src="./../../css/assets/js/price-range.js"></script>
+        <script type="text/javascript" src="./../../css/assets/js/lightslider.min.js"></script>
+        <script src="./../../css/assets/js/main.js"></script>
 
-    </div> <!-- /.row-->
+        <script>
+                            $(document).ready(function () {
 
-</div>
+                                $('#image-gallery').lightSlider({
+                                    gallery: true,
+                                    item: 1,
+                                    thumbItem: 9,
+                                    slideMargin: 0,
+                                    speed: 500,
+                                    auto: true,
+                                    loop: true,
+                                    onSliderLoad: function () {
+                                        $('#image-gallery').removeClass('cS-hidden');
+                                    }
+                                });
+                                initMap("<%= data[0].address %>, <%= data[0].city %>, <%= data[0].state %>, <%= data[0].zip_code %>")
+                            });
+        </script>
 
-<script type="text/javascript">
-    initMap("<%= data[0].address %>, <%= data[0].city %>, <%= data[0].state %>, <%= data[0].zip_code %>")
-</script>
-
-</body>
+    </body>
 </html>

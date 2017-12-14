@@ -1,142 +1,199 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
+    <meta charset="utf-8">
     <% if(returning == true){ %>
-    <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="../js/userScripts.js"></script>
+    <!--OUR STUFF-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
     <script type="text/javascript" src="../js/listingScripts.js"></script>
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../js/userScripts.js"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
-    <% } else { %>
-    <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="./js/userScripts.js"></script>
+    <!--END OUR STUFF-->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Property  page11</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css/assets/css/normalize.css">
+    <link rel="stylesheet" href="../css/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/assets/css/fontello.css">
+    <link href="../css/assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
+    <link href="../css/assets/fonts/icon-7-stroke/css/helper.css" rel="stylesheet">
+    <link href="../css/assets/css/animate.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="../css/assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/assets/css/icheck.min_all.css">
+    <link rel="stylesheet" href="../css/assets/css/price-range.css">
+    <link rel="stylesheet" href="../css/assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="../css/assets/css/owl.theme.css">
+    <link rel="stylesheet" href="../css/assets/css/owl.transitions.css">
+    <link rel="stylesheet" href="../css/assets/css/lightslider.min.css">
+    <link rel="stylesheet" href="../css/assets/css/style.css">
+    <link rel="stylesheet" href="../css/assets/css/responsive.css">
+    <%} else {%>
+    <!--OUR STUFF-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
     <script type="text/javascript" src="./js/listingScripts.js"></script>
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./js/userScripts.js"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-    <% } %>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <!--END OUR STUFF-->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Property  page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+
+
+    <link rel="stylesheet" href="./../../css/assets/css/normalize.css">
+    <link rel="stylesheet" href="./../../css/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./../../css/assets/css/fontello.css">
+    <link href="./../../css/assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
+    <link href="./../../css/assets/fonts/icon-7-stroke/css/helper.css" rel="stylesheet">
+    <link href="./../../css/assets/css/animate.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="./../../css/assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="./../../css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../../css/assets/css/icheck.min_all.css">
+    <link rel="stylesheet" href="./../../css/assets/css/price-range.css">
+    <link rel="stylesheet" href="./../../css/assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="./../../css/assets/css/owl.theme.css">
+    <link rel="stylesheet" href="./../../css/assets/css/owl.transitions.css">
+    <link rel="stylesheet" href="./../../css/assets/css/lightslider.min.css">
+    <link rel="stylesheet" href="./../../css/assets/css/style.css">
+    <link rel="stylesheet" href="./../../css/assets/css/responsive.css">
+    <%}%>
 </head>
+    <body>
 
-<body id="divResults">
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark tab-content-top">
-    <div class="container">
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/fa17g12/" style="font-size: 20px; Background: #343a40;">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/fa17g12/about/" style="font-size: 20px; color: white">About</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-                <% if(login === false) { %>
-                <li class="nav-item">
-                    <a class="btn btn-primary" style="padding: 8px 18px" href="api/login">Sign In</a>
-                </li>
-                <% } else { %>
-                <li class="nav-item">
-                    <a class="btn btn-primary" style="padding: 8px 18px" href="api/logout">Logout</a>
-                </li>
-                <% } %>
-                <li class="nav-item">
-                    <a class="btn btn-primary" style="padding: 8px 18px; margin-left: 10px;" href="api/signup">Sign
-                        up</a>
-                </li>
-            </ul>
+        <div id="preloader">
+            <div id="status">&nbsp;</div>
         </div>
-    </div>
-</nav>
+        <!-- Body content -->
 
-<% if (typeof isSeller !== 'undefined' && isSeller !== '0') { %>
-<p><a href="api/listings">All Listings</a></p>
-<% } %>
+        <nav class="navbar navbar-default ">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
 
-<!-- Page Content -->
-<div class="container">
-    <!-- Page Heading -->
-    <div class="my-4">
-        <center>
-            <form method="post" action="" id="search_form">
-                <input style="padding: 10px 18px; width: 60%" type="text" placeholder="Street Address, City, State, Zip"
-                       id="listingSearch" name="search" onkeydown="return searchListingEnter(event)" maxlength="40"
-                       value="">
-                <input style="padding: 10px 18px ; " type="button" class="btn btn-info" value="Search"
-                       id="listingSearchBtn" onClick="searchListing()">
-            </form>
-        </center>
-    </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse yamm" id="navigation">
+                    <div class="button navbar-right" style="margin-top:10px;">
+                        <% if(login === false) { %>
+                        <a class="navbar-btn nav-button wow bounceInRight login"  href="/api/login" data-wow-delay="0.4s">Login</a>
+                        <% } else { %>
+                        <a class="navbar-btn nav-button wow bounceInRight login"  href="/api/logout" data-wow-delay="0.4s">Logout</a>
+                        <% } %>
+                    </div>
+                    <ul class="main-nav nav navbar-nav navbar-right">
+                        <li class="dropdown ymm-sw " data-wow-delay="0.1s">
+                            <a onclick="backToSearch()" href="/fa17g12/" >Home </a>
+                        </li>
+                        <% if (typeof isSeller !== 'undefined' && isSeller !== '0') { %>
+                        <li class="dropdown ymm-sw " data-wow-delay="0.1s">
+                            <a href="api/listings" >My Dashboard </a>
+                        </li>
+                        <% } %>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <!-- End of nav bar -->
 
-    <div class="page-data">
-        <ul class="err-area" id="err-area"></ul>
-    </div>
-
-    <!--listing-->
-    <% if(data.length){ %>
-    <div class="row">
-        <% for(var i = 0;i < data.length;i++) { %>
-        <tr>
-            <div class="col-lg-4 col-sm-6 portfolio-item" style="margin-bottom: 5px">
-                <div class="card h-100">
-                    <% if(returning == true){ %>
-                    <td><a href="#" onClick="listingDescription(<%= data[i].listing_id %>)"><img class="card-img-top"
-                                                                                                 src="../public/<%= data[i].image %>"
-                                                                                                 alt="House image"></a>
-                    </td>
-                    <% } else { %>
-                    <td><a href="#" onClick="listingDescription(<%= data[i].listing_id %>)"><img class="card-img-top"
-                                                                                                 src="./public/<%= data[i].image %>"
-                                                                                                 alt="House image"></a>
-                    </td>
-                    <% } %>
-                    <div class="card-body">
-                        <p class="card-text">
-                            <label style="margin-right: 2px">Address:</label>
-                        <td><%= data[i].address %></td>
-                        <br>
-                        <label style="margin-right: 31px">City:</label>
-                        <td><%= data[i].city %></td>
-                        <br>
-                        <label style="margin-right: 22px">State:</label>
-                        <td><%= data[i].state %></td>
-                        <br>
-                        <label>ZipCode:</label>
-                        <td><%= data[i].zip_code %></td>
-                        <br>
-                        </p>
-                        <td><input type="button" value="See More" class="btn btn-primary"
-                                   onClick="listingDescription(<%= data[i].listing_id %>)"></td>
+        <div class="col-md-12 large-search">
+            <div class="search-form wow pulse">
+                <form action="" class=" form-inline">
+                        <div style="display: flex;">
+                            <input type="text" class="form-control" style="margin-left: 15px; " placeholder="Search for street address, city, state, zip..."  id="listingSearch" name="search" onkeydown="return searchListingEnter(event)" maxlength="40">
+                            <input type="submit" value="Search" class="btn btn-default btn-lg-sheach" style="margin-right: 15px; padding: 0px; background: #43A047" id="listingSearchBtn" onClick="searchListing()">
+                        </div>
+                </form>
+            </div>
+        </div>
+        <!-- property area -->
+        <div class="content-area home-area-1 recent-property" style="background-color: #FCFCFC; padding-bottom: 55px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
+                        <!-- /.feature title -->
+                        <h2>Welcome to SFSU CSC648 Real Estate</h2>
                     </div>
                 </div>
+                <% if(data.length){ %>
+                <div class="row">
+                    <% for(var i = 0;i < data.length;i++) { %>
+                    <div class="proerty-th">
+
+                        <div class="col-sm-6 col-md-3 p0">
+                            <div class="box-two proerty-item">
+                                <% if(returning == true){ %>
+                                <div class="item-thumb">
+                                    <a href="#" onClick="listingDescription(<%= data[i].listing_id %>)" ><img src="../public/<%= data[i].image %>"></a>
+                                </div>
+                                <% } else { %>
+                                <div class="item-thumb">
+                                <a href="#" onClick="listingDescription(<%= data[i].listing_id %>)" ><img src="../public/<%= data[i].image %>"></a>
+                                </div>
+                                <% } %>
+                                <div class="item-entry overflow">
+                                    <h5><a href="#" onClick="listingDescription(<%= data[i].listing_id %>)" ><%= data[0].address %>, <%= data[0].city %>, <%= data[0].state%></a></h5>
+                                    <div class="dot-hr"></div>
+                                    <span class="pull-left"><b>Area :</b> <%= data[0].area%></span>
+                                    <span class="proerty-price pull-right">$ <%= data[0].price%></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } } else { %>
+                <tr>
+                    <td colspan="6">No Data</td>
+                </tr>
+                <% } %>
             </div>
-        </tr>
+        </div>
+        <% if(returning == true){ %>
+        <script src="./../../css/assets/js/jquery-1.10.2.min.js"></script>
+        <script src="./../../css/bootstrap/js/bootstrap.min.js"></script>
+        <script src="./../../css/assets/js/bootstrap-select.min.js"></script>
+        <script src="./../../css/assets/js/bootstrap-hover-dropdown.js"></script>
+        <script src="./../../css/assets/js/easypiechart.min.js"></script>
+        <script src="./../../css/assets/js/jquery.easypiechart.min.js"></script>
+        <script src="./../../css/assets/js/owl.carousel.min.js"></script>
+        <script src="./../../css/assets/js/wow.js"></script>
+        <script src="./../../css/assets/js/icheck.min.js"></script>
+        <script src="./../../css/assets/js/price-range.js"></script>
+        <script type="text/javascript" src="./../../css/assets/js/lightslider.min.js"></script>
+        <script src="./../../css/assets/js/main.js"></script>
+        <%} else {%>
+        <script src="./../../css/assets/js/jquery-1.10.2.min.js"></script>
+        <script src="./../../css/bootstrap/js/bootstrap.min.js"></script>
+        <script src="./../../css/assets/js/bootstrap-select.min.js"></script>
+        <script src="./../../css/assets/js/bootstrap-hover-dropdown.js"></script>
+        <script src="./../../css/assets/js/easypiechart.min.js"></script>
+        <script src="./../../css/assets/js/jquery.easypiechart.min.js"></script>
+        <script src="./../../css/assets/js/owl.carousel.min.js"></script>
+        <script src="./../../css/assets/js/wow.js"></script>
+        <script src="./../../css/assets/js/icheck.min.js"></script>
+        <script src="./../../css/assets/js/price-range.js"></script>
+        <script type="text/javascript" src="./../../css/assets/js/lightslider.min.js"></script>
+        <script src="./../../css/assets/js/main.js"></script>
         <% } %>
-    </div>
-</div>
->
-<% }else{ %>
-<tr>
-    <td colspan="6">No Data</td>
-</tr>
-<% } %>
-<!-- Footer -->
-<div class="py-5 bg-dark" style="position: relative; left: 0; right: 0; bottom: 0">
-    <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
-    </div>
-</div>
 
-<script type="text/javascript">
-    getSearchString()
-</script>
+        <script type="text/javascript">
+            getSearchString()
+        </script>
 
-<% returning = false; %>
-
-</body>
+        <% returning = false; %>
+    </body>
 </html>
