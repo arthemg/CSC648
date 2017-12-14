@@ -53,28 +53,28 @@
     <!--END OUR STUFF-->
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Property  page</title>
+    <title>Property  page777 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
 
 
-    <link rel="stylesheet" href="./../../css/assets/css/normalize.css">
-    <link rel="stylesheet" href="./../../css/assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./../../css/assets/css/fontello.css">
-    <link href="./../../css/assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
-    <link href="./../../css/assets/fonts/icon-7-stroke/css/helper.css" rel="stylesheet">
-    <link href="./../../css/assets/css/animate.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" href="./../../css/assets/css/bootstrap-select.min.css">
-    <link rel="stylesheet" href="./../../css/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./../../css/assets/css/icheck.min_all.css">
-    <link rel="stylesheet" href="./../../css/assets/css/price-range.css">
-    <link rel="stylesheet" href="./../../css/assets/css/owl.carousel.css">
-    <link rel="stylesheet" href="./../../css/assets/css/owl.theme.css">
-    <link rel="stylesheet" href="./../../css/assets/css/owl.transitions.css">
-    <link rel="stylesheet" href="./../../css/assets/css/lightslider.min.css">
-    <link rel="stylesheet" href="./../../css/assets/css/style.css">
-    <link rel="stylesheet" href="./../../css/assets/css/responsive.css">
+    <link rel="stylesheet" href="./css/assets/css/normalize.css">
+    <link rel="stylesheet" href="./css/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/assets/css/fontello.css">
+    <link href="./css/assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
+    <link href="./css/assets/fonts/icon-7-stroke/css/helper.css" rel="stylesheet">
+    <link href="./css/assets/css/animate.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="./css/assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/assets/css/icheck.min_all.css">
+    <link rel="stylesheet" href="./css/assets/css/price-range.css">
+    <link rel="stylesheet" href="./css/assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="./css/assets/css/owl.theme.css">
+    <link rel="stylesheet" href="./css/assets/css/owl.transitions.css">
+    <link rel="stylesheet" href="./css/assets/css/lightslider.min.css">
+    <link rel="stylesheet" href="./css/assets/css/style.css">
+    <link rel="stylesheet" href="./css/assets/css/responsive.css">
     <%}%>
 </head>
     <body>
@@ -100,9 +100,10 @@
                 <div class="collapse navbar-collapse yamm" id="navigation">
                     <div class="button navbar-right" style="margin-top:10px;">
                         <% if(login === false) { %>
-                        <a class="navbar-btn nav-button wow bounceInRight login"  href="/api/login" data-wow-delay="0.4s">Login</a>
+                        <a class="navbar-btn nav-button wow bounceInRight login"  href="/fa17g12/api/login" data-wow-delay="0.4s">Login</a>
+			<a class="navbar-btn nav-button wow bounceInRight login"  href="/fa17g12/api/signup" data-wow-delay="0.4s">Signup</a>
                         <% } else { %>
-                        <a class="navbar-btn nav-button wow bounceInRight login"  href="/api/logout" data-wow-delay="0.4s">Logout</a>
+                        <a class="navbar-btn nav-button wow bounceInRight login"  href="/fa17g12/api/logout" data-wow-delay="0.4s">Logout</a>
                         <% } %>
                     </div>
                     <ul class="main-nav nav navbar-nav navbar-right">
@@ -152,7 +153,7 @@
                                 </div>
                                 <% } else { %>
                                 <div class="item-thumb">
-                                <a href="#" onClick="listingDescription(<%= data[i].listing_id %>)" ><img src="../public/<%= data[i].image %>"></a>
+                                <a href="#" onClick="listingDescription(<%= data[i].listing_id %>)" ><img src="./images/<%= data[i].image %>"></a>
                                 </div>
                                 <% } %>
                                 <div class="item-entry overflow">
@@ -173,31 +174,31 @@
             </div>
         </div>
         <% if(returning == true){ %>
-        <script src="./../../css/assets/js/jquery-1.10.2.min.js"></script>
-        <script src="./../../css/bootstrap/js/bootstrap.min.js"></script>
-        <script src="./../../css/assets/js/bootstrap-select.min.js"></script>
-        <script src="./../../css/assets/js/bootstrap-hover-dropdown.js"></script>
-        <script src="./../../css/assets/js/easypiechart.min.js"></script>
-        <script src="./../../css/assets/js/jquery.easypiechart.min.js"></script>
-        <script src="./../../css/assets/js/owl.carousel.min.js"></script>
-        <script src="./../../css/assets/js/wow.js"></script>
-        <script src="./../../css/assets/js/icheck.min.js"></script>
-        <script src="./../../css/assets/js/price-range.js"></script>
-        <script type="text/javascript" src="./../../css/assets/js/lightslider.min.js"></script>
-        <script src="./../../css/assets/js/main.js"></script>
+        <script src="../css/assets/js/jquery-1.10.2.min.js"></script>
+        <script src="../css/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../css/assets/js/bootstrap-select.min.js"></script>
+        <script src="../css/assets/js/bootstrap-hover-dropdown.js"></script>
+        <script src="../css/assets/js/easypiechart.min.js"></script>
+        <script src="../css/assets/js/jquery.easypiechart.min.js"></script>
+        <script src="../css/assets/js/owl.carousel.min.js"></script>
+        <script src="../css/assets/js/wow.js"></script>
+        <script src="../css/assets/js/icheck.min.js"></script>
+        <script src="../css/assets/js/price-range.js"></script>
+        <script type="text/javascript" src="../css/assets/js/lightslider.min.js"></script>
+        <script src="../css/assets/js/main.js"></script>
         <%} else {%>
-        <script src="./../../css/assets/js/jquery-1.10.2.min.js"></script>
-        <script src="./../../css/bootstrap/js/bootstrap.min.js"></script>
-        <script src="./../../css/assets/js/bootstrap-select.min.js"></script>
-        <script src="./../../css/assets/js/bootstrap-hover-dropdown.js"></script>
-        <script src="./../../css/assets/js/easypiechart.min.js"></script>
-        <script src="./../../css/assets/js/jquery.easypiechart.min.js"></script>
-        <script src="./../../css/assets/js/owl.carousel.min.js"></script>
-        <script src="./../../css/assets/js/wow.js"></script>
-        <script src="./../../css/assets/js/icheck.min.js"></script>
-        <script src="./../../css/assets/js/price-range.js"></script>
-        <script type="text/javascript" src="./../../css/assets/js/lightslider.min.js"></script>
-        <script src="./../../css/assets/js/main.js"></script>
+        <script src="./css/assets/js/jquery-1.10.2.min.js"></script>
+        <script src="./css/bootstrap/js/bootstrap.min.js"></script>
+        <script src="./css/assets/js/bootstrap-select.min.js"></script>
+        <script src="./css/assets/js/bootstrap-hover-dropdown.js"></script>
+        <script src="./css/assets/js/easypiechart.min.js"></script>
+        <script src="./css/assets/js/jquery.easypiechart.min.js"></script>
+        <script src="./css/assets/js/owl.carousel.min.js"></script>
+        <script src="./css/assets/js/wow.js"></script>
+        <script src="./css/assets/js/icheck.min.js"></script>
+        <script src="./css/assets/js/price-range.js"></script>
+        <script type="text/javascript" src="./css/assets/js/lightslider.min.js"></script>
+        <script src="./css/assets/js/main.js"></script>
         <% } %>
 
         <script type="text/javascript">
