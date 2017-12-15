@@ -140,10 +140,10 @@
                         <h2>Welcome to SFSU CSC648 Real Estate</h2>
                     </div>
                 </div>
-      
-                <div class="row">
+      		
 		<% if(data.length) { %>
-                    <% for(var i = 0;i < data.length;i++) { %>
+                <div class="row">
+                    <% for(var i = 0; i < data.length;i++) { %>
                     <div class="proerty-th">
 
                         <div class="col-sm-6 col-md-3 p0">
@@ -165,13 +165,14 @@
                                 </div>
                             </div>
                         </div>
+			<% } } else { %>
+		               	 <tr>
+                		 <td colspan="6">No Data</td>
+               			 </tr>
+               		 <% } %>
+
                     </div>
                 </div>
-                <% } } else { %>
-                <tr>
-                    <td colspan="6">No Data</td>
-                </tr>
-                <% } %>
             </div>
         </div>
         <% if(returning == true){ %>
