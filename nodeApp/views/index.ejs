@@ -140,8 +140,9 @@
                         <h2>Welcome to SFSU CSC648 Real Estate</h2>
                     </div>
                 </div>
-                <% if(data.length){ %>
+      
                 <div class="row">
+		<% if(data.length) { %>
                     <% for(var i = 0;i < data.length;i++) { %>
                     <div class="proerty-th">
 
@@ -157,10 +158,10 @@
                                 </div>
                                 <% } %>
                                 <div class="item-entry overflow">
-                                    <h5><a href="#" onClick="listingDescription(<%= data[i].listing_id %>)" ><%= data[0].address %>, <%= data[0].city %>, <%= data[0].state%></a></h5>
+                                    <h5><a href="#" onClick="listingDescription(<%= data[i].listing_id %>)" ><%= data[i].address %>, <%= data[i].city %>, <%= data[i].state%></a></h5>
                                     <div class="dot-hr"></div>
-                                    <span class="pull-left"><b>Area :</b> <%= data[0].area%></span>
-                                    <span class="proerty-price pull-right">$ <%= data[0].price%></span>
+                                    <span class="pull-left"><b>Area :</b> <%= data[i].area%></span>
+                                    <span class="proerty-price pull-right">$ <%= data[i].price%></span>
                                 </div>
                             </div>
                         </div>
