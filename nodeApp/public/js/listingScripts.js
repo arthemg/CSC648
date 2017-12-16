@@ -185,9 +185,10 @@ function searchListing(){
 				console.log(res, 'response');
 
 
-				var html = res;
-				$('#divResults').html(html);
+				// var html = res;
+				// $('#divResults').html(html);
 				//window.location.reload();
+				window.location.href = "/fa17g12/search_listings/" + listing;
 
 				return false;
 			},

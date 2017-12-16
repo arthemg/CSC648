@@ -131,6 +131,7 @@ app.post('/api/listings/:listing_id', upload.array('photos',3), listings.upLoadM
 app.get('/api/add_listing', listings.getAddListingPage);
 app.post('/api/add_listing', upload.single('photo'), listings.addNewListing);
 app.post('/search_listings/:listing', listings.searchListing);
+app.get('/search_listings/:listing', listings.searchListing);
 app.get('/api/listings/:listing_id', listings.getListingToEdit);
 app.put('/api/listings/:listing_id', upload.single('photo'), listings.updateListingInfo);
 app.delete('/api/listings/:listing_id', listings.deleteListing);

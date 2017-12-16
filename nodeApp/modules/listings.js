@@ -87,7 +87,7 @@ var addNewListing = function (req, res, next) {
 var searchListing = function (req, res, next) {
 
     var listing = req.params.listing;
-	var returning = false;
+	var returning = true;
 
 	//like search 1-4 characters
 	var searchWord = "%";
@@ -104,8 +104,8 @@ var searchListing = function (req, res, next) {
 	searchWord = searchWord + "%";
 	
 	
-	var queryString = "SELECT * FROM listings WHERE city LIKE ? OR address LIKE ? OR zip_code LIKE ? "
-	var filter = [searchWord, searchWord, searchWord];
+	var queryString = "SELECT * FROM listings WHERE city LIKE ? OR address LIKE ? OR zip_code LIKE ? OR state LIKE ? "
+	var filter = [searchWord, searchWord, searchWord, searchWord];
 	
 	var query = dbConnection.query(queryString, filter, function (err, rows) {
 
@@ -251,8 +251,8 @@ var returnToSearch = function (req, res, next) {
 	searchWord = searchWord + "%";
 	
 	
-	var queryString = "SELECT * FROM listings WHERE city LIKE ? OR address LIKE ? OR zip_code LIKE ? "
-	var filter = [searchWord, searchWord, searchWord];
+	var queryString = "SELECT * FROM listings WHERE city LIKE ? OR address LIKE ? OR zip_code LIKE ? OR state LIKE ? "
+	var filter = [searchWord, searchWord, searchWord, searchWord];
 	
 	var query = dbConnection.query(queryString, filter, function (err, rows) {
 
