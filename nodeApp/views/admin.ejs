@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%=title%></title>
+        <script type="text/javascript" src="./../js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="./../js/userScripts.js"></script>
+        <script type="text/javascript" src="./../js/listingScripts.js"></script>
+        <link rel="stylesheet" href="./../css/style.css">
+    </head>
+<body>
+<p><a href="/fa17g12/">Back to home page</a></p>
+
+<!--- ALL USERS DISPLAY --->
+<div class="data-table">
+    <table border="1" cellpadding="7" cellspacing="7">
+        <tr>
+            <th width="50px">No</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Seller</th>
+            <th>License</th>
+        </tr>
+                       
+        <% if(data.length){ 
+                        
+         for(var i = 0;i < data.length;i++) { %>
+         
+        <tr>
+            <td><%=(i+1)%></td>
+            <td><%=data[i].name%></td>
+            <td><%=data[i].lname%></td>
+            <td><%=data[i].phone%></td>
+            <td><%=data[i].email%></td>
+            <td><%=data[i].password%></td>
+            <td><%=data[i].seller%></td>
+            <td><%=data[i].license%></td>
+
+            <td>
+                <a class="a-inside edit" href="/fa17g12/api/user/<%=data[i].user_id%>">Edit</a>
+               
+                <a class="a-inside delete" href="javascript:void(0)" onClick="deleteUser(<%=data[i].user_id%>)">Delete</a>
+               
+            </td>
+        </tr>
+    <% }
+    
+     }else{ %>
+         <tr>
+            <td colspan="5">No Data</td>
+         </tr>
+    <% } %>
+                                      
+    </table>
+</div>
+
+<!--- ALL LISTINGS DISPLAY --->
+<div class="data-table">
+    <table border="1" cellpadding="7" cellspacing="7">
+        <tr>
+            <th width="50px">Num</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip Code</th>
+            <th>Picture</th>
+        </tr>
+                       
+        <% if(listings.length){ 
+                        
+         for(var i = 0;i < listings.length;i++) { %>
+         
+        <tr>
+            <td><%=(i+1)%></td>
+            <td><%=listings[i].address%></td>
+            <td><%=listings[i].city%></td>
+            <td><%=listings[i].state%></td>
+            <td><%=listings[i].zip_code%></td>
+            <td><img src="<%=listings[i].image%>" style=" height:200px; width:200px; " > </td>
+			<td>
+                <a class="a-inside delete" href="javascript:void(0)" onClick="deleteListing(<%=listings[i].listing_id%>)">Delete</a>
+            </td>
+        </tr>
+    <% }
+    
+     }else{ %>
+         <tr>
+            <td colspan="5">No Data</td>
+         </tr>
+    <% } %>
+                                      
+    </table>
+</div>
+
+</body>
+</html>

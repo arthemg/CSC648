@@ -305,7 +305,22 @@ var deleteMessage = function (req, res, next) {
 	});
 };
 
+var getAdminPage = function (req, res, next) {
+
+	var query = dbConnection.query('SELECT * FROM t_user; SELECT * FROM listings; ', function (err, rows) {
+
+		if (err) {
+			console.log(err);
+			return next("Mysql error, check your query");
+		}
+
+		res.render('admin', {title: "Admin", data: rows[0], listings: rows[1]});
+
+	});
+};
+
 module.exports = {
+	getAdminPage: getAdminPage,
     getAllUsers: getAllUsers,
     addNewUser:addNewUser,
     searchUser:searchUser,

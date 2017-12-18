@@ -112,6 +112,7 @@ router.use(function (req, res, next) {
 });
 
 //USERS EXTERNAL MODULES
+app.get('/api/admin', users.getAdminPage);
 app.get('/api/user', users.getAllUsers);
 app.post('/api/user', users.addNewUser);
 app.get('/search_users', users.getSearchUsersPage);
