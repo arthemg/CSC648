@@ -170,10 +170,10 @@ function searchListing(){
 
 	//this checks for empty search
 	if (listing){
-		
+
 		console.log(listing);
 		sessionStorage.searchString = listing;
-	
+
 		$.ajax({
 
 			url:"/fa17g12/search_listings/" + listing,
@@ -285,17 +285,17 @@ function initMap(address) {
 }
 
 function getSearchString() {
-	
+
 	var search = sessionStorage.searchString;
 	var backToSearchWord = sessionStorage.returnString;
-	
+
 	if (search != "" && search != null){
-		
+
 			document.getElementById("listingSearch").value = search;
 			sessionStorage.removeItem("searchString");
 	}
 	else if (backToSearchWord != "" && backToSearchWord != null){
-		
+
 		if(sessionStorage.clicked == "1"){
 			document.getElementById("listingSearch").value = backToSearchWord;
 			sessionStorage.removeItem("returnString");
@@ -309,18 +309,18 @@ function getSearchString() {
 	else{
 		return false;
 	}
-	
+
 }
 
 function backToSearch(){
-	
+
 	if (sessionStorage.returnString == ""){
 		return false;
 	}
-	
+
 	var requery = sessionStorage.returnString;
 	sessionStorage.clicked = "1";
-	
+
     console.log(requery, 'arg');
     $.ajax({
         type: "get",
