@@ -12,10 +12,13 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111247777-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
+
         function gtag() {
             dataLayer.push(arguments);
         }
+
         gtag('js', new Date());
+
         gtag('config', 'UA-111247777-1');
     </script>
 
@@ -27,9 +30,11 @@
     <script type="text/javascript" src="../js/userScripts.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <!--END OUR STUFF-->
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Property page11</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../css/assets/css/normalize.css">
     <link rel="stylesheet" href="../css/assets/css/font-awesome.min.css">
@@ -54,10 +59,14 @@
     <script type="text/javascript" src="./js/userScripts.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <!--END OUR STUFF-->
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Bay Real Estate </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+
+
     <link rel="stylesheet" href="./css/assets/css/normalize.css">
     <link rel="stylesheet" href="./css/assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/assets/css/fontello.css">
@@ -150,6 +159,7 @@
         <div class="row">
             <% for(var i = 0; i < data.length;i++) { %>
             <div class="proerty-th">
+
                 <div class="col-sm-6 col-md-3 p0">
                     <div class="box-two proerty-item">
                         <% if(returning == true){ %>
@@ -215,19 +225,25 @@
     getSearchString()
 </script>
 <!-- Footer -->
-<div class="py-5 bg-dark" style="position: relative; left: 0; right: 0; bottom: 0">
-    <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; (SFSU CSC648 Team 12) 2017</p>
-        <div class="text-center center-block">
-            <a href="https://www.facebook.com/sanfranciscostate/"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
-            <a href="https://twitter.com/SFSU"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
-            <a href="https://github.com/JiawenZhu"><i id="social-gi" class="fa fa-github-square fa-3x social"></i></a>
-            <a href="https://www.linkedin.com/in/zhu-jiawen-1b166430/"><i id="social-li" class="fa fa-linkedin-square fa-3x social"></i></a>
-            <a href="mailto:zhujiawen519@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+<div id="footer">
+    <div class="py-5 bg-dark" style="position: relative; left: 0; right: 0; bottom: 0">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; (SFSU CSC648 Team 12) 2017</p>
+            <div class="text-center center-block">
+                <a href="https://www.facebook.com/sanfranciscostate/"><i id="social-fb"
+                                                                         class="fa fa-facebook-square fa-3x social"></i></a>
+                <a href="https://twitter.com/SFSU"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                <a href="https://github.com/JiawenZhu"><i id="social-gi"
+                                                          class="fa fa-github-square fa-3x social"></i></a>
+                <a href="https://www.linkedin.com/in/zhu-jiawen-1b166430/"><i id="social-li"
+                                                                              class="fa fa-linkedin-square fa-3x social"></i></a>
+                <a href="mailto:zhujiawen519@gmail.com"><i id="social-em"
+                                                           class="fa fa-envelope-square fa-3x social"></i></a>
+            </div>
         </div>
     </div>
 </div>
-
 <% returning = false; %>
 </body>
 </html>
+
