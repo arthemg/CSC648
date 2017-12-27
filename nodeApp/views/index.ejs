@@ -77,14 +77,6 @@
     <link rel="stylesheet" href="./css/assets/css/style.css">
     <link rel="stylesheet" href="./css/assets/css/responsive.css">
     <% } %>
-    <style>
-        #footer {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 60px; /* Height of the footer */
-        }
-    </style>
 </head>
 <body id="divResults">
 
@@ -225,22 +217,24 @@
     getSearchString()
 </script>
 <!-- Footer -->
-<div class="py-5 bg-dark" style="position: relative; left: 0; right: 0; bottom: 0">
-    <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; (SFSU CSC648 Team 12) 2017</p>
-        <div class="text-center center-block">
-            <a href="https://www.facebook.com/sanfranciscostate/"><i id="social-fb"
-                                                                     class="fa fa-facebook-square fa-3x social"></i></a>
-            <a href="https://twitter.com/SFSU"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
-            <a href="https://github.com/JiawenZhu"><i id="social-gi" class="fa fa-github-square fa-3x social"></i></a>
-            <a href="https://www.linkedin.com/in/zhu-jiawen-1b166430/"><i id="social-li"
-                                                                          class="fa fa-linkedin-square fa-3x social"></i></a>
-            <a href="mailto:zhujiawen519@gmail.com"><i id="social-em"
-                                                       class="fa fa-envelope-square fa-3x social"></i></a>
+<div id=footer>
+    <div class="py-5 bg-dark" style="position: relative; left: 0; right: 0; bottom: 0">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; (SFSU CSC648 Team 12) 2017</p>
+            <div class="text-center center-block">
+                <a href="https://www.facebook.com/sanfranciscostate/"><i id="social-fb"
+                                                                         class="fa fa-facebook-square fa-3x social"></i></a>
+                <a href="https://twitter.com/SFSU"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                <a href="https://github.com/JiawenZhu"><i id="social-gi"
+                                                          class="fa fa-github-square fa-3x social"></i></a>
+                <a href="https://www.linkedin.com/in/zhu-jiawen-1b166430/"><i id="social-li"
+                                                                              class="fa fa-linkedin-square fa-3x social"></i></a>
+                <a href="mailto:zhujiawen519@gmail.com"><i id="social-em"
+                                                           class="fa fa-envelope-square fa-3x social"></i></a>
+            </div>
         </div>
     </div>
 </div>
-
 <% returning = false; %>
 </body>
 </html>
